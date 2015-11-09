@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h3 id="examprojects">Exam Projects</h3>
+
+<p>There are two projects in this part of the exam. To get the full number of points your app must work correctly in the console. However, partial credit will be given generously. Do as much as you can on every part of the projects. If you get stuck, move on and get more points in another part of the project. You can still do very well on this part of the exam even if your apps don’t run. You are trying to communicate to your instructor that you understand the concepts the projects cover. Also note that just because your apps run correctly doesn’t mean you automatically get all the points. Full credit requires <strong>running correctly</strong>, having <strong>good code</strong>, and <strong>sound architecture and design</strong>.</p>
+
+<hr />
+
+<h3 id="project110points">Project 1 (10 points)</h3>
+
+<p>Create a new <strong>Command Line Tool</strong> in Xcode named <strong>Exam1Project1</strong>.</p>
+
+<p>Write the tool as follows.</p>
+
+<p><strong>1.</strong> In the <strong>main.swift</strong> file add three functions. The functions will be as follows.</p>
+
+<ul>
+<li>Write a function named <code>calculateSquareWithNumber</code> that has a <code>Double</code> as a parameter and returns a <code>Double</code>.
+
+<ul>
+<li>The parameter does not have a required parameter name.</li>
+<li>The function will calculate the square of the input value.</li>
+<li>The function will return the calculated value.</li>
+</ul></li>
+<li>Write a function named <code>calculateCubeWithNumber</code> that has a <code>Double</code> as a parameter and returns a <code>Double</code>.
+
+<ul>
+<li>The parameter does not have a required parameter name.</li>
+<li>The function will calculate the cube of the input value.</li>
+<li>The function must call the <code>calculateSquareWithNumber</code> function and multiply the returned value by the input value to calculate the cube.</li>
+<li>The function will return the calculated value.</li>
+</ul></li>
+<li>Write a function named <code>showSquareCubeWith</code> that has a <code>Double</code> as a parameter and does not return a value.
+
+<ul>
+<li>The function parameter will have an external parameter name of <code>inputValue</code> and an internal parameter name of <code>input</code>.</li>
+<li>The function will have two local constants to hold the return values from the two functions described above.</li>
+<li>The function will output the following to the console. This example uses <code>2.0</code> as the input.</li>
+<li><code>Input: 2.0, Square: 4.0, Cube: 8.0</code></li>
+</ul></li>
+</ul>
+
+<p><strong>2.</strong> After the functions call the <code>showSquareCubeWith()</code> functions several times with different input values. You should see something like this in the console when you run the project.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre>Input: 1.5, Square: 2.25, Cube: 3.375
+Input: 15.0, Square: 225.0, Cube: 3375.0
+Input: 150.7, Square: 22710.49, Cube: 3422470.843
+Input: 1.0, Square: 1.0, Cube: 1.0
+Input: 2.0, Square: 4.0, Cube: 8.0
+</pre></div>
+</td></tr></table>
+
+<hr />
+
+<h3 id="project215points">Project 2 (15 points)</h3>
+
+<p>Create a new <strong>Command Line Tool</strong> in Xcode named <strong>Exam1Project2</strong>.</p>
+
+<p>Write the tool as follows.</p>
+
+<h4 id="1.projectclasses.">1. Project classes.</h4>
+
+<ul>
+<li>The project will have three classes: one superclass, and two subclasses.</li>
+<li>The superclass will be named <strong>Ball</strong> and will be about a generic ball used for sports.</li>
+<li>The subclasses will be named <strong>VolleyBall</strong> and <strong>BasketBall</strong>.</li>
+</ul>
+
+<h4 id="2.projectfile">2. Project File</h4>
+
+<ul>
+<li>Create a file named <strong>Ball.swift</strong>. This file will contain all three classes for the project.</li>
+</ul>
+
+<h4 id="3.classdetails">3. Class Details</h4>
+
+<ul>
+<li>The <strong>Ball</strong> class.
+
+<ul>
+<li>Create a class in the <strong>Ball.swift</strong> file named <strong>Ball</strong>. This will be the superclass for the project.</li>
+<li>The class will have two properties:
+
+<ul>
+<li>a variable for the circumference of the ball that is a <code>Double</code>.</li>
+<li>a variable for the weight of the ball that is a <code>Double</code>.</li>
+</ul></li>
+<li>Create an initializer that has a parameter for each of the variables. Assign the parameter values to the variables.</li>
+<li>Create a function named <code>bounce</code> that has no parameters and no return value. In the body of the function output the string:
+
+<ul>
+<li><code>I'm bouncing the ball.</code></li>
+</ul></li>
+<li>Create a computed property named <code>description</code> that returns a string like this:
+
+<ul>
+<li><code>circumference: 0.0, weight: 0.0</code></li>
+</ul></li>
+</ul></li>
+<li>The <strong>VolleyBall</strong> class.
+
+<ul>
+<li>Create a class in the <strong>Ball.swift</strong> file named <strong>VolleyBall</strong>.</li>
+<li>The class must subclass the <strong>Ball</strong> class.</li>
+<li>The class will add one property:
+
+<ul>
+<li>a variable to hold the color of the volleyball that is a string.</li>
+</ul></li>
+<li>Create an initializer that has three parameters.
+
+<ul>
+<li>The parameters should be for the color property and the two properties of the superclass.</li>
+<li>Set the value of the color property with the input parameter.</li>
+<li>Call the superclass initializer to set the two remaining parameters.</li>
+</ul></li>
+<li>Override the <code>bounce</code> method and output the string:
+
+<ul>
+<li><code>I'm bouncing the volleyball.</code></li>
+</ul></li>
+<li>Override the <code>description</code> computed property. In the return statement you need to:
+
+<ul>
+<li>get the output from the superclass <code>description</code> property.</li>
+<li>Add the string <code>VolleyBall:</code> to the front of the superclass <code>description</code>.</li>
+<li>Add the string and value from the color property to the end of the superclass <code>description</code> like this:
+
+<ul>
+<li><code>color: &lt;color&gt;</code></li>
+</ul></li>
+<li>The final string returned from the computed property will look something like this:
+
+<ul>
+<li><code>VolleyBall: circumference: 29.5, weight: 32.0, color: White</code></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>The <strong>BasketBall</strong> class.
+
+<ul>
+<li>Create a class in the <strong>Ball.swift</strong> file named <strong>BasketBall</strong>.</li>
+<li>The class must subclass the <strong>Ball</strong> class.</li>
+<li>The class will add one property:
+
+<ul>
+<li>a variable for the material the basketball is made from that is a string.</li>
+</ul></li>
+<li>Create an initializer that has three parameters.
+
+<ul>
+<li>The parameters should be for the material property and the two properties of the superclass.</li>
+<li>Assign the value of the material property with the input parameter.</li>
+<li>Call the superclass initializer to set the two remaining parameters.</li>
+</ul></li>
+<li>Override the <code>bounce</code> method and output the string:
+
+<ul>
+<li><code>I'm bouncing the basketball.</code></li>
+</ul></li>
+<li>Override the <code>description</code> computed property. In the return statement you need to:
+
+<ul>
+<li>get the output from the superclass <code>description</code> property.</li>
+<li>Add the string <code>BasketBall:</code> to the front of the superclass <code>description</code>.</li>
+<li>Next add the string <code>material: &lt;material&gt;</code> in between the previous string and the superclass <code>description</code>.</li>
+<li>The final string returned from the computed property will look something like this:
+
+<ul>
+<li><code>BasketBall: material: leather, circumference: 30.5, weight: 32.0</code></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h4 id="4.runningtheproject">4. Running the Project</h4>
+
+<ul>
+<li>In the <strong>main.swift</strong> file you should have the following.
+
+<ul>
+<li>Create an array of <strong>Ball</strong> instances.</li>
+<li>Add at least two of each of the subclasses to the array using the initializer with parameters.</li>
+<li>Create two <strong><code>for-in</code></strong> loops that iterate through the array.
+
+<ul>
+<li>The first loop will call the <code>bounce()</code> function on each of the instances.</li>
+<li>The second loop will access the <code>description</code> property and output it to the console.</li>
+</ul></li>
+</ul></li>
+<li>The final output of the program might look something like this:</li>
+</ul>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre>I&#39;m bouncing the volleyball.
+I&#39;m bouncing the basketball.
+I&#39;m bouncing the volleyball.
+I&#39;m bouncing the basketball.
+</pre></div>
+</td></tr></table>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre>VolleyBall: circumference: 29.0, weight: 30.0, color: Brown
+BasketBall: material: leather, circumference: 29.5, weight: 34.0
+VolleyBall: circumference: 29.5, weight: 32.0, color: White
+BasketBall: material: leather, circumference: 30.5, weight: 32.0
+</pre></div>
+</td></tr></table>
+
+<h3 id="submittingtheexam">Submitting the Exam</h3>
+
+<ul>
+<li>Compress the playground back to <strong>Exam1.playground.zip</strong>. Make sure you have deleted the zip file you downloaded so as not to submit a blank exam.</li>
+<li>Compress all Xcode projects like you do for assignments.</li>
+<li>Attach the zip files to one email and send it to your instructor. Put &quot;<strong>iOS Exam 1</strong>&quot; in the subject.</li>
+<li>Make sure the instructor has received your exam before you leave.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>    </section>
+  </div>
+</body>
+</html>

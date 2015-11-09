@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Developers cheered when they heard that Swift won't allow us to leave out the <strong><code>{}</code></strong>.</p>
+
+<p><img class="img-border" src="images/conditionals01.png" alt="" width="559" /></p>
+
+<h3 id="booleanvariables">Boolean Variables</h3>
+
+<p>Swift has a special type for <code>true</code> and <code>false</code>: <code>Bool</code>.</p>
+
+<p>You can make a Boolean variable like this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">isSpecial</span> <span class="o">=</span> <span class="nb">true</span>
+</pre></div>
+</td></tr></table>
+
+<p>You can also save the results of a Boolean condition into a variable.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">big</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">let</span> <span class="n">test</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="k">var</span> <span class="n">isSmall</span> <span class="o">=</span> <span class="n">test</span> <span class="o">&lt;</span> <span class="n">big</span>
+
+<span class="k">if</span> <span class="n">isSmall</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;It is small&quot;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;It is big&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>To test if something is <strong>not</strong> true we use the <strong>Logical NOT Operator</strong>, the <span style="font-size:1.5em;"><strong><code>!</code></strong></span>. If we put a <code>!</code> in front of something that's <code>true</code> the result will be <code>false</code>.</p>
+
+<p>In the following Swift block, create a constant that holds a number. Write an <code>if</code> statement to see if the variable is NOT bigger than 100. Use the <code>!</code> operator and not the <code>!=</code> operator.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

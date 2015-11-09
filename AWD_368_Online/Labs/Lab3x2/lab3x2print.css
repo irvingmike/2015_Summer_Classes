@@ -1,0 +1,40 @@
+/*
+    Name: Aaron Anderson
+    Assignment:  Lab 3.2 - XML and Print CSS
+    Date: 06/26/2015
+ */
+
+* {
+    display: block;
+    color: black;
+}
+
+items {
+    font-family: Arial, sans-serif;
+}
+
+item {
+    border: 2px solid black;
+    width: 17em;
+    margin: .5em;
+    float: left;
+    padding: 1em;
+}
+
+description {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+supplier {
+    margin-left: 2em;
+    padding-top: 1em;
+}
+
+backorderedAmount[dateOrdered] {
+    font-weight: 600;
+}
+
+shipmentLeadTime[unit="days"] {
+    font-weight: 600;
+}

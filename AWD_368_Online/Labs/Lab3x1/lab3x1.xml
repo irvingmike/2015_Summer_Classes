@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<!--
+    Name: Aaron Anderson
+    Assignment: Lab 3.1 - XML and CSS
+    Date: 06/26/2015
+-->
+
+<?xml-stylesheet type="text/css" href="lab3x1.css"?>
+
+<items>
+    <item itemNumber='ITM123456'>
+        <description>Waterproof tacos</description>
+        <country>Made in Brazil</country>
+        <sellingPrice saleItem='Y'>$19.95</sellingPrice>
+        <cost>$11.54</cost>
+        <quantityOnHand>42</quantityOnHand>
+        <backorderedAmount>0</backorderedAmount>
+        <dateLastReceived>
+            <month>01</month>
+            <day>01</day>
+            <year>2015</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>13</quantitySoldYearToDate>
+        <warehouseSection>D32</warehouseSection>
+        <warehouseShelf>A4</warehouseShelf>
+        <remarks>
+            <![CDATA[This item is sold "as is" with a limited 90-day warranty. It is part of our "Scratch & Dent" sale.]]>
+        </remarks>
+        <supplier>
+            <supplierNumber>SUP00789</supplierNumber>
+            <shipmentLeadTime unit='weeks'>1</shipmentLeadTime>
+            <supplierCost>$11.54</supplierCost>
+       </supplier>
+       <supplier>
+            <supplierNumber>SUP00258</supplierNumber>
+            <shipmentLeadTime unit='weeks'>2</shipmentLeadTime>
+            <supplierCost>12.38</supplierCost>
+       </supplier>
+   </item>
+   <item itemNumber='ITM951357'>
+        <description>Edible Socks</description>
+        <country>Made in United States</country>
+        <sellingPrice saleItem='N'>$7.95</sellingPrice>
+        <cost>$3.24</cost>
+        <quantityOnHand>19</quantityOnHand>
+        <backorderedAmount dateOrdered='09182009'>25</backorderedAmount>
+        <dateLastReceived>
+            <month>02</month>
+            <day>05</day>
+            <year>2015</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>172</quantitySoldYearToDate>
+        <warehouseSection>E11</warehouseSection>
+        <warehouseShelf>B5</warehouseShelf>
+        <remarks>
+            <![CDATA[Customers can view product information about this item at: http://www.trellisstructures.com?19234]]>
+        </remarks>
+        <supplier>
+            <supplierNumber>SUP00049</supplierNumber>
+            <shipmentLeadTime unit='days'>3</shipmentLeadTime>
+            <supplierCost>$4.24</supplierCost>
+       </supplier>
+       <supplier>
+            <supplierNumber>SUP00789</supplierNumber>
+            <shipmentLeadTime unit='weeks'>7</shipmentLeadTime>
+            <supplierCost>$3.24</supplierCost>
+       </supplier>
+   </item>
+   <item itemNumber='ITM852852'>
+        <description>Dinosaur Jerky</description>
+        <country>Made in India</country>
+        <sellingPrice saleItem='N'>$23.99</sellingPrice>
+        <cost>$11.56</cost>
+        <quantityOnHand>0</quantityOnHand>
+        <backorderedAmount dateOrdered='09262014'>5</backorderedAmount>
+        <dateLastReceived>
+            <month>05</month>
+            <day>1</day>
+            <year>2015</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>75</quantitySoldYearToDate>
+        <warehouseSection>D01</warehouseSection>
+        <warehouseShelf>B2</warehouseShelf>
+        <remarks>
+            <![CDATA[Aged more than a million years!]]>
+        </remarks>
+        <supplier>
+            <supplierNumber>SUP02548</supplierNumber>
+            <shipmentLeadTime unit='days'>4</shipmentLeadTime>
+            <supplierCost>$11.56</supplierCost>
+       </supplier>
+   </item>
+   <item itemNumber='ITM121212'>
+        <description>Candied Dreams</description>
+        <country>Made in Japan</country>
+        <sellingPrice saleItem='Y'>$16.99</sellingPrice>
+        <cost>$9.78</cost>
+        <quantityOnHand>42</quantityOnHand>
+        <backorderedAmount dateOrdered='10212013'>15</backorderedAmount>
+        <dateLastReceived>
+            <month>01</month>
+            <day>26</day>
+            <year>2013</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>4</quantitySoldYearToDate>
+        <warehouseSection>G13</warehouseSection>
+        <warehouseShelf>C5</warehouseShelf>
+        <remarks></remarks>
+        <supplier>
+            <supplierNumber>SUP79135</supplierNumber>
+            <shipmentLeadTime unit='weeks'>3</shipmentLeadTime>
+            <supplierCost>$9.78</supplierCost>
+       </supplier>
+   </item>
+</items>

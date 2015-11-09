@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<ul>
+<li>You should see <strong>NSConcreteData</strong> to the right.</li>
+<li>The <strong>NSData</strong> class can hold any kind of digital data, including text.</li>
+</ul>
+
+<hr />
+
+<p>Next, we use <strong>NSJSONSerialization</strong> to convert the data to <strong>Objective-C</strong> objects.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">jsonArray</span> <span class="o">=</span> <span class="bp">NSJSONSerialization</span><span class="p">.</span><span class="n">JSONObjectWithData</span><span class="p">(</span>
+        <span class="n">jsonData</span><span class="p">,</span>
+        <span class="nl">options</span><span class="p">:</span> <span class="n">NSJSONReadingOptions</span><span class="p">.</span><span class="n">MutableContainers</span><span class="p">,</span>
+        <span class="nl">error</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span><span class="o">!</span> <span class="kt">as</span> <span class="bp">NSArray</span>
+
+<span class="n">println</span><span class="p">(</span><span class="n">jsonArray</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

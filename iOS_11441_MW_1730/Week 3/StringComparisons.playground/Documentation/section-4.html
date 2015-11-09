@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h4 id="trimmingastring">Trimming a String</h4>
+
+<p>What about these two strings?</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">string3</span> <span class="o">=</span> <span class="s">&quot;   Bill  &quot;</span>
+<span class="k">let</span> <span class="n">string4</span> <span class="o">=</span> <span class="s">&quot;Bill&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Sometimes we might want them compare as equal, other times as not equal. Try this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">string5</span> <span class="o">=</span> <span class="n">string3</span><span class="p">.</span><span class="n">stringByTrimmingCharactersInSet</span><span class="p">(</span><span class="bp">NSCharacterSet</span><span class="p">.</span><span class="n">whitespaceCharacterSet</span><span class="p">())</span>
+
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;trimmed \(string5)&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>&nbsp;</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

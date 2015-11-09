@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h4 id="addingelementstotheendofanarray">Adding Elements to the end of an Array</h4>
+
+<p>There are a few ways to do this.</p>
+
+<ul>
+<li>The <code>append</code> function</li>
+</ul>
+
+<table style="margin-left:2em;" class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">names</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;Seymour&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>Concatenation <span style="font-size:1.5em;">(<strong><code>+</code></strong>)</span> Why do we need the <code>[]</code>?</li>
+</ul>
+
+<table style="margin-left:2em;" class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">names</span> <span class="o">=</span> <span class="n">names</span> <span class="o">+</span> <span class="p">[</span><span class="s">&quot;Jewel&quot;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>The <span style="font-size:1.5em;">(<strong><code>+=</code></strong>)</span> operator.</li>
+</ul>
+
+<table style="margin-left:2em;" class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">names</span> <span class="o">+=</span> <span class="p">[</span><span class="s">&quot;Jane&quot;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<p>Add a bunch of names to the <code>names</code> array in the following code block. Can you see how to add more than one with one statement?</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

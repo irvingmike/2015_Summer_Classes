@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="exchanges">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="exchange" type="exchangeType" minOccurs="4" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="exchangeType">
+        <xsd:sequence>
+            <xsd:element name="name" type="nameType" />
+            <xsd:element name="address" type="addressType" />
+            <xsd:element name="telephone" type="phoneType" />
+            <xsd:element name="emailAddress" type="xsd:string" />
+            <xsd:element name="applicationDate" type="dateType" />
+            <xsd:element name="availableDate" type="dateType" />
+            <xsd:element name="birthCountry" type="alphaType" />
+            <xsd:element name="dateOfBirth" type="dateType" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="age" minOccurs="0" maxOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:int">
+                        <xsd:minInclusive value="13" />
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="gender" type="genderType" />
+            <xsd:element name="schoolName" type="alphaType" />
+            <xsd:element name="schoolAddress" type="addressType" />
+            <xsd:element name="yearInSchool" type="xsd:string" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="motherName" type="nameType" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="fatherName" type="nameType" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="emergencyTelephone" type="phoneType" />
+            <xsd:element name="feePaid" type="feeType" />
+            <xsd:element name="essay">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="1000" />
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="spokenLanguages" type="languagesType" />
+            <xsd:element name="countryChoices" type="countryChoicesType" />
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:ID" use="required" />
+        <xsd:attribute name="exchangeType" use="required">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:pattern value="[S|T]" />
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="nameType">
+        <xsd:all>
+            <xsd:element name="firstName" type="alphaType" />
+            <xsd:element name="middleInitial" type="initialType" />
+            <xsd:element name="lastName" type="alphaType" />
+        </xsd:all>
+    </xsd:complexType>
+
+    <xsd:simpleType name="alphaType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[\s\-'A-Za-z]{1,}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="initialType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z]?" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="addressType">
+        <xsd:sequence>
+            <xsd:element name="street" type="xsd:string" />
+            <xsd:element name="apartment" type="xsd:string" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="city" type="xsd:string" />
+            <xsd:choice>
+                <xsd:element name="state" type="alphaType" />
+                <xsd:element name="province" type="alphaType" />
+            </xsd:choice>
+            <xsd:choice>
+                <xsd:element name="zipCode" type="zipType" />
+                <xsd:element name="postalCode">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="12" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:choice>
+            <xsd:element name="country" type="alphaType" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="zipType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\d{5}(-\d{4})?" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="phoneType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\(\d{3}\)\s\d{3}-\d{4}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="dateType">
+        <xsd:sequence>
+            <xsd:element name="month">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:unsignedByte">
+                        <xsd:minInclusive value="1"/>
+                        <xsd:maxInclusive value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="day">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:unsignedByte">
+                        <xsd:minInclusive value="1"/>
+                        <xsd:maxInclusive value="31"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="year" type="xsd:gYear" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="genderType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[M|F]" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="feeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:double">
+                <xsd:attribute name="currency" use="required">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="USD|JPY|BRL|GBP|PAB" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="languagesType">
+        <xsd:sequence>
+            <xsd:element name="language" type="languageType" minOccurs="2" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="languageType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="fluency" use="required">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="[1-4]" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="countryChoicesType">
+        <xsd:sequence>
+            <xsd:element name="countryChoice" type="countryChoiceType" minOccurs="5" maxOccurs="5" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="countryChoiceType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="rank" use="required">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="[1-5]" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+</xsd:schema>

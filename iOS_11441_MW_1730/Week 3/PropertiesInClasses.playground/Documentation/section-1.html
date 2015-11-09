@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h3 id="whatareproperties">What Are Properties?</h3>
+
+<h4 id="storedproperties">Stored Properties</h4>
+
+<p>You've already been using Swift properties in their simplest form. These are call <strong>Stored Properties</strong> because they are only used to store data.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="n">Point</span> <span class="p">{</span>
+<span class="hll">    <span class="k">var</span> <span class="nl">pointX</span><span class="p">:</span> <span class="n">Double</span>
+</span><span class="hll">    <span class="k">var</span> <span class="nl">pointY</span><span class="p">:</span> <span class="n">Double</span>
+</span>    
+    <span class="k">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">pointX</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">pointY</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Lines 2 and 3 are Swift <strong>properties</strong>. In their simplest form they are just variables. We access them by using the dot syntax we are very comfortable with. What is really going on? Properties are really causing functions to be generated behind the scenes. Some languages require us to write getter and setter methods for our instance variables. Swift does it for us with stored properties.</p>
+
+<p>Here's a quick example that we've seen before.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">point1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
+<span class="n">point1</span><span class="p">.</span><span class="n">pointX</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="n">point1</span><span class="p">.</span><span class="n">pointY</span> <span class="o">=</span> <span class="mf">20.0</span>
+
+<span class="k">var</span> <span class="n">point2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
+<span class="n">point2</span><span class="p">.</span><span class="n">pointX</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="n">point2</span><span class="p">.</span><span class="n">pointY</span> <span class="o">=</span> <span class="mf">150.0</span>
+
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Point: x:\(point1.pointX), y:\(point1.pointY)&quot;</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Point: x:\(point2.pointX), y:\(point2.pointY)&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Which will give us this output.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="nl">Point</span><span class="p">:</span> <span class="nl">x</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span><span class="mf">20.0</span>
+<span class="nl">Point</span><span class="p">:</span> <span class="nl">x</span><span class="p">:</span><span class="mf">100.0</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span><span class="mf">150.0</span>
+</pre></div>
+</td></tr></table>
+
+<p>Enter the class and the above code so we can see it working. But, first create an <code>init</code> method that takes both values as input. Then we can just do this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">point1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">)</span>
+<span class="k">var</span> <span class="n">point2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="mf">150.0</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

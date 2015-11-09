@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>You should see this output.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre>Pet: name=Fido, species=Dog, w/h=45.0/20.0
+Pet: name=Fifi, species=Cat, w/h=8.0/12.0
+</pre></div>
+</td></tr></table>
+
+<p>Does anyone else think that a lot of repetitive typing? We'll improve this with <strong>Initializers</strong>.</p>
+
+<h4 id="initializers">Initializers</h4>
+
+<p>Wouldn't it be nice if we could do this?</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">petThree</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Ralph&quot;</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="s">&quot;Dog&quot;</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="mf">30.0</span><span class="p">)</span>
+<span class="k">var</span> <span class="n">petFour</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Panda&quot;</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="s">&quot;Rabbit&quot;</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="mf">6.0</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>And maybe we could even arrange the code like this so it wouldn't wrap weirdly or get clipped by the edge of the window.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">petThree</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Ralph&quot;</span><span class="p">,</span>
+    <span class="nl">species</span><span class="p">:</span> <span class="s">&quot;Dog&quot;</span><span class="p">,</span>
+    <span class="nl">weight</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="mf">30.0</span><span class="p">)</span>
+
+<span class="k">var</span> <span class="n">petFour</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Panda&quot;</span><span class="p">,</span>
+    <span class="nl">species</span><span class="p">:</span> <span class="s">&quot;Rabbit&quot;</span><span class="p">,</span>
+    <span class="nl">weight</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="mf">6.0</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Well, of course we can, or I wouldn't be taunting you with it.😜</p>
+
+<p>An <strong>Initializer</strong> is a special function named simply <code>init</code> like this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">init</span><span class="p">()</span> <span class="p">{</span>               
+
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>There are no words in front like <code>func</code> or <code>public</code>, it's just <code>init</code>.</p>
+
+<p>When you use the code <code>Pet()</code> you are actually calling the <code>init</code> method. Let's see that in action. Add the init method to the class with a <code>println()</code> statement in it so we can tell when it gets called. Add this code right after the variable.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&quot;In the init() method!&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Open the console if you haven't already. As soon as you add the code you should see this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre>In the init() method!
+In the init() method!
+</pre></div>
+</td></tr></table>
+
+<p>OK, we can see that they run but what are they for? </p>
+
+<p>They are for <strong>initializing</strong> an instance, just like their name. We put code in them to set up our object. Let's add default values for our variables to see how this works.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&quot;In the init() method!&quot;</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;&lt;name&gt;&quot;</span>
+        <span class="n">species</span> <span class="o">=</span> <span class="s">&quot;&lt;unknown&gt;&quot;</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Then make a few more pets but don't set any of their variables.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">petFive</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">()</span>
+<span class="k">var</span> <span class="n">petSix</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">()</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Pet: name=\(petFive.name), species=\(petFive.species), w/h=\(petFive.weight)/\(petFive.height)&quot;</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Pet: name=\(petSix.name), species=\(petSix.species), w/h=\(petSix.weight)/\(petSix.height)&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

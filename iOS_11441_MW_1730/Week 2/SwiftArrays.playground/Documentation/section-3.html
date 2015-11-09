@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Your output will look something like this with the data from above.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre>first: Bob.
+second: Dakota.
+last: Bill.
+</pre></div>
+</td></tr></table>
+
+<h4 id="arraycount">Array <code>count</code></h4>
+
+<p>Hmm, if you delete one of the names in the array will your code still work? Try it, it probably won't work.</p>
+
+<p>How do we fix this? We need to know how many names are in the array. We get the count of elements with <code>count</code>. It is coded as <code>&lt;array name&gt;.count</code>.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">arrayCount</span> <span class="o">=</span> <span class="n">names</span><span class="p">.</span><span class="n">count</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now we can output the last element in an array and it won't fail if we delete one. It will also be correct if we add elements. The last element is always the count - 1, in this case <code>names.count - 1</code>, because the index starts at zero. In the following block output the last element with the count. Then go back to the array and add another name, like &quot;Fred&quot;. Your output should change automatically.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

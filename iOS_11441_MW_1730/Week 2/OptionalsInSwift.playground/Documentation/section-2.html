@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>But, what if the names are entered by the user? We won't know what they are and they might not enter anything, which is common for the middle name. We could start with empty strings.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">firstName</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<span class="k">var</span> <span class="n">middleName</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<span class="k">var</span> <span class="n">lastName</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>That is not a good solution for lots of situations. What if the value is big and hard to make? Many languages allow for variable to be declared with a <code>NULL</code> or <code>nil</code> value. This is used to indicate that a value is missing. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Not valid in Swift</span>
+
+<span class="n">firstName</span> <span class="o">=</span> <span class="nb">nil</span>
+<span class="n">middleName</span> <span class="o">=</span> <span class="nb">nil</span>
+<span class="n">lastName</span> <span class="o">=</span> <span class="nb">nil</span>
+</pre></div>
+</td></tr></table>
+
+<p>Just to drive this home, try entering the above code. (Then comment it out after you see the errors.)</p>    </section>
+  </div>
+</body>
+</html>

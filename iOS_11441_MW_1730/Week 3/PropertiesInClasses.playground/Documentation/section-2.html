@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h4 id="computedproperties">Computed Properties</h4>
+
+<p>We can also have properties that use stored properties to computed or create a value. They are called <strong>computed properties</strong>. They start out looking like other properties with a <code>var</code>. But, then...</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">var</span> <span class="nl">point</span><span class="p">:</span> <span class="p">(</span><span class="n">Double</span><span class="p">,</span> <span class="n">Double</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">get</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">pointX</span><span class="p">,</span> <span class="n">pointY</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="kr">set</span> <span class="p">{</span>
+            <span class="n">pointX</span> <span class="o">=</span> <span class="n">newValue</span><span class="mf">.0</span>
+            <span class="n">pointY</span> <span class="o">=</span> <span class="n">newValue</span><span class="mf">.1</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Whoa! That looks like a cross between a variable and a function. And that's basically what it is.</p>
+
+<p><img class="img-border" src="images/classes06.png" alt="" width="900" /></p>
+
+<p><strong><code>newValue</code></strong> is an automatic parameter that Swift creates for you. Add this property to your class.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

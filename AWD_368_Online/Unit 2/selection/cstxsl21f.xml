@@ -1,0 +1,161 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="cust21f.xsl" ?>
+<!DOCTYPE customers [
+<!ELEMENT customers (customer)+>
+<!ELEMENT customer         (name, address, created_date, purchase_date, payment_date, current_balance, notes)>
+<!ATTLIST customer NUMBER ID #REQUIRED>
+<!ELEMENT name             (lastname, firstname,middle_initial?)>
+<!ATTLIST name type (individual|corporate) #REQUIRED>
+<!ELEMENT lastname         (#PCDATA)>
+<!ATTLIST lastname prefix (Mr.|Ms.) #REQUIRED>
+<!ELEMENT firstname        (#PCDATA)>
+<!ELEMENT middle_initial   (#PCDATA)>
+<!ELEMENT address          (street, apartment?, city, state, zip, country)>
+<!ELEMENT street           (#PCDATA)>
+<!ELEMENT apartment        (#PCDATA)>
+<!ELEMENT city             (#PCDATA)>
+<!ELEMENT state            (#PCDATA)>
+<!ELEMENT zip              (#PCDATA)>
+<!ELEMENT country          (#PCDATA)>
+<!ELEMENT notes            (#PCDATA)>
+<!ELEMENT created_date     (month, day, year)>
+<!ELEMENT purchase_date    (month, day, year)>
+<!ELEMENT payment_date     (month, day, year)>
+<!ELEMENT current_balance  (#PCDATA)>
+<!ENTITY usa "United States">
+<!ENTITY jpn "Japan">
+<!ENTITY note1 SYSTEM "entity1.dtd">
+<!ENTITY note2 SYSTEM "http://faculty.matcmadison.edu/schmidt/xml/entity2.dtd">
+<!ENTITY note3 SYSTEM "entity3.dtd">
+<!ENTITY note4 SYSTEM "entity4.dtd">
+    ]> 
+<customers>
+	<customer NUMBER="C09288">
+	    <name type="individual">
+		<lastname prefix="Mr.">Tyrebiter</lastname>
+		<firstname>George</firstname>
+		<middle_initial>L</middle_initial>
+	    </name>
+	    <address>
+		<street>123 Oak Street</street>
+		<apartment>Suite 16</apartment>
+		<city>Madison</city>
+		<state>WI</state>
+		<zip>43704</zip>
+		<country>Mexico</country>
+	    </address>
+	    <created_date>
+		<month>04</month>
+    	        <day>15</day>
+                <year>1988</year>
+            </created_date>
+	    <purchase_date>
+		<month>08</month>
+    	        <day>19</day>
+                <year>2002</year>
+            </purchase_date>
+	    <payment_date>
+		<month>09</month>
+    	        <day>18</day>
+                <year>2002</year>
+            </payment_date>
+	    <current_balance>123.45</current_balance>
+            <notes>&note1;</notes>
+	</customer>
+	<customer NUMBER="C09289">
+	    <name type="individual">
+		<lastname prefix="Ms.">Brown</lastname>
+		<firstname>Sally</firstname>
+		<middle_initial>S</middle_initial>
+	    </name>
+	    <address>
+		<street>123 Elm Street</street>
+		<apartment>Apt. 1</apartment>
+		<city>Madison</city>
+		<state>WI</state>
+		<zip>43704</zip>
+		<country>&usa;</country>
+	    </address>
+	    <created_date>
+		<month>11</month>
+    	        <day>04</day>
+                <year>1995</year>
+            </created_date>
+	    <purchase_date>
+		<month>08</month>
+    	        <day>19</day>
+                <year>2001</year>
+            </purchase_date>
+	    <payment_date>
+		<month>09</month>
+    	        <day>18</day>
+                <year>2001</year>
+            </payment_date>
+	    <current_balance>9,876.54</current_balance>
+            <notes>&note2;</notes>
+	</customer>
+	<customer NUMBER="C09290">
+	    <name type="individual">
+		<lastname prefix="Mr.">Porter</lastname>
+    	        <firstname>Harry</firstname>
+                <middle_initial>W</middle_initial>
+            </name>
+            <address>
+                <street>7722 First Street</street>
+                <apartment></apartment>
+                <city>Madison</city>
+                <state>WI</state>
+                <zip>43704</zip>
+                <country>United States</country>
+            </address>
+	    <created_date>
+		<month>06</month>
+    	        <day>07</day>
+                <year>1999</year>
+            </created_date>
+	    <purchase_date>
+		<month>01</month>
+    	        <day>05</day>
+                <year>2001</year>
+            </purchase_date>
+	    <payment_date>
+		<month>03</month>
+    	        <day>07</day>
+                <year>2001</year>
+            </payment_date>
+            <current_balance>1,234.56</current_balance>
+            <notes>&note1;</notes>
+	</customer>
+	<customer NUMBER="C09291">
+	    <name type="individual">
+		<lastname prefix="Ms.">Abe</lastname>
+		<firstname>Miaka</firstname>
+		<middle_initial></middle_initial>
+	    </name>
+	    <address>
+		<street>1396 Gohan Avenue</street>
+		<apartment>Apt. 21</apartment>
+		<city>Niigata</city>
+		<state>Niigata</state>
+		<zip>0298483</zip>
+		<country>&jpn;</country>
+	    </address>
+	    <created_date>
+		<month>03</month>
+    	        <day>09</day>
+                <year>1992</year>
+            </created_date>
+	    <purchase_date>
+		<month>07</month>
+    	        <day>23</day>
+                <year>2001</year>
+            </purchase_date>
+	    <payment_date>
+		<month>07</month>
+    	        <day>24</day>
+                <year>2001</year>
+            </payment_date>
+	    <current_balance>246.00</current_balance>
+            <notes>&note4;</notes>
+	</customer>
+</customers>

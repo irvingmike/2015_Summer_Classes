@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Yup, that's all it takes.</p>
+
+<p>However, did you notice that the function returns a <code>Bool</code>? If everything goes well it will return <code>true</code>. It will return <code>false</code> if it couldn't write the file. Let's be good coders. You should comment out the previous block expect for the <code>let path =</code> statement.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">success</span> <span class="o">=</span> <span class="n">myString</span><span class="p">.</span><span class="n">writeToFile</span><span class="p">(</span><span class="n">path</span><span class="p">,</span>
+    <span class="nl">atomically</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span>
+    <span class="nl">encoding</span><span class="p">:</span> <span class="n">NSUTF8StringEncoding</span><span class="p">,</span>
+    <span class="nl">error</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">success</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;File was saved successfully.&quot;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Error saving the file.&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

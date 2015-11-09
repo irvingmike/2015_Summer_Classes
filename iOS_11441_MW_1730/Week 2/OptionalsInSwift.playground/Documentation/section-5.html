@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p><img style="float:left; margin-right:1.0em;" class="imgwb" src="images/optionals01.png" alt="" width="400" /></p>
+
+<p class="spacer">&nbsp;</p>
+
+<p><strong>Interesting!</strong> It works but there's something else going on. </p>
+
+<p style="clear:both;">&nbsp;</p>
+
+<hr />
+
+<p><img style="float:left; margin-right:1.0em;" class="img-border" src="images/optionals02.png" alt="" width="500" /></p>
+
+<p class="spacer">&nbsp;</p>
+
+<p>We see the same output in the Console.</p>
+
+<p style="clear:both;">&nbsp;</p>
+
+<h3 id="optionalsareathing">Optionals Are a Thing!</h3>
+
+<p>They are not some theoretical abstract concept that exists in only in the compiler. They are real things like a <code>Double</code> or a <code>String</code>. In this example there's something the box.</p>
+
+<p><img style="display:block; margin-left:auto; margin-right:auto;"  class="img-border" src="images/optionals06.png" alt="" width="300" /></p>
+
+<p>Optionals are really a Swift <code>enum</code> that is wrapped around the variable. We are not seeing the real variable, just it's wrapper.</p>
+
+<hr />
+
+<p><img style="float:right; margin-right:5.0em;" class="img-border" src="images/optionals03.png" alt="" width="500" /></p>
+
+<p class="spacer">&nbsp;</p>
+
+<p>When we use a <code>println()</code> we aren't outputting the variable, we only see the Optional.</p>
+
+<p style="clear:both;">&nbsp;</p>
+
+<h3 id="unwraptotherescue">Unwrap to the Rescue!</h3>
+
+<p>When we want the real variable we have to <strong>unwrap</strong> it. There are many ways to unwrap an Optional. The right one to use depends on the data and the circumstances. </p>
+
+<h4 id="forcedunwrapping">Forced Unwrapping</h4>
+
+<p>The first way we'll learn is the simplest and the most dangerous. We can <strong>force</strong> an Optional to unwrap and give us its value like this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Unwrapping a variable</span>
+
+<span class="n">firstName</span> <span class="o">=</span> <span class="s">&quot;Fred&quot;</span>
+
+<span class="n">println</span><span class="p">(</span><span class="n">firstName</span><span class="o">!</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>    </section>
+  </div>
+</body>
+</html>

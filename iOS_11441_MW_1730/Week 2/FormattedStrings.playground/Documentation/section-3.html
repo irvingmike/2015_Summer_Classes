@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>We get this. </p>
+
+<p><code>The value of Pi is 3.142</code></p>
+
+<p>How did that happen?</p>
+
+<p><img class="img-border" src="images/format02.png" alt="" width="842" /></p>
+
+<p>We can also put a value in front of the <code>.3</code> in our example. Let's try it. We can also just put the formatting right inside a <code>println()</code> like this. Enter all these so we can see what happens.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">println</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="nl">format</span><span class="p">:</span> <span class="s">&quot;%9.3f&quot;</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="nl">format</span><span class="p">:</span> <span class="s">&quot;%9.3f&quot;</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="nl">format</span><span class="p">:</span> <span class="s">&quot;%9.3f&quot;</span><span class="p">,</span> <span class="mf">123.456789</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="nl">format</span><span class="p">:</span> <span class="s">&quot;%9.3f&quot;</span><span class="p">,</span> <span class="mi">80000.0</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

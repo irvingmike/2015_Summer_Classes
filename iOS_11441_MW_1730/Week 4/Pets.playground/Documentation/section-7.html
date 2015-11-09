@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>We can have as many classes inherit from Pet as we want.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">cat1</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">()</span>
+<span class="k">var</span> <span class="n">rabbit1</span> <span class="o">=</span> <span class="n">Rabbit</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p><img class="img-border" src="images/bag06.png" alt="" width="700" /></p>
+
+<p><img class="img-border" src="images/bag07.png" alt="" width="717" /></p>
+
+<h3 id="superandsub">Super and Sub!</h3>
+
+<p>What do we call these things? </p>
+
+<p><strong>Superclass</strong> and <strong>Subclass</strong></p>
+
+<p><img class="img-border" src="images/bag08.png" alt="" width="600" /></p>
+
+<p>We use the word <strong>subclass</strong> as a verb, too. We will say, &quot;You should subclass the Pet class.&quot; </p>
+
+<h3 id="extendingaclass">Extending a Class</h3>
+
+<p>If this was the only point to subclassing it would still be quite useful. There's a lot more, though.</p>
+
+<p>We can add new <strong>variables</strong>, <strong>constants</strong>, and <strong>functions</strong> to a class. Let's add a new property to our Dog class.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="nl">Dog</span><span class="p">:</span> <span class="n">Pet</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nl">breed</span><span class="p">:</span> <span class="n">String</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>That's a start but the compiler gives this error now: </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>Swift Compiler Error: Class &#39;Dog&#39; has no initializers
+</pre></div>
+</td></tr></table>
+
+<p>What's the problem? As long as we didn't add new variables we were using the Pet <code>init()</code> function. With the new variable we have to have our own now.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="nl">Dog</span><span class="p">:</span> <span class="n">Pet</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nl">breed</span><span class="p">:</span> <span class="n">String</span>
+
+    <span class="k">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">breed</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>Swift Compiler Error: Overriding declaration requires an &#39;override&#39; keyword
+</pre></div>
+</td></tr></table>
+
+<p>OK, there's still a problem. We are subclassing something that already has that function. This is the next concept in Object-Orientation, <strong>overriding</strong>.</p>
+
+<h3 id="override">Override</h3>
+
+<p>When a subclass has a function that's the same as one in its superclass we have to add some syntax. We need the <code>override</code> keyword.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="nl">Dog</span><span class="p">:</span> <span class="n">Pet</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nl">breed</span><span class="p">:</span> <span class="n">String</span>
+
+    <span class="kr">override</span> <span class="k">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">breed</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>There, that fixes the compiler error, are we done yet? Not quite.</p>
+
+<p><img class="img-border" src="images/bag09.png" alt="" width="600" /></p>
+
+<p>Hmm, that phrase &quot;instead of&quot; is a problem. Does that mean the variables in the superclass won't get initialized? Yes, and we need to fix that.</p>
+
+<p>A subclass can call methods in its superclass, we just have to use the <code>super</code> keyword. First, comment out the previous Dog class. </p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

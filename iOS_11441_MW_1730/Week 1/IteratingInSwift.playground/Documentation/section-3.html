@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Then change the <code>1...5</code> to <code>1..&lt;5</code>. What happened?</p>
+
+<h4 id="ranges">Ranges</h4>
+
+<ul>
+<li>Closed range operator: <span style="font-size:1.2em;"><strong><code>...</code></strong></span>
+
+<ul>
+<li><strong>Inclusive</strong> – The values on either end are included in the range.</li>
+</ul></li>
+<li>Half-open range operator: <span style="font-size:1.2em;"><strong><code>..&lt;</code></strong></span>
+
+<ul>
+<li><strong>Half-exclusive</strong> – The value on the left in included, the value on the right is excluded.</li>
+</ul></li>
+</ul>
+
+<h4 id="spanstylefont-size:1.2emfor-inspanwithnoindex"><span style="font-size:1.2em;"><code>for-in</code></span> With No <code>index</code></h4>
+
+<p>If you don't need the index value when you are looping there is no need to create it. We use and underscore <strong><code>_</code></strong> instead of an index.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mf">1.</span><span class="p">.</span><span class="mf">.5</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;In the loop doing something important!&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>As usual, try it!</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

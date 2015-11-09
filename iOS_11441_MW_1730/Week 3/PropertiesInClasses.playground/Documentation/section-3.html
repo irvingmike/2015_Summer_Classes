@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Here's the full class so far.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="n">Point</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nl">pointX</span><span class="p">:</span> <span class="n">Double</span>
+    <span class="k">var</span> <span class="nl">pointY</span><span class="p">:</span> <span class="n">Double</span>
+    <span class="k">var</span> <span class="nl">point</span><span class="p">:</span> <span class="p">(</span><span class="n">Double</span><span class="p">,</span> <span class="n">Double</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">get</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">pointX</span><span class="p">,</span> <span class="n">pointY</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="kr">set</span> <span class="p">{</span>
+            <span class="n">pointX</span> <span class="o">=</span> <span class="n">newValue</span><span class="mf">.0</span>
+            <span class="n">pointY</span> <span class="o">=</span> <span class="n">newValue</span><span class="mf">.1</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">pointX</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">pointY</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="p">}</span>
+
+    <span class="k">init</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="n">Double</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="n">Double</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">pointX</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">pointY</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now you can do this!</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">point1</span><span class="p">.</span><span class="n">point</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Point: x:\(point1.pointX), y:\(point1.pointY)&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>And get this output.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>Point: x:1.0, y:4.5
+</pre></div>
+</td></tr></table>
+
+<h4 id="read-onlycomputedproperties">Read-Only Computed Properties</h4>
+
+<p>If we want a read-only computer property we only make the get. Remember the <code>description()</code> functions we've been writing? Let's do that with a property. For this we just make the <code>get</code> portion of the code.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">var</span> <span class="nl">description</span><span class="p">:</span> <span class="n">String</span> <span class="p">{</span>
+        <span class="kr">get</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s">&quot;Point: x:\(pointX), y:\(pointY)&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Which lets us do this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">println</span><span class="p">(</span><span class="n">point1</span><span class="p">.</span><span class="n">description</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">point2</span><span class="p">.</span><span class="n">description</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Which gives us this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre>Point: x:10.0, y:20.0
+Point: x:100.0, y:150.0
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

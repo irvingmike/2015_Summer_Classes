@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h4 id="caseinsensitivecompare">Case Insensitive Compare</h4>
+
+<p>What if we don't care about the case of the strings we are comparing? One way to do this is to look at the companion class to Swift's String: <strong>NSString</strong>. This is the Objective-C class that can be used with String.</p>
+
+<p>Open the documentation window in Xcode and search for NSString. Let's review this together.</p>
+
+<hr />
+
+<p>OK, we're back. We found this Obj-C method which will work for us.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">caseInsensitiveCompare</span><span class="p">(</span><span class="nl">aString</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NSComparisonResult</span>
+</pre></div>
+</td></tr></table>
+
+<p>We understand that this will compare one string to another, but what is <code>NSComparisonResult</code>?</p>
+
+<p><strong>NSComparisonResult</strong> is an Obj-C <code>enum</code>. Here are the values in Swift.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">enum</span> <span class="nl">NSComparisonResult</span> <span class="p">:</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">OrderedAscending</span>
+    <span class="k">case</span> <span class="n">OrderedSame</span>
+    <span class="k">case</span> <span class="n">OrderedDescending</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>And here they are in Obj-C.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">enum</span> <span class="p">{</span>
+   <span class="n">NSOrderedAscending</span>  <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+   <span class="n">NSOrderedSame</span> <span class="p">,</span>
+   <span class="n">NSOrderedDescending</span> 
+<span class="p">};</span>
+<span class="k">typedef</span> <span class="bp">NSInteger</span>  <span class="n">NSComparisonResult</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>They are similar but not the same. In Swift we use it like this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">if</span> <span class="n">string1</span><span class="p">.</span><span class="n">caseInsensitiveCompare</span><span class="p">(</span><span class="n">string2</span><span class="p">)</span> <span class="o">==</span> <span class="n">NSComparisonResult</span><span class="p">.</span><span class="n">OrderedSame</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Equal for case insenitive&quot;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Not Equal for case insenitive&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>&nbsp;</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

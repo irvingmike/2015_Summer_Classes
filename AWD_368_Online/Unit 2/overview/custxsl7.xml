@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="cust07.xsl" ?>
+<customers>
+        <title>Customer Information</title>
+        <jscript>
+	<![CDATA[
+ 		function welcome()
+			{
+			 alert("Please check the elements shown in this XML document carefully");
+			}
+	  ]]>
+	</jscript>
+	<customer>
+            <number>09288</number>
+	    <name>
+		<lastname>Tyrebiter</lastname>
+    	        <firstname>George</firstname>
+                <middle_initial>L</middle_initial>
+            </name>
+            <address>
+                <street>123 Oak Street</street>
+                <apartment>Suite 16</apartment>
+                <city>Madison</city>
+                <state>WI</state>
+                <zip>43704</zip>
+                <country>United States</country>
+            </address>
+            <current_balance>123.45</current_balance>
+	</customer>
+	<customer>
+	    <number>15008</number>
+	    <name>
+		<lastname>Brown</lastname>
+		<firstname>Sally</firstname>
+		<middle_initial>S</middle_initial>
+	    </name>
+	    <address>
+		<street>123 Elm Street</street>
+		<apartment>Apt. 1</apartment>
+		<city>Madison</city>
+		<state>WI</state>
+		<zip>43704</zip>
+		<country>United States</country>
+	    </address>
+	    <current_balance>9,876.54</current_balance>
+	</customer>
+</customers>

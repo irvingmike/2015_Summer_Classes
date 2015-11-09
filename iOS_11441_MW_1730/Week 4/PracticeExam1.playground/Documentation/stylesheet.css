@@ -1,0 +1,117 @@
+html {
+  font-size: 120.0%;
+}
+
+body {
+  background-color: #f8f8f8;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.0em;
+  padding-left: 20px;
+  color: #000000;
+}
+
+h1,h2,h3,h4,h5,h6,p,pre { color: #000; }
+
+hr {
+  background-color: #ddd;
+  border: 0 none;
+  color: #eee;
+  height: 1px;
+}
+
+.imgwb {
+  border:1px solid black;
+}
+
+.jazz p {
+  padding-left:1em;
+}
+
+.jazz .spacer {
+  font-size:0.2em;
+  margin-top:-0.5em;
+  margin-bottom:-1.0em;
+}
+
+.jazz .logoimg {
+  margin-left:-1em; 
+  margin-top:-1em;
+}
+
+.jazz img {
+  margin-top:0.5em;
+}
+
+.jazz h2, h3, h4, h5 {
+  font-family: "Futura", sans-serif;
+}
+
+.jazz h3 {
+  border-bottom: 1px solid lightgray;
+  padding-top:5px;
+}
+
+section {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.jazz code {
+  color:#222;
+  padding:0.2em;
+  background-color:#e8e8e8;
+  font-family: Menlo,monospace;
+  font-size:0.8em;
+  word-wrap: break-word
+}
+
+.jazz a:visited {
+  font-family: "Futura", sans-serif;
+  color: #0000EA;
+}
+
+.jazz a:link {
+  font-family: "Futura", sans-serif;
+  color: #0000EA;
+}
+
+.jazz ul {
+  padding-left:3.0em;
+}
+
+.jazz ol {
+  padding-left:3.0em;
+}
+
+.jazz ul li {
+  padding-top:0.5em;
+}
+
+.jazz ol li {
+  padding-top:0.5em;
+}
+
+.codediv {
+  background-color: #ddd;
+  border:1px solid #bbb;
+  padding:8px;
+}
+
+blockquote {
+  font-size: 0.9em;
+  margin-left: 1.1em;
+  padding-left: 0.5em;
+  border-left: 8px solid #ccc;
+}
+
+.jazz table {
+  padding-left:1.0em;
+}
+
+td {
+  border:1px solid black;
+  background-color:#F0F0F0;
+  padding:5px;
+}
+

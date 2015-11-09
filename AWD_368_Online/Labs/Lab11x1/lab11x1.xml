@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--
+  Student Name: Aaron Anderson
+  LAB 11.1
+  Date: 07/21/2015
+  File Dependencies: lab11x1.css
+-->
+
+<!DOCTYPE items [
+
+    <!ELEMENT items (item+)>
+
+    <!ELEMENT item (description, country, sellingPrice, cost, quantityOnHand, backorderedAmount, dateLastReceived, quantitySoldYearToDate, warehouseSection, warehouseShelve, remarks, supplier+)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT country (#PCDATA)>
+    <!ELEMENT sellingPrice (#PCDATA)>
+    <!ELEMENT cost (#PCDATA)>
+    <!ELEMENT quantityOnHand (#PCDATA)>
+    <!ELEMENT backorderedAmount (#PCDATA)>
+
+    <!ELEMENT dateLastReceived (month, day, year)>
+    <!ELEMENT month (#PCDATA)>
+    <!ELEMENT day (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+
+    <!ELEMENT quantitySoldYearToDate (#PCDATA)>
+    <!ELEMENT warehouseSection (#PCDATA)>
+    <!ELEMENT warehouseShelve (#PCDATA)>
+    <!ELEMENT remarks (#PCDATA)>
+
+    <!ELEMENT supplier (number, shipmentLeadTime, cost)>
+    <!ELEMENT number (#PCDATA)>
+    <!ELEMENT shipmentLeadTime (#PCDATA)>
+
+    <!ATTLIST item itemNumber ID #REQUIRED>
+    <!ATTLIST sellingPrice saleItem (Y|N) #REQUIRED>
+    <!ATTLIST backorderedAmount dateOrdered CDATA #IMPLIED>
+    <!ATTLIST shipmentLeadTime unit (weeks|days) #REQUIRED>
+
+    <!ENTITY us "Made in the United States">
+    <!ENTITY ch "Made in China">
+    <!ENTITY in "Made in India">
+    <!ENTITY sa "Made in South Africa">
+    <!ENTITY jp "Made in Japan">
+    <!ENTITY bz "Made in Brazil">
+    <!ENTITY gr "Made in Germany">
+
+]>
+
+<?xml-stylesheet type="text/css" href="lab11x1.css"?>
+
+<items>
+    <item itemNumber="I0001">
+        <description>500Gb Portable Hard Drive</description>
+        <country>&us;</country>
+        <sellingPrice saleItem="N">$109.99</sellingPrice>
+        <cost>$79.99</cost>
+        <quantityOnHand>0</quantityOnHand>
+        <backorderedAmount dateOrdered="01022012">60</backorderedAmount>
+        <dateLastReceived>
+            <month>12</month>
+            <day>25</day>
+            <year>2011</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>520</quantitySoldYearToDate>
+        <warehouseSection>T67</warehouseSection>
+        <warehouseShelve>3</warehouseShelve>
+        <remarks><![CDATA[This item is sold "as is" with a limited 90-day warrenty. It is part of our "Scratch & Dent" sale.]]></remarks>
+        <supplier>
+            <number>2539</number>
+            <shipmentLeadTime unit="days">2</shipmentLeadTime>
+            <cost>$3.75</cost>
+        </supplier>
+        <supplier>
+            <number>1237</number>
+            <shipmentLeadTime unit="weeks">2</shipmentLeadTime>
+            <cost>$3.45</cost>
+        </supplier>
+    </item>
+
+    <item itemNumber="I0002">
+        <description>DVD-R spindle 50 count</description>
+        <country>&ch;</country>
+        <sellingPrice saleItem="Y">$19.99</sellingPrice>
+        <cost>$14.99</cost>
+        <quantityOnHand>51</quantityOnHand>
+        <backorderedAmount>0</backorderedAmount>
+        <dateLastReceived>
+            <month>09</month>
+            <day>19</day>
+            <year>2011</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>125</quantitySoldYearToDate>
+        <warehouseSection>T62</warehouseSection>
+        <warehouseShelve>5</warehouseShelve>
+        <remarks><![CDATA[Customers can view product information about this item at: http://www.trellisstructures.com?19234]]>
+        </remarks>
+        <supplier>
+            <number>8634</number>
+            <shipmentLeadTime unit="days">3</shipmentLeadTime>
+            <cost>$1.19</cost>
+        </supplier>
+        <supplier>
+            <number>5489</number>
+            <shipmentLeadTime unit="weeks">3</shipmentLeadTime>
+            <cost>$1.15</cost>
+        </supplier>
+    </item>
+
+    <item itemNumber="I0003">
+        <description>500Gb Portable Hard Drive</description>
+        <country>&jp;</country>
+        <sellingPrice saleItem="N">$109.99</sellingPrice>
+        <cost>$79.99</cost>
+        <quantityOnHand>35</quantityOnHand>
+        <backorderedAmount dateOrdered="01202012">10</backorderedAmount>
+        <dateLastReceived>
+            <month>12</month>
+            <day>29</day>
+            <year>2011</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>52</quantitySoldYearToDate>
+        <warehouseSection>T67</warehouseSection>
+        <warehouseShelve>3</warehouseShelve>
+        <remarks><![CDATA[This item is sold with a limited 90-day warrenty. Check the warranty included with the product.]]>
+        </remarks>
+        <supplier>
+            <number>2539</number>
+            <shipmentLeadTime unit="days">2</shipmentLeadTime>
+            <cost>$3.75</cost>
+        </supplier>
+        <supplier>
+            <number>1237</number>
+            <shipmentLeadTime unit="days">2</shipmentLeadTime>
+            <cost>$3.45</cost>
+        </supplier>
+    </item>
+
+    <item itemNumber="I004">
+        <description>DVD-R spindle 500 count</description>
+        <country>&ch;</country>
+        <sellingPrice saleItem="Y">$39.99</sellingPrice>
+        <cost>$16.99</cost>
+        <quantityOnHand>300</quantityOnHand>
+        <backorderedAmount dateOrdered="01222012">13</backorderedAmount>
+        <dateLastReceived>
+            <month>03</month>
+            <day>19</day>
+            <year>2012</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>25</quantitySoldYearToDate>
+        <warehouseSection>T62</warehouseSection>
+        <warehouseShelve>5</warehouseShelve>
+        <remarks><![CDATA[Customers can view product information about this item at: http://www.trellisstructures.com?19234]]>
+        </remarks>
+        <supplier>
+            <number>8635</number>
+            <shipmentLeadTime unit="days">3</shipmentLeadTime>
+            <cost>$12.19</cost>
+        </supplier>
+        <supplier>
+            <number>5490</number>
+            <shipmentLeadTime unit="weeks">1</shipmentLeadTime>
+            <cost>$12.15</cost>
+        </supplier>
+    </item>
+</items>

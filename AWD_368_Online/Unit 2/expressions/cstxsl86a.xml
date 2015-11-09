@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cust86a.xsl" ?>
+<customers>
+<customer>                                             
+     <number>06327</number>
+     <name>AMERICAN INDUSTRIES</name>
+     <address>
+          <street>1023 Fence Lane </street>
+          <city> Numis</city>
+          <state>NE</state>
+          <zip>68763</zip>
+     </address>
+     <telephone>2063514999 </telephone>
+     <lastPurchaseDate>1/1/2003</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>09288</number>
+     <name>GREAT BEAR CO.</name>
+     <address>
+          <street>Pier 36 </street>
+          <city>Seattle</city>
+          <state>WA</state>
+          <zip>98152</zip>
+     </address>
+     <telephone>2063514999 </telephone>
+     <lastPurchaseDate>10/1/1996</lastPurchaseDate>
+     <balance>946.35</balance>
+</customer>
+<customer>
+     <number>10243</number>
+     <name>NESBITT MFG.</name>
+     <address>
+          <street>2730 Belmount Drive</street>
+          <city>New Haven</city>
+          <state>CT</state>
+          <zip>06516</zip>
+     </address>
+     <telephone>0000000000 </telephone>
+     <lastPurchaseDate>9/18/2003 </lastPurchaseDate>
+     <balance>-100.00</balance>
+</customer>
+<customer>
+     <number>12345</number>
+     <name>IRISH IMPORTS</name>
+     <address>
+          <street>14 East 80th </street>
+          <city>New York</city>
+          <state>NY</state>
+          <zip>10092</zip>
+     </address>
+     <telephone>2123349487 </telephone>
+     <lastPurchaseDate>9/25/2003</lastPurchaseDate>
+     <balance>3935.25</balance>
+</customer>
+<customer>
+     <number>14672</number>
+     <name>ITC SHIPPING</name>
+     <address>
+          <street>1560 Marks Ave.</street>
+          <city>Bakersfield</city>
+          <state>CA</state>
+          <zip>93306</zip>
+     </address>
+     <telephone>8052638060 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>2270.25</balance>
+</customer>
+<customer>
+     <number>15008</number>
+     <name>ZUNI COOPERATIVE</name>
+     <address>
+          <street>237 Sunrise Ave.</street>
+          <city>Flagstaff</city>
+          <state>AZ</state>
+          <zip>86001</zip>
+     </address>
+     <telephone>6024971887 </telephone>
+     <lastPurchaseDate>9/23/2003</lastPurchaseDate>
+     <balance>-485.41</balance>
+</customer>
+<customer>
+     <number>16403</number>
+     <name>MAX ELECTRONICS</name>
+     <address>
+          <street>911 Fruit St.</street>
+          <city>Palo Alto</city>
+          <state>CA</state>
+          <zip>94306</zip>
+     </address>
+     <telephone>4154581364 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>-1546.15</balance>
+</customer>
+<customer>
+     <number>18325</number>
+     <name>WEST COMPANY</name>
+     <address>
+          <street>8677 Cotton Canyon </street>
+          <city>Provo</city>
+          <state>UT</state>
+          <zip>84118</zip>
+     </address>
+     <telephone>8018232287 </telephone>
+     <lastPurchaseDate>9/24/2003</lastPurchaseDate>
+     <balance>67.80</balance>
+</customer>
+<customer>
+     <number>19542</number>
+     <name>MOM'S PIE CO.</name>
+     <address>
+          <street>56 Cayton Rd.</street>
+          <city>Florence</city>
+          <state>NY</state>
+          <zip>41042</zip>
+     </address>
+     <telephone>0000000000 </telephone>
+     <lastPurchaseDate>11/04/2003</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>19592</number>
+     <name>WOOSTER FEED CO.</name>
+     <address>
+          <street>7 American Ave.</street>
+          <city>Clovis</city>
+          <state>CA</state>
+          <zip>93612</zip>
+     </address>
+     <telephone>0000000000 </telephone>
+     <lastPurchaseDate>10/2/1998</lastPurchaseDate>
+     <balance>871.79</balance>
+</customer>
+<customer>
+     <number>19631</number>
+     <name>SARA'S LOFT</name>
+     <address>
+          <street>1403 Skyline Dr.</street>
+          <city>Oakland</city>
+          <state>CA</state>
+          <zip>94611</zip>
+     </address>
+     <telephone>4158326211</telephone>
+     <lastPurchaseDate>10/2/1998</lastPurchaseDate>
+     <balance>1177.05</balance>
+</customer>
+<customer>
+     <number>19712</number>
+     <name>BRINJAL PICKLE</name>
+     <address>
+          <street>43 Mirabel Ave.</street>
+          <city>San Francisco</city>
+          <state>CA</state>
+          <zip>94142</zip>
+     </address>
+     <telephone>4153361114 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>301.70</balance>
+</customer>
+<customer>
+     <number>19844</number>
+     <name>DEWEY, CHEETUM &amp; HOWE LAW FIRM</name>
+     <address>
+          <street>99 Hellgate Way</street>
+          <city>Chicago</city>
+          <state>IL</state>
+          <zip>60642</zip>
+     </address>
+     <telephone>3122389963 </telephone>
+     <lastPurchaseDate>9/24/1998</lastPurchaseDate>
+     <balance>232.99</balance>
+</customer>
+<customer>
+     <number>22128</number>
+     <name>ANNA MAE COMICS</name>
+     <address>
+          <street>2850 Kesey Way</street>
+          <city>Coos Bay</city>
+          <state>OR</state>
+          <zip>97420</zip>
+     </address>
+     <telephone>5037359051 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>243.55</balance>
+</customer>
+<customer>
+     <number>24724</number>
+     <name>EAZYSOFT SERVICES</name>
+     <address>
+          <street>1326 Van Ness </street>
+          <city>Iowa City</city>
+          <state>IA</state>
+          <zip>52240</zip>
+     </address>
+     <telephone>3199643029 </telephone>
+     <lastPurchaseDate>9/24/2003</lastPurchaseDate>
+     <balance>501.00</balance>
+</customer>
+<customer>
+     <number>25259</number>
+     <name>AZURE ISLE RESORT</name>
+     <address>
+          <street>2941 Linden Ave.</street>
+          <city>Berkeley</city>
+          <state>CA</state>
+          <zip>94704</zip>
+     </address>
+     <telephone>4156840975 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>762.20</balance>
+</customer>
+<customer>
+     <number>26301</number>
+     <name>ZANTASTIC MUSIC</name>
+     <address>
+          <street>17643 Colfax </street>
+          <city>Denver</city>
+          <state>CO</state>
+          <zip>80228</zip>
+     </address>
+     <telephone>3037816113 </telephone>
+     <lastPurchaseDate>9/24/1998</lastPurchaseDate>
+     <balance>42.15</balance>
+</customer>
+<customer>
+     <number>27251</number>
+     <name>TRADERS, INC.</name>
+     <address>
+          <street>207 Aspen Lane </street>
+          <city>Taos</city>
+          <state>NM</state>
+          <zip>87571</zip>
+     </address>
+     <telephone>5053386864 </telephone>
+     <lastPurchaseDate>9/23/2003</lastPurchaseDate>
+     <balance>666.66</balance>
+</customer>
+<customer>
+     <number>28177</number>
+     <name>FRESNO FRUIT CO.</name>
+     <address>
+          <street>2432 Railroad Ave.</street>
+          <city>Fresno</city>
+          <state>CA</state>
+          <zip>93721</zip>
+     </address>
+     <telephone>2094234001</telephone>
+     <lastPurchaseDate>10/2/1997</lastPurchaseDate>
+     <balance>1783.17</balance>
+</customer>
+<customer>
+     <number>29718</number>
+     <name>AURORAL LIGHTING</name>
+     <address>
+          <street>1939 Schlitz Way</street>
+          <city>Milwaukee</city>
+          <state>WI</state>
+          <zip>53233</zip>
+     </address>
+     <telephone>4149626872</telephone>
+     <lastPurchaseDate>9/25/1998</lastPurchaseDate>
+     <balance>1417.41</balance>
+</customer>
+<customer>
+     <number>30309</number>
+     <name>MUSIC MACHINE ENTERTAINMENT</name>
+     <address>
+          <street>6 Beach St.</street>
+          <city>Carmel</city>
+          <state>CA</state>
+          <zip>93921</zip>
+     </address>
+     <telephone>0000000000 </telephone>
+     <lastPurchaseDate>4/15/2003</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+</customers>

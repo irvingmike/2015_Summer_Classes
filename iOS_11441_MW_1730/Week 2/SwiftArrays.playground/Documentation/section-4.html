@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Oh, we can also do this to get the last element of an array.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">last</span><span class="o">!</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>However...</p>
+
+<h4 id="makingemptyarraysinswift">Making Empty Arrays in Swift</h4>
+
+<p>We need the <strong><code>!</code></strong> after <code>last</code> because the array could be empty. In that case there is no last element. But, <code>names.last!</code> will fail if it's empty. We need an easy way to test if an array is not empty. </p>
+
+<ul>
+<li><code>names.isEmpty</code></li>
+</ul>
+
+<p>The <code>isEmpty</code> property is part of a Swift Array. However, Swift also lets us use the array that's written in Objective-C called <strong>NSArray</strong>. If we try to make an empty array like this it makes the wrong one.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// NSArray, not a Swift Array!</span>
+<span class="k">var</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</td></tr></table>
+
+<p>If we make one like this it makes a Swift Array</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Swift!</span>
+<span class="k">var</span> <span class="nl">names</span><span class="p">:</span> <span class="p">[</span><span class="n">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</td></tr></table>
+
+<p>Then we can test the array to make sure it's empty before we do anything with it.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">if</span> <span class="o">!</span><span class="n">names</span><span class="p">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">last</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;names is empty&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>What happened with the first empty array? Even Swift arrays have to have types. With <code>var names = []</code> there are no types. Swift just makes an array that doesn't have types, an <strong>NSArray</strong>.</p>
+
+<p>Create a Swift Array with a different name than <code>names</code>. Make is empty to start with and add the above <code>if</code> statement. Then add elements to see the output change. </p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

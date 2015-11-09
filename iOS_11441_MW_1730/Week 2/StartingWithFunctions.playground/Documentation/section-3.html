@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Every time we call it we get another <strong>Hello, World!</strong></p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="o">!</span>
+<span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="o">!</span>
+<span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="o">!</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="gettingsomethingback">Getting Something Back</h3>
+
+<p>Functions can send data back to us. We say that the functions <strong>returns</strong> a value. Here's how we do this in Swift.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">getHelloWorldGreeting</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s">&quot;Hello, World!&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="returntype">Return Type</h4>
+
+<p>Swift functions have the return syntax in a different place than most languages. It's at the end of the function declaration, not at the beginning. The syntax is called the return arrow. It's a dash and a greater-than character.</p>
+
+<ul>
+<li><span style="font-size:1.5em;"><strong><code>-&gt;</code></strong></span></li>
+</ul>
+
+<p><img class="img-border" src="images/functions03.png" alt="" width="924" /></p>
+
+<p>When we call a function that returns something we have to do something with the value it returns. We can store it in a variable or a constant.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">greeting</span> <span class="o">=</span> <span class="n">getHelloWorldGreeting</span><span class="p">()</span>
+<span class="n">println</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>We can output the results directly.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">println</span><span class="p">(</span><span class="n">getHelloWorldGreeting</span><span class="p">())</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="tryit">Try it!</h4>
+
+<p>Type the <code>getHelloWorldGreeting()</code> function below and call it a few times after the function declaration. Catch the returned data in a constant, a variable, and in a <code>println()</code>. </p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

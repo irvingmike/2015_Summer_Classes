@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<stylesheetinfo>
+	<category>NonXML</category>
+	<subcategory>FixedLengthText</subcategory>
+	<stylesheetname>FixedLengthTextToHTML</stylesheetname>
+	<heading>Transforming a fixed length text file to HTML</heading>
+	<description>This stylsheet demonstrates transforming a fixed length text file as an HTML table.  In this example we are using substring functions to  create an HTML document from a text file based on the start and end positions of the data.  Additionally, we are calling a template named TrimTrailing to remove any extra traling spaces from our table. </description>
+	<xslelements>
+		<xslelement elementname="xsl:template"/>
+		<xslelement elementname="xsl:for-each"/>
+		<xslelement elementname="xsl:param"/>
+		<xslelement elementname="xsl:call-template()"/>
+		<xslelement elementname="substring()"/>
+		<xslelement elementname="string-length()"/>
+		<xslelement elementname="xsl:variable"/>
+	</xslelements>
+	<creationdate>06/20/2001</creationdate>
+	<author>David Silverlight</author>
+	<emails>
+		<email>DSilverlight@Infoteria.com</email>
+		<email>HeadGeek@xmlpitstop.com</email>
+		<email>DavidSilverlight@hotmail.com</email>
+	</emails>
+</stylesheetinfo>

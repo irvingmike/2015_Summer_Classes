@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>What else can we override? Other functions besides initializers and computed properties. Let do that with a description property. Add this to the <strong>Pet</strong> class.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">var</span> <span class="nl">description</span><span class="p">:</span> <span class="n">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;name: \(name), weight: \(weight), height: \(height)&quot;</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Then add this to the <strong>Dog</strong> class.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="kr">override</span> <span class="k">var</span> <span class="nl">description</span><span class="p">:</span> <span class="n">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;Dog: \(super.description), breed: \(breed)&quot;</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Let's see this in action.</p>
+
+<p><img class="img-border" src="images/Mandy.jpeg" alt="" width="300" /></p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<p>Ah, so it's a <code>Double</code>. </p>
+
+<p><img class="img-border" src="images/types01.png" alt="" width="600" /></p>
+
+<p>What if you wanted it to be a <code>Float</code> for some reason? Are we out of luck? Nope. </p>
+
+<h3 id="typeannotation">Type Annotation</h3>
+
+<p>We can annotate a variable or constant by adding the type. We do it like this:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="nl">minimumHeightInMeters</span><span class="p">:</span> <span class="n">Float</span> <span class="o">=</span> <span class="mf">1.2192</span>
+<span class="k">let</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span> <span class="o">=</span> <span class="s">&quot;Fred Flintstone&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Type Annotations are not required. We use them when we need to for clarity or when we need things to be a certain type.</p>
+
+<h3 id="whatswiththis">What's with this?</h3>
+
+<p>We are used to declaring variables without giving them an initial value. That's normal and expected. Here's a sample in Java.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Java:</span>
+
+<span class="kd">private</span> <span class="kt">int</span> <span class="n">counter</span><span class="o">;</span>
+<span class="kd">private</span> <span class="n">String</span> <span class="n">firstName</span><span class="o">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>What happens when we try this with Swift? Well, just try it. Declare a variable with a <code>var</code> in this Swift block. Add a type annotattion and don't assign it a value. Then use <code>println()</code> to output it.</p>    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>The <code>println(jsonArray)</code> statement will output the contents of the array of dictionaries. Here's the beginning of the file.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre>(
+        {
+        cell = &quot;608-555-1234&quot;;
+        email = &quot;fred@sanders.com&quot;;
+        firstName = Fred;
+        lastName = Sanders;
+    },
+        {
+        cell = &quot;608-555-9999&quot;;
+        email = &quot;joe@email.com&quot;;
+        firstName = Joe;
+        lastName = Brown;
+    },
+    ...
+</pre></div>
+</td></tr></table>
+
+<p>Notice that it starts with a <strong><code>(</code></strong> not a <strong><code>[</code></strong>? This is a Swift array, not JSON at this point.</p>
+
+<h3 id="convertingjsondata">Converting JSON Data</h3>
+
+<p>What we really want is a Swift class that holds this data. Here's a nice one.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="nl">Contact</span><span class="p">:</span> <span class="n">Printable</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nl">firstName</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">lastName</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">email</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">cell</span><span class="p">:</span> <span class="n">String</span>
+
+    <span class="k">init</span><span class="p">(</span><span class="nl">contactDictionary</span><span class="p">:</span> <span class="bp">NSDictionary</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">firstName</span> <span class="o">=</span> <span class="p">(</span><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;firstName&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="kt">as</span> <span class="n">String</span>
+        <span class="n">lastName</span> <span class="o">=</span> <span class="p">(</span><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;lastName&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="kt">as</span> <span class="n">String</span>
+        <span class="n">email</span> <span class="o">=</span> <span class="p">(</span><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;email&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="kt">as</span> <span class="n">String</span>
+        <span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;cell&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="kt">as</span> <span class="n">String</span>
+    <span class="p">}</span>
+
+    <span class="k">var</span> <span class="nl">description</span><span class="p">:</span> <span class="n">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;\(firstName) \(lastName), \(email), \(cell)&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+
+<p>First, we create a class with all the fields in the JSON as Swift variables.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">var</span> <span class="nl">firstName</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">lastName</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">email</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">cell</span><span class="p">:</span> <span class="n">String</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+
+<p>The real heart of the this process is the initializer. It takes an <strong>NSDictionary</strong> as its input.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">init</span><span class="p">(</span><span class="nl">contactDictionary</span><span class="p">:</span> <span class="bp">NSDictionary</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">firstName</span> <span class="o">=</span> <span class="p">(</span><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;firstName&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="kt">as</span> <span class="n">String</span>
+        <span class="n">lastName</span> <span class="o">=</span> <span class="p">(</span><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;lastName&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="kt">as</span> <span class="n">String</span>
+        <span class="n">email</span> <span class="o">=</span> <span class="p">(</span><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;email&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="kt">as</span> <span class="n">String</span>
+        <span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;cell&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="kt">as</span> <span class="n">String</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>We access each element in the dictionary with code like this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;firstName&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>We have to do this because Swift doesn't know if there is a value for any given key. So it always returns an <strong>Optional</strong>. We use the <strong><code>??</code></strong> to check if there is a value. If not we'll get <strong>&quot;&quot;</strong>, and empty string. <strong>Safety first!</strong></p>
+
+<p>Because the <code>contactDictionary</code> is an <strong>NSDictionary</strong> we now need to cast it to a Swift string with <code>as String</code>. That gives us the full syntax.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="p">(</span><span class="n">contactDictionary</span><span class="p">[</span><span class="s">&quot;firstName&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="kt">as</span> <span class="n">String</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+
+<p>Here's a recap of the process.</p>
+
+<p><img class="imgwb" src="images/dictionary07.png" alt="" width="634" /></p>
+
+<hr />
+
+<p>Let's put that class to work.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

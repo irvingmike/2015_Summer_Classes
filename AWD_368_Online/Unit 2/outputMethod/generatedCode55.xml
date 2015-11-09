@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="cust55html.xsl"?>
+<itemsSold>
+<!--This document includes all items for each customer order-->
+   <orderItem orderItemId="I00012345928333">
+      <customerNumber>09288</customerNumber>
+      <orderNumber>0012345</orderNumber>
+      <itemNumber>928333</itemNumber>
+      <itemQuantity>12</itemQuantity>
+      <itemPrice>16.28</itemPrice>
+      <extendedAmount>195.36</extendedAmount>
+      <shippingUnit><![CDATA[Case]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012345893757">
+      <customerNumber>09288</customerNumber>
+      <orderNumber>0012345</orderNumber>
+      <itemNumber>893757</itemNumber>
+      <itemQuantity>144</itemQuantity>
+      <itemPrice>23.45</itemPrice>
+      <extendedAmount>3376.80</extendedAmount>
+      <shippingUnit><![CDATA[Piece]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012345948830">
+      <customerNumber>09288</customerNumber>
+      <orderNumber>0012345</orderNumber>
+      <itemNumber>948830</itemNumber>
+      <itemQuantity>20</itemQuantity>
+      <itemPrice>20.45</itemPrice>
+      <extendedAmount>409.00</extendedAmount>
+      <shippingUnit><![CDATA[Kilogram]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00023132019228">
+      <customerNumber>09288</customerNumber>
+      <orderNumber>0023132</orderNumber>
+      <itemNumber>019228</itemNumber>
+      <itemQuantity>200</itemQuantity>
+      <itemPrice>12.00</itemPrice>
+      <extendedAmount>2400.00</extendedAmount>
+      <shippingUnit><![CDATA[Piece]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00023132018277">
+      <customerNumber>09288</customerNumber>
+      <orderNumber>0023132</orderNumber>
+      <itemNumber>018277</itemNumber>
+      <itemQuantity>400</itemQuantity>
+      <itemPrice>9.50</itemPrice>
+      <extendedAmount>3800.00</extendedAmount>
+      <shippingUnit><![CDATA[Kilogram]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012346928333">
+      <customerNumber>09289</customerNumber>
+      <orderNumber>0012346</orderNumber>
+      <itemNumber>928333</itemNumber>
+      <itemQuantity>12</itemQuantity>
+      <itemPrice>16.28</itemPrice>
+      <extendedAmount>195.36</extendedAmount>
+      <shippingUnit><![CDATA[Case]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012346893757">
+      <customerNumber>09289</customerNumber>
+      <orderNumber>0012346</orderNumber>
+      <itemNumber>893757</itemNumber>
+      <itemQuantity>144</itemQuantity>
+      <itemPrice>12.22</itemPrice>
+      <extendedAmount>1759.68</extendedAmount>
+      <shippingUnit><![CDATA[Piece]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012346948830">
+      <customerNumber>09289</customerNumber>
+      <orderNumber>0012346</orderNumber>
+      <itemNumber>948830</itemNumber>
+      <itemQuantity>123</itemQuantity>
+      <itemPrice>20.45</itemPrice>
+      <extendedAmount>2515.35</extendedAmount>
+      <shippingUnit><![CDATA[Kilogram]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00045677019228">
+      <customerNumber>09289</customerNumber>
+      <orderNumber>0045677</orderNumber>
+      <itemNumber>019228</itemNumber>
+      <itemQuantity>200</itemQuantity>
+      <itemPrice>12.00</itemPrice>
+      <extendedAmount>2400.00</extendedAmount>
+      <shippingUnit><![CDATA[Piece]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00045677018277">
+      <customerNumber>09289</customerNumber>
+      <orderNumber>0045677</orderNumber>
+      <itemNumber>018277</itemNumber>
+      <itemQuantity>400</itemQuantity>
+      <itemPrice>9.50</itemPrice>
+      <extendedAmount>3800.00</extendedAmount>
+      <shippingUnit><![CDATA[Kilogram]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012347928333">
+      <customerNumber>09290</customerNumber>
+      <orderNumber>0012347</orderNumber>
+      <itemNumber>928333</itemNumber>
+      <itemQuantity>12</itemQuantity>
+      <itemPrice>16.28</itemPrice>
+      <extendedAmount>195.36</extendedAmount>
+      <shippingUnit><![CDATA[Case]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012347893757">
+      <customerNumber>09290</customerNumber>
+      <orderNumber>0012347</orderNumber>
+      <itemNumber>893757</itemNumber>
+      <itemQuantity>144</itemQuantity>
+      <itemPrice>122</itemPrice>
+      <extendedAmount>17568.00</extendedAmount>
+      <shippingUnit><![CDATA[Piece]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012347948830">
+      <customerNumber>09290</customerNumber>
+      <orderNumber>0012347</orderNumber>
+      <itemNumber>948830</itemNumber>
+      <itemQuantity>224</itemQuantity>
+      <itemPrice>20.45</itemPrice>
+      <extendedAmount>4580.80</extendedAmount>
+      <shippingUnit><![CDATA[Kilogram]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00033352019228">
+      <customerNumber>09290</customerNumber>
+      <orderNumber>0033352</orderNumber>
+      <itemNumber>019228</itemNumber>
+      <itemQuantity>200</itemQuantity>
+      <itemPrice>12.00</itemPrice>
+      <extendedAmount>2400.00</extendedAmount>
+      <shippingUnit><![CDATA[Piece]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00033352018277">
+      <customerNumber>09290</customerNumber>
+      <orderNumber>0033352</orderNumber>
+      <itemNumber>018277</itemNumber>
+      <itemQuantity>400</itemQuantity>
+      <itemPrice>9.50</itemPrice>
+      <extendedAmount>3800.00</extendedAmount>
+      <shippingUnit><![CDATA[Kilogram]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012348928333">
+      <customerNumber>09291</customerNumber>
+      <orderNumber>0012348</orderNumber>
+      <itemNumber>928333</itemNumber>
+      <itemQuantity>12</itemQuantity>
+      <itemPrice>16.28</itemPrice>
+      <extendedAmount>195.36</extendedAmount>
+      <shippingUnit><![CDATA[Case]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012348893757">
+      <customerNumber>09291</customerNumber>
+      <orderNumber>0012348</orderNumber>
+      <itemNumber>893757</itemNumber>
+      <itemQuantity>144</itemQuantity>
+      <itemPrice>123.45</itemPrice>
+      <extendedAmount>17776.80</extendedAmount>
+      <shippingUnit><![CDATA[Piece]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00012348948830">
+      <customerNumber>09291</customerNumber>
+      <orderNumber>0012348</orderNumber>
+      <itemNumber>948830</itemNumber>
+      <itemQuantity>222</itemQuantity>
+      <itemPrice>20.45</itemPrice>
+      <extendedAmount>4539.90</extendedAmount>
+      <shippingUnit><![CDATA[Kilogram]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00043107019228">
+      <customerNumber>09291</customerNumber>
+      <orderNumber>0043107</orderNumber>
+      <itemNumber>019228</itemNumber>
+      <itemQuantity>200</itemQuantity>
+      <itemPrice>12.00</itemPrice>
+      <extendedAmount>2400.00</extendedAmount>
+      <shippingUnit><![CDATA[Piece]]></shippingUnit>
+   </orderItem>
+   <orderItem orderItemId="I00043107018277">
+      <customerNumber>09291</customerNumber>
+      <orderNumber>0043107</orderNumber>
+      <itemNumber>018277</itemNumber>
+      <itemQuantity>400</itemQuantity>
+      <itemPrice>9.50</itemPrice>
+      <extendedAmount>3800.00</extendedAmount>
+      <shippingUnit><![CDATA[Kilogram]]></shippingUnit>
+   </orderItem>
+</itemsSold>

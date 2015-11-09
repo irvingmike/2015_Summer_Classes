@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h4 id="casting">Casting</h4>
+
+<blockquote>
+<p>Thinking of something as something else.</p>
+</blockquote>
+
+<p>We can use a Swift <strong>String</strong> almost anywhere that calls for an <strong>NSString</strong>. Almost.</p>
+
+<p>Here's an example where it won't work.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">stringLength</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="n">length</span> 
+</pre></div>
+</td></tr></table>
+
+<p>We get this error when we try that.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight" ><pre style="color: #FF0000;">&#39;String&#39; does not have a member named &#39;length&#39;
+</pre></div>
+</td></tr></table>
+
+<p>If we look at the <strong>Xcode</strong> documentation for NSString we see that <code>length</code> is indeed a property of the class and there is a Swift version of it.</p>
+
+<p><img class="imgwb" src="images/strings01.png" alt="" width="400" /></p>
+
+<p>What's going on? In this case a Swift String and an Objective-C NSString are not the same. It has to do with how Unicode is implemented. In this case we have to tell the compiler that it's OK to treat the String just like an NSString. We do this with a <strong>cast</strong>.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">stringLength</span> <span class="o">=</span> <span class="p">(</span><span class="n">sample</span> <span class="kt">as</span> <span class="bp">NSString</span><span class="p">).</span><span class="n">length</span>
+                 <span class="c1">//^^^^^^^^^^^^^^^^^^^^</span>
+                 <span class="c1">//     A Cast!</span>
+</pre></div>
+</td></tr></table>
+
+<p><img class="imgwb" src="images/strings02.png" alt="" width="700" /></p>
+
+<p>Notice that it says &quot;Treat this as one of these?&quot; This is not a conversion. It is telling the compiler that it is OK to use the Swift String as if it was an NSString in this situation.</p>    </section>
+  </div>
+</body>
+</html>

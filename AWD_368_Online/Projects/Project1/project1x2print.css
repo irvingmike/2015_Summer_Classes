@@ -1,0 +1,96 @@
+/*
+    Name: Aaron Anderson
+    Assignment:  Project 1
+    Date: 07/01/2015
+ */
+
+*  {
+    font-family: Times New Roman, Times, Serif;
+
+    display: block;
+}
+
+name *, applicationDate *, availableDate *, dateOfBirth *, addressCity, addressState, addressZip, motherName *, fatherName *, addressCitySchool, addressStateSchool, addressZipSchool  {
+    display: inline;
+}
+
+exchange  {
+    float: left;
+
+    width: 250px;
+    margin: 1em;
+
+    border: 2px solid #000000;
+}
+
+name  {
+    font-weight: 700;
+
+    text-align: center;
+
+    border-bottom: 2px solid #000000;
+}
+
+addressHome  {
+    width: 250px;
+    margin-bottom: .5em;
+    padding: .5em 0;
+}
+
+addressStreet  {
+    /* padding-top: .5em; */
+}
+
+telephone  {
+    padding-top: 1ex;
+}
+
+email  {
+    padding: 1ex 0;
+}
+
+applicationDate *, availableDate *, dateOfBirth *  {
+    font-style: italic;
+}
+
+gender  {
+    margin-bottom: .5em;
+}
+
+schoolName  {
+    padding-top: 1ex;
+
+    border-top: 2px dashed #000000;
+}
+
+addressStreetSchool  {
+    padding-top: .5ex;
+}
+
+yearInSchool {
+    margin: 1ex 0;
+}
+
+motherName  {
+    padding: 1ex 0;
+
+    border-top: 2px dashed #000000;
+}
+
+fatherName  {
+    padding: 1ex 0;
+
+    border-top: 2px dashed #000000;
+}
+
+emergencyTelephone  {
+    padding: 1ex 0;
+}
+
+essay  {
+    margin: 1ex 0;
+}
+
+exchange[classification="T"] motherName, exchange[classification="T"] fatherName {
+    display: none;
+}

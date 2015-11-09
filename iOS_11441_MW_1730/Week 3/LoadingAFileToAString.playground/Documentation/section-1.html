@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Open a terminal window and run this command.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>$ cd Documents/Shared\ Playground\ Data/
+</pre></div>
+</td></tr></table>
+
+<p>If you see this message then you don't have that directory. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>-bash: cd: Documents/Shared Playground Data/: No such file or directory
+</pre></div>
+</td></tr></table>
+
+<p>If you don't have that directory run this command. This will create a directory that Swift playgrounds can access. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>mkdir Documents/Shared\ Playground\ Data
+</pre></div>
+</td></tr></table>
+
+<p>Next, run this command.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>cp /usr/share/dict/propernames .
+</pre></div>
+</td></tr></table>
+
+<p>Now we have a nice file in our shared playground directory that we can use in this playground. </p>
+
+<p>We want to load that file into a string so we can use it. Here's how. (Change <code>user</code> to your account name.)</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">path</span> <span class="o">=</span> <span class="n">XCPSharedDataDirectoryPath</span><span class="p">.</span><span class="n">stringByAppendingPathComponent</span><span class="p">(</span><span class="s">&quot;propernames&quot;</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="n">namesFile</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span>
+    <span class="nl">contentsOfFile</span><span class="p">:</span> <span class="n">path</span><span class="p">,</span>
+    <span class="nl">encoding</span><span class="p">:</span> <span class="n">NSUTF8StringEncoding</span><span class="p">,</span>
+    <span class="nl">error</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span><span class="o">!</span>
+</pre></div>
+</td></tr></table>
+
+<p>Enter that here.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

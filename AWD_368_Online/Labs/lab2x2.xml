@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<!--
+    Name: Aaron Anderson
+    Assignment: Lab 2.2 - Creating and XML Document
+    Date: 06/16/2015
+-->
+
+<items>
+    <item itemNumber='ITM123456'>
+        <description>Waterproof tacos</description>
+        <sellingPrice saleItem='Y'>$19.95</sellingPrice>
+        <cost>$11.54</cost>
+        <quantityOnHand>42</quantityOnHand>
+        <backorderedAmount>0</backorderedAmount>
+        <dateLastReceived>
+            <month>01</month>
+            <day>01</day>
+            <year>2015</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>13</quantitySoldYearToDate>
+        <warehouseSection>D32</warehouseSection>
+        <warehouseShelf>A4</warehouseShelf>
+        <remarks>
+            <![CDATA[
+                This item is sold "as is" with a limited 90-day warranty. It
+                is part of our "Scratch & Dent" sale.
+            ]]>
+        </remarks>
+        <supplier>
+            <supplierNumber>SUP00789</supplierNumber>
+            <shipmentLeadTime unit='weeks'>1</shipmentLeadTime>
+            <supplierCost>$11.54</supplierCost>
+       </supplier>
+       <supplier>
+            <supplierNumber>SUP00258</supplierNumber>
+            <shipmentLeadTime unit='weeks'>2</shipmentLeadTime>
+            <supplierCost>12.38</supplierCost>
+       </supplier>
+   </item>
+   <item itemNumber='ITM951357'>
+        <description>Edible Socks</description>
+        <sellingPrice saleItem='N'>$7.95</sellingPrice>
+        <cost>$3.24</cost>
+        <quantityOnHand>19</quantityOnHand>
+        <backorderedAmount dateOrdered='09182009'>25</backorderedAmount>
+        <dateLastReceived>
+            <month>02</month>
+            <day>05</day>
+            <year>2015</year>
+        </dateLastReceived>
+        <quantitySoldYearToDate>172</quantitySoldYearToDate>
+        <warehouseSection>E11</warehouseSection>
+        <warehouseShelf>B5</warehouseShelf>
+        <remarks>
+            <![CDATA[
+                Customers can view product information about this item at:
+                http://www.trellisstructures.com?19234
+            ]]>
+        </remarks>
+        <supplier>
+            <supplierNumber>SUP00049</supplierNumber>
+            <shipmentLeadTime unti='days'>3</shipmentLeadTime>
+            <supplierCost>$4.24</supplierCost>
+       </supplier>
+       <supplier>
+            <supplierNumber>SUP00789</supplierNumber>
+            <shipmentLeadTime unit='weeks'>7 days</shipmentLeadTime>
+            <supplierCost>$3.24</supplierCost>
+       </supplier>
+   </item>
+</items>

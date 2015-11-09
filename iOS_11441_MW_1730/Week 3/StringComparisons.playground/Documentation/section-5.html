@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Now compare string5 to string3.</p>
+
+<h3 id="comparingpartsofstrings">Comparing Parts of Strings</h3>
+
+<p>What if we want to see if just the beginning part of a string is the same as another string? We use this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">hasPrefix</span><span class="p">(</span><span class="n">_</span> <span class="nl">aString</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span>
+</pre></div>
+</td></tr></table>
+
+<p>Let's make some new strings and see this function in use. It might be handy if they were in an array.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">firstNameArray</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Stephen&quot;</span><span class="p">,</span> <span class="s">&quot;Steven&quot;</span><span class="p">,</span> <span class="s">&quot;Stephanie&quot;</span><span class="p">,</span> <span class="s">&quot;Stacey&quot;</span><span class="p">,</span> <span class="s">&quot;Sandy&quot;</span><span class="p">,</span> <span class="s">&quot;Sam&quot;</span><span class="p">,</span> <span class="s">&quot;Sean&quot;</span><span class="p">,</span> <span class="s">&quot;Sergio&quot;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<p>Loop through the array and output the names that start with &quot;Ste&quot;. Then change it to the other prefixes.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

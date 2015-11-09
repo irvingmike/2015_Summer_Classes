@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!--
+	Name: Aaron Anderson
+	Lab information: Lab 2 Debug XML
+	Date: 06/15/2015
+-->
+
+<campuses>
+
+	<campus>
+		<campusName>Truax</campusName>
+		<address>
+			<street>1701 Wright St.</street>
+			<city>Madison</city>
+			<state>WI</state>
+			<zipCode>53704</zipCode>
+		</address>
+		<telephone>(608) 246-6100</telephone>
+		<url>http://madisoncollege.edu/truax-campus</url>
+	</campus>
+
+	<campus>
+		<campusName>Downtown</campusName>
+		<address>
+			<street>211 N. Carroll St.</street>
+			<city>Madison</city>
+			<state>WI</state>
+			<zipCode>53703</zipCode>
+		</address>
+		<telephone>(608) 258-2300</telephone>
+		<url>http://madisoncollege.edu/dtec</url>
+	</campus>
+
+	<campus>
+		<campusName>Fort Atkinson</campusName>
+		<address>
+			<street>827 Banker Rd.</street>
+			<city>Fort Atkinson</city>
+			<state>WI</state>
+			<zipCode>53538-1069</zipCode>
+		</address>
+		<telephone>(920) 568-7200</telephone>
+		<url>http://madisoncollege.edu/fort-atkinson-campus</url>
+	</campus>
+
+	<campus>
+		<campusName>Portage</campusName>
+		<address>
+			<street>330 West Collins St.</street>
+			<city>Portage</city>
+			<state>WI</state>
+			<zipCode>53901</zipCode>
+		</address>
+		<telephone>(608) 745-3100</telephone>
+		<url>http://madisoncollege.edu/portage-campus</url>
+	</campus>
+
+	<campus>
+		<campusName>Reedsburg</campusName>
+		<address>
+			<street>300 Alexander Ave.</street>
+			<city>Reedsburg</city>
+			<state>WI</state>
+			<zipCode>53959</zipCode>
+		</address>
+		<telephone>(608) 524-7800</telephone>
+		<url>http://madisoncollege.edu/reedsburg-campus</url>
+	</campus>
+
+	<campus>
+		<campusName>Watertown</campusName>
+		<address>
+			<street>1300 W. Main St.</street>
+			<city>Watertown</city>
+			<state>WI</state>
+			<zipCode>53098</zipCode>
+		</address>
+		<telephone>(920) 206-8000</telephone>
+		<url>http://madisoncollege.edu/watertown-campus</url>
+	</campus>
+
+</campuses>

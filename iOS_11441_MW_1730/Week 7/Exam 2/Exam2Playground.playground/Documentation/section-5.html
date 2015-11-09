@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p><strong>5.</strong> Assume that a class has the following function. (2 points)</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">functionTwo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>How would this function be overridden in a subclass? Which of these options is the correct way?</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>&nbsp;
+1
+&nbsp;</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="kr">override</span> <span class="n">functionTwo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>&nbsp;
+2
+&nbsp;</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">functionTwo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>&nbsp;
+3
+&nbsp;</pre></div></td><td class="code"><div class="highlight"><pre><span class="kr">override</span> <span class="k">func</span> <span class="n">functionTwo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>&nbsp;
+4
+&nbsp;</pre></div></td><td class="code"><div class="highlight"><pre><span class="nb">super</span> <span class="k">func</span> <span class="n">functionTwo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>    </section>
+  </div>
+</body>
+</html>

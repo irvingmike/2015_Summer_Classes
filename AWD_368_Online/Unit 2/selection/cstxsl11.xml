@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="cust11.xsl" ?>
+<customers>
+        <title>Customer Information</title>
+	<customer>
+            <number>09288</number>
+	    <name type="individual">
+		<lastname prefix="Mr.">Tyrebiter</lastname>
+    	        <firstname>George</firstname>
+                <middle_initial>L</middle_initial>
+            </name>
+            <address>
+                <street>123 Oak Street</street>
+                <apartment>Suite 16</apartment>
+                <city>Madison</city>
+                <state>WI</state>
+                <zip>43704</zip>
+                <country>United States</country>
+            </address>
+            <current_balance>123.45</current_balance>
+	</customer>
+	<customer>
+	    <number>15008</number>
+	    <name type="individual">
+		<lastname prefix="Ms.">Brown</lastname>
+		<firstname>Sally</firstname>
+		<middle_initial>S</middle_initial>
+	    </name>
+	    <address>
+		<street>123 Elm Street</street>
+		<apartment>Apt. 1</apartment>
+		<city>Madison</city>
+		<state>WI</state>
+		<zip>43704</zip>
+		<country>United States</country>
+	    </address>
+	    <current_balance>9,876.54</current_balance>
+	</customer>
+	<customer>
+            <number>16020</number>
+	    <name type="individual">
+		<lastname prefix="Mr.">Porter</lastname>
+    	        <firstname>Harry</firstname>
+                <middle_initial>W</middle_initial>
+            </name>
+            <address>
+                <street>7722 First Street</street>
+                <apartment></apartment>
+                <city>Madison</city>
+                <state>WI</state>
+                <zip>43704</zip>
+                <country>United States</country>
+            </address>
+            <current_balance>1,234.56</current_balance>
+	</customer>
+	<customer>
+	    <number>15008</number>
+	    <name type="individual">
+		<lastname prefix="Ms.">Abe</lastname>
+		<firstname>Miaka</firstname>
+		<middle_initial></middle_initial>
+	    </name>
+	    <address>
+		<street>1396 Gohan Avenue</street>
+		<apartment>Apt. 21</apartment>
+		<city>Niigata</city>
+		<state>Niigata</state>
+		<zip>0298483</zip>
+		<country>Japan</country>
+	    </address>
+	    <current_balance>246.00</current_balance>
+	</customer>
+</customers>

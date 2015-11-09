@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>We frequently need to break a string up into pieces. There is an easy way to do this in Swift. We use an Objective-C function. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">componentsSeparatedByString</span><span class="p">(</span><span class="n">_</span> <span class="nl">separator</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">AnyObject</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<p>Here's an example. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">sample</span> <span class="o">=</span> <span class="s">&quot;We frequently need to break a string up into pieces. There is an easy way to do this in Swift. We use an Objective-C function.&quot;</span>
+
+<span class="k">let</span> <span class="n">wordArray</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="n">componentsSeparatedByString</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Enter that here.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

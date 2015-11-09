@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<p>It reads well now, &quot;Say greeting to person, 'Fred' with greeting, 'Howdy'.&quot;</p>
+
+<h4 id="example">Example</h4>
+
+<p>Here's an example from the book which really illustrates how this works. This is a function with very vague parameter names.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">join</span><span class="p">(</span><span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">joiner</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">s1</span> <span class="o">+</span> <span class="n">joiner</span> <span class="o">+</span> <span class="n">s2</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>When that function gets called it looks like this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Clear, eh?</span>
+
+<span class="n">join</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">,</span> <span class="s">&quot;world&quot;</span><span class="p">,</span> <span class="s">&quot;, &quot;</span><span class="p">)</span>
+
+<span class="c1">// return &quot;hello, world&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>We're developers, we've written code like this. We can read it, after a few seconds. With a little extra effort we can do better.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// better!</span>
+<span class="k">func</span> <span class="n">join</span><span class="p">(</span><span class="n">string</span> <span class="nl">s1</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">toString</span> <span class="nl">s2</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">withJoiner</span> <span class="nl">joiner</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">s1</span> <span class="o">+</span> <span class="n">joiner</span> <span class="o">+</span> <span class="n">s2</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Why is it better? This is why.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Yes, better.</span>
+
+<span class="n">join</span><span class="p">(</span><span class="nl">string</span><span class="p">:</span> <span class="s">&quot;hello&quot;</span><span class="p">,</span> <span class="nl">toString</span><span class="p">:</span> <span class="s">&quot;world&quot;</span><span class="p">,</span> <span class="nl">withJoiner</span><span class="p">:</span> <span class="s">&quot;, &quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><strong>Join string, &quot;hello&quot; to string, &quot;world&quot; with joiner, &quot;, &quot;.</strong> (Nice. A real sentence.)</li>
+</ul>
+
+<p>Now you try it. Make a function with a few parameters. Give them nice programmer-like internal names and very clear external names. Have it return something like a <code>String</code>. Then call the function a few times to verify that it reads well. Stumped for ideas? Well, how about something with pets or bikes or something boring like students and courses. Anything will do as long as the call to the function reads like a true sentence.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

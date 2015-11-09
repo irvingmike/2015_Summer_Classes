@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!--
+    This document contains data on Jazz Warehouse special offers.
+    Author: Aaron Anderson
+    Date: 6/15/2015
+    Description: Jazz.xml Tutorial 1 practice
+-->
+
+<?xml-stylesheet tyoe="text/css" href="jw.css" ?>
+
+<items>
+    <message>
+        <![CDATA[
+            Here are some of the specials from the Jazz Warehouse. Please note that all Miles Davis & John Coltrane CDs will be on sale for the month of March.
+        ]]>
+    </message>
+    <item>
+        <title>Kind of Blue</title>
+        <priceus>US: $11.99</priceus>
+        <priceuk>UK: &#x00A3;8.39</priceuk>
+        <artist>Miles Davis</artist>
+        <tracks>
+            <track length="9:22">So What</track>
+            <track length="9:46">Freddie Freeloader</track>
+            <track length="5:37">Blue Green</track>
+            <track length="11:33">All Blues</track>
+            <track length="9:26">Flamenco Sketches</track>
+        </tracks>
+    </item>
+
+    <item>
+        <title>Cookin'</title>
+        <priceus>US: $7.99</priceus>
+        <priceuk>UK: &#163;5.59</priceuk>
+        <artist>Miles Davis</artist>
+        <tracks>
+            <track length="5:57">My Funny Valentine</track>
+            <track length="9:53">Blues by Five</track>
+            <track length="4:22">Airegin</track>
+            <track length="13:03">Tune-Up</track>
+        </tracks>
+    </item>
+
+    <item>
+        <title>Blue Train</title>
+        <priceus>US: $8.99</priceus>
+        <priceuk>UK: &#163;6.29</priceuk>
+        <artist>John Coltrain</artist>
+        <tracks>
+            <track length="10:39">Blue Train</track>
+            <track length="9:06">Moment's Notice</track>
+            <track length="7:11">Locomotion</track>
+            <track length="7:55">I'm Old Fashioned</track>
+            <track length="7:03">Lazy Bird</track>
+        </tracks>
+    </item>
+    <answers>
+        <answer>1) &#x13A0;</answer>
+        <answer>2) &#x2713;</answer>
+        <answer>3) http://www.unicode.org/charts/PDF/U2600.pdf</answer>
+        <answer>4) Geometric Shapes, 25A0 - 25FF</answer>
+        <answer>5) &#x00A1; &#x00BF;    </answer>
+    </answers>
+</items>
+
+

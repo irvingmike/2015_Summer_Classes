@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>To write this to a file we use an Objective-C function in the <strong>NSString</strong> class. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">writeToFile</span><span class="p">(</span><span class="n">_</span> <span class="nl">path</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+    <span class="n">atomically</span> <span class="nl">useAuxiliaryFile</span><span class="p">:</span> <span class="n">Bool</span><span class="p">,</span>
+    <span class="n">encoding</span> <span class="nl">enc</span><span class="p">:</span> <span class="n">UInt</span><span class="p">,</span>
+    <span class="n">error</span> <span class="nl">error</span><span class="p">:</span> <span class="n">NSErrorPointer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span>
+</pre></div>
+</td></tr></table>
+
+<p>To write the above string we will do this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">path</span> <span class="o">=</span> <span class="n">XCPSharedDataDirectoryPath</span><span class="p">.</span><span class="n">stringByAppendingPathComponent</span><span class="p">(</span><span class="s">&quot;HuckStart.txt&quot;</span><span class="p">)</span>
+
+<span class="n">myString</span><span class="p">.</span><span class="n">writeToFile</span><span class="p">(</span><span class="n">path</span><span class="p">,</span>
+    <span class="nl">atomically</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span>
+    <span class="nl">encoding</span><span class="p">:</span> <span class="n">NSUTF8StringEncoding</span><span class="p">,</span>
+    <span class="nl">error</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

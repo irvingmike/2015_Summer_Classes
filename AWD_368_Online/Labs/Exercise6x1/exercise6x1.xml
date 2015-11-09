@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Student Name: Aaron Anderson -->
+<!-- EXERCISE 6.1                 -->
+<?xml-stylesheet type="text/xsl" href="exercise6x1.xsl" ?>
+<movies>
+	<movie>
+	   <rating>R</rating>
+	   <title type="D">The Godfather</title>
+	   <director>
+		  <last>Coppola</last>
+		  <first>Francis</first>
+		  <middle>Ford</middle>
+	   </director>
+	   <releaseDate>
+		  <month>3</month>
+		  <day>24</day>
+		  <year>1972</year>
+	   </releaseDate>
+	   <genres>
+		   <genre>crime</genre>
+		   <genre>drama</genre>
+	   </genres>
+	</movie>
+
+	<movie>
+	   <rating>PG</rating>
+	   <title type="B">Megamind</title>
+	   <director>
+		  <last>McGrath</last>
+		  <first>Tom</first>
+		  <middle></middle>
+	   </director>
+	   <releaseDate>
+		  <month>11</month>
+		  <day>5</day>
+		  <year>2010</year>
+	   </releaseDate>
+	   <genres>
+		   <genre>animation</genre>
+		   <genre>action</genre>
+		   <genre>comedy</genre>
+	   </genres>
+	</movie>
+
+	<movie>
+	   <rating>PG-13</rating>
+	   <title type="D">Ocean's Thirteen</title>
+	   <director>
+		  <last>Soderbergh</last>
+		  <first>Steven</first>
+		  <middle></middle>
+	   </director>
+	   <releaseDate>
+		  <month>6</month>
+		  <day>8</day>
+		  <year>2007</year>
+	   </releaseDate>
+	   <genres>
+		   <genre>crime</genre>
+		   <genre>thriller</genre>
+	   </genres>
+	</movie>
+
+	<movie>
+	   <rating>PG</rating>
+	   <title type="V">Night at the Museum</title>
+	   <director>
+		  <last>Levy</last>
+		  <first>Shawn</first>
+		  <middle></middle>
+	   </director>
+	   <releaseDate>
+		  <month>12</month>
+		  <day>22</day>
+		  <year>2006</year>
+	   </releaseDate>
+	   <genres>
+		   <genre>action</genre>
+		   <genre>adventure</genre>
+		   <genre>comedy</genre>
+	   </genres>
+	</movie>
+</movies>

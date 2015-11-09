@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h4 id="inferredtypesandshorthandargumentnames">Inferred Types and Shorthand Argument Names</h4>
+
+<p>The next step is a little tricky. Swift is really good at inferring the types of things. The sort function requires two parameters that are the same type. It also requires a <code>Bool</code> return type. Because of this, you can skip writing this part of the closure:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="p">(</span><span class="nl">student1</span><span class="p">:</span> <span class="n">Student</span><span class="p">,</span> <span class="nl">student2</span><span class="p">:</span> <span class="n">Student</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Bool</span> <span class="k">in</span>
+</pre></div>
+</td></tr></table>
+
+<p>That would leave us with this:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Won&#39;t Compile!</span>
+<span class="n">students</span><span class="p">.</span><span class="n">sort</span><span class="p">(){</span>
+    <span class="k">let</span> <span class="n">lastFirst1</span> <span class="o">=</span> <span class="s">&quot;\(student1.lastName)\(student1.firstName)&quot;</span>
+    <span class="k">let</span> <span class="n">lastFirst2</span> <span class="o">=</span> <span class="s">&quot;\(student2.lastName)\(student2.firstName)&quot;</span>
+    <span class="k">return</span> <span class="n">lastFirst1</span> <span class="o">&lt;</span> <span class="n">lastFirst2</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>This won't compile because we don't have the <code>student1</code> and <code>student2</code> parameters. Swift solves this with <strong>Shorthand Argument Names</strong>. In a closure that infers the types we can use <code>$0</code> and <code>$1</code> as the parameter names. That will give us this, which will compile.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

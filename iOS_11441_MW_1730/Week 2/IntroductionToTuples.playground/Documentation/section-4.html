@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Ok, that makes sense. The <code>println()</code> is showing us the whole tuple. What if we want the <strong><code>12</code></strong> or the <strong><code>87</code></strong> as individual numbers?</p>
+
+<p>That's where the hint in this image comes in.</p>
+
+<p><img class="imgwb" src="images/tuples03.png" alt="" width="286" /></p>
+
+<p>Here's what to do.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">println</span><span class="p">(</span><span class="s">&quot;First value:  \(aTuple.0)&quot;</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Second value: \(aTuple.1)&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>The <strong><code>.0</code></strong> and the <strong><code>.1</code></strong> are automatic constants that Swift creates for us. That's handy.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

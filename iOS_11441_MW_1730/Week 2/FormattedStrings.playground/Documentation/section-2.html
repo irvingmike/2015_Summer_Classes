@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>There it is, in all its 14-decimal-place glory.</p>
+
+<p><code>The value of Pi is 3.14159265358979</code></p>
+
+<p>What if we want to display it like this, with only a few decimal places? And let's round to the nearest value we're showing.</p>
+
+<p><code>The value of Pi is 3.142</code></p>
+
+<p>String interpolation does not help us here. We need to use string formatting instead. How to do this can be quite different in different languages. Here's how Swift does it. We'll start with an example.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">formattedString</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="nl">format</span><span class="p">:</span> <span class="s">&quot;The value of Pi is %f&quot;</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">formattedString</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="formatcodes">Format Codes</h4>
+
+<p><img class="img-border" src="images/format01.png" alt="" width="806" /></p>
+
+<p>The different between <code>%f</code> and <code>\( )</code> is that a format code can be configured to display how we want it to. Also, there are different codes for different data types. Here are some common ones.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Code</th>
+	<th style="text-align:left;">Type</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>%d</code></td>
+	<td style="text-align:left;"><code>Int</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>%f</code></td>
+	<td style="text-align:left;"><code>Float</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>%s</code></td>
+	<td style="text-align:left;"><code>String</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>%u</code></td>
+	<td style="text-align:left;"><code>unsigned</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>%c</code></td>
+	<td style="text-align:left;"><code>char</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>To see more of them open a browser window and search the internet for &quot;printf format codes&quot;. The <code>printf</code> is from C and so are the format codes. This search will result in lots of sites with more information.</p>
+
+<hr />
+
+<p>Another great feature of format codes is being able to specify how things are formatted. In our example with Pi we just need to do this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">formattedString</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="nl">format</span><span class="p">:</span> <span class="s">&quot;The value of Pi is %.3f&quot;</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="n">formattedString</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Try it!</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

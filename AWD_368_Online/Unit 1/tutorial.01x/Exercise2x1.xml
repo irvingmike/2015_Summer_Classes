@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+
+<!--
+    Name: Aaron Anderson
+    Assignment: Exercise 2.1
+    Date: 06/16/2015
+-->
+
+<!--
+    This document contains data on SJB Pet Boutique holiday specials
+-->
+
+<products>
+    <message>
+        <![CDATA[
+            At SJB Pet Boutique we are constantly striving to give our
+            customers (and their humans) the highest quality products at a
+            very competitive price. Welcome in the holidays' festivities by
+            coming in to SJB Pet Boutique for your holiday accessories.
+            Something for you & something for your human. Don't forget to get
+            your SJBTracks stamps for even more di$count$!!
+        ]]>
+    </message>
+    <product>
+        <description>Dog Shirt Gift Basket</description>
+        <price currency='USD'>$35.99</price>
+        <price currency='EUR'>&#8364;26.79</price>
+        <manufacturer>SJB Pet Boutique</manufacturer>
+        <items>
+            <item color='black'>Meltdown Monday And?!</item>
+            <item color='yellow'>Terrible Tuesday. Who moved the fire hydrant?</item>
+            <item color='blue'>Wacky Wednesday. Watch out for the crazy crivers!</item>
+            <item color='green'>Thirsty Thursday. Where is the lake?</item>
+            <item color='red'>Fun Friday. Can we go to the park?</item>
+            <item color='purple'>Sassy Saturday. Can we just not walk?</item>
+            <item color='white'>Solemn Sunday. Relax.</item>
+        </items>
+    </product>
+    <product>
+        <description>Cat Curiosity Basket</description>
+        <price currency='USD'>$15.99</price>
+        <price currency='EUR'>&#8364;11.90</price>
+        <manufacturer>SJB Pet Boutique</manufacturer>
+        <items>
+            <item color='yellow'>Feather Stick</item>
+            <item color='yellow'>Catnip</item>
+            <item  color='blue'>Sparkle Ball</item>
+        </items>
+    </product>
+    <product>
+        <description>Piggy Snuggle Basket</description>
+        <price currency='USD'>$17.50</price>
+        <price currency='EUR'>&#8364;13.03</price>
+        <manufacturer>ACME</manufacturer>
+        <items>
+            <item color='black'>Blanket</item>
+            <item color='black'>Slippers</item>
+        </items>
+    </product>
+    <product>
+        <description>Dog Snuggle Basket</description>
+        <price currency='USD'>$14.25</price>
+        <price currency='EUR'>&#8364;10.61</price>
+        <manufacturer>ACME</manufacturer>
+        <items>
+            <item color='green'>Blanket</item>
+            <item color='green'>Slippers</item>
+            <item color='gold'>Night Cap</item>
+        </items>
+    </product>
+</products>

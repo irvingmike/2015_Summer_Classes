@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h4 id="stringsandnumbers">Strings and Numbers</h4>
+
+<p>Frequently, we want to make a string that contains text and a number. </p>
+
+<p><code>The temperature is 85 degrees.</code></p>
+
+<p>What if the <code>85</code> is in a variable and we need to concatenation it to the text? Our first guess might be to do this:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Bad Code!</span>
+<span class="k">var</span> <span class="n">temperature</span> <span class="o">=</span> <span class="mi">85</span>
+<span class="k">var</span> <span class="n">currentTemperature</span> <span class="o">=</span> <span class="s">&quot;The temperature is &quot;</span> <span class="o">+</span> <span class="n">temperature</span> <span class="o">+</span> <span class="s">&quot; degrees.&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>However, we will immediately see something to the left of the line:</p>
+
+<p><img class="imgwb" src="images/lab1_3.png" alt="" width="666" /></p>
+
+<p>This means the line has an error. We can see what the error is by clicking on the little red icon.</p>
+
+<p><img class="imgwb" src="images/lab1_3_2.png" alt="" width="739" /></p>
+
+<p>In this case the error is telling us that we can't concatenate strings and numbers. Since that is something we need to do often there must be another way. In Swift this is called <strong>String Interpolation</strong>. </p>
+
+<hr />
+
+<h3 id="stringinterpolation">String Interpolation</h3>
+
+<p>The <strong>+</strong> operator only works on strings. We need to be able to create a string with other types, too. You've probably seen that in other languages. Here's how Swift does it. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">temperature</span> <span class="o">=</span> <span class="mi">85</span>
+<span class="k">var</span> <span class="n">currentTemperature</span> <span class="o">=</span> <span class="s">&quot;The temperature is</span> <span class="n">\(temperature)</span> <span class="s">degrees.&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>We first make a string with a set of double quotes. Then add a back-slash and a set of parenthesis. </p>
+
+<ul>
+<li>&quot;<strong><code>text can be on \(&lt;data or variables here&gt;) either side</code></strong>&quot;</li>
+</ul>
+
+<p>Inside the parenthesis we can put variables, constants, data, even calculations. Here are some examples.</p>
+
+<h4 id="examplewithanintconstant.">Example with an Int constant.</h4>    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>As you can see over to the right, you have the whole file in that string. Now what?</p>
+
+<p>We get a big string from somewhere and break it up into smaller pieces over and over in programming. We already saw how to break that string in a previous playground. That file has each word on its own line which means they are separated by a newline character <strong><code>\n</code></strong>. Let's do this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">names</span> <span class="o">=</span> <span class="n">namesFile</span><span class="p">.</span><span class="n">componentsSeparatedByCharactersInSet</span><span class="p">(</span><span class="bp">NSCharacterSet</span><span class="p">.</span><span class="n">newlineCharacterSet</span><span class="p">())</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

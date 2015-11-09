@@ -1,0 +1,53 @@
+/*
+    Name: Aaron Anderson
+    Assignment:  Lab 3.1 - XML and CSS
+    Date: 06/26/2015
+ */
+
+* {
+    display: block;
+}
+
+items {
+    color: navy;
+    font-family: Arial, sans-serif;
+}
+
+item {
+    border: 2px solid red;
+    width: 15em;
+    min-height: 30em;
+    margin: 1em;
+    float: left;
+    padding: 1em;
+}
+
+description {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+remarks {
+    color: black;
+}
+
+supplier {
+    color: green;
+    margin-left: 2em;
+    padding-top: 1em;
+}
+
+backorderedAmount[dateOrdered] {
+    color: red;
+    font-weight: 600;
+}
+
+shipmentLeadTime[unit="days"] {
+    color: purple;
+    font-weight: 600;
+}
+
+shipmentLeadTime[unit="weeks"] {
+    color: pink;
+    font-weight: 600;
+}

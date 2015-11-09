@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<p>Swift is not happy about that and won't compile. <strong>This is good.®</strong> </p>
+
+<p>Swift variables and constants can't be nil (or null from other languages). This has some serious benefits for modern programming. For one, this allows the compiler to apply some serious optimizations. Swift code has very high performance. It also eliminates a whole category of errors. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="nl">lastName</span><span class="p">:</span> <span class="n">String</span>
+<span class="n">println</span><span class="p">(</span><span class="n">lastName</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>We get a very good message for this error.</p>
+
+<p><strong>Swift Compiler Error:</strong> <span style="font-family:Menlo;background-color:#FFAC99; padding:0.2em;">Variable 'lastName' used before being initialized</span></p>
+
+<p>I can hear the questions.</p>
+
+<blockquote>
+<p><em>So, what if we don't know what the initial value is supposed to be? What if we get a value back from somewhere and don't know if it is <code>nil</code>?</em> </p>
+</blockquote>
+
+<p>That is dealt with in Swift with a new concept called <strong>Optionals</strong>. It's a big topic and there will be many lectures, playgrounds, and projects covering them. For now just ponder. <span style="font-size:0.6em;color:gray;">(And maybe go read about them.)</span></p>
+
+<h2 id="numbersinswift">Numbers in Swift</h2>
+
+<p>Swift has numbers that represent integer values and floating point numbers.</p>
+
+<h3 id="integers">Integers</h3>
+
+<p>Integers in Swift come in sizes that are 8, 16, 32, and 64 bits. Most of the time we don't need to think about this and can use the simple form. </p>
+
+<ul>
+<li>Signed integers
+
+<ul>
+<li><code>Int</code> – This is the form to use most of the time and its size will vary depending on the OS.</li>
+<li><code>Int8</code></li>
+<li><code>Int16</code></li>
+<li><code>Int32</code></li>
+<li><code>Int64</code></li>
+</ul></li>
+<li>Unsigned integers – We will want to default to using an <code>Int</code> instead of these.
+
+<ul>
+<li><code>UInt</code></li>
+<li><code>UInt8</code></li>
+<li><code>UInt16</code></li>
+<li><code>UInt32</code></li>
+<li><code>UInt64</code></li>
+</ul></li>
+</ul>
+
+<p>We can determine the maximum and minimum values of each of these with the <code>.min</code> and <code>.max</code> properties.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">println</span><span class="p">(</span><span class="s">&quot;Minimum of an Int is</span> <span class="n">\(Int.min)</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Maximum of an Int is</span> <span class="n">\(Int.max)</span><span class="s">&quot;</span><span class="p">)</span>
+
+<span class="cm">/*</span>
+<span class="cm">Minimum of an Int is -9223372036854775808</span>
+<span class="cm">Maximum of an Int is 9223372036854775807</span>
+<span class="cm">*/</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="lab3">Lab 3</h4>
+
+<p>Use the <code>.min</code> and <code>.max</code> properties to output all the minimum and maximum values of the Integer types.</p>    </section>
+  </div>
+</body>
+</html>

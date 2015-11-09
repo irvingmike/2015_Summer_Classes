@@ -1,0 +1,326 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="cust82a.xsl" ?>
+<!DOCTYPE customers [
+<!ELEMENT customers (customer)+>
+<!ELEMENT customer         (name, address, created_date, purchase_date, payment_date, current_balance, order*)>
+<!ATTLIST customer NUMBER ID #REQUIRED>
+<!ELEMENT name             (lastname, firstname,middle_initial?)>
+<!ATTLIST name type (individual|corporate) #REQUIRED>
+<!ELEMENT lastname         (#PCDATA)>
+<!ATTLIST lastname prefix (Mr.|Ms.) #REQUIRED>
+<!ELEMENT firstname        (#PCDATA)>
+<!ELEMENT middle_initial   (#PCDATA)>
+<!ELEMENT address          (street, apartment?, city, state, zip, country)>
+<!ELEMENT street           (#PCDATA)>
+<!ELEMENT apartment        (#PCDATA)>
+<!ELEMENT city             (#PCDATA)>
+<!ELEMENT state            (#PCDATA)>
+<!ELEMENT zip              (#PCDATA)>
+<!ELEMENT country          (#PCDATA)>
+<!ELEMENT created_date     (month, day, year)>
+<!ELEMENT purchase_date    (month, day, year)>
+<!ELEMENT payment_date     (month, day, year)>
+<!ELEMENT current_balance  (#PCDATA)>
+<!ELEMENT order            (order_number, order_date, item+)>
+<!ATTLIST order customer_number IDREF #REQUIRED>
+<!ELEMENT order_number     (#PCDATA)>
+<!ELEMENT order_date       (month, day, year)>
+<!ELEMENT month            (#PCDATA)>
+<!ELEMENT day              (#PCDATA)>
+<!ELEMENT year             (#PCDATA)>
+<!ELEMENT item             (item_number, quantity, price)>
+<!ELEMENT item_number      (#PCDATA)>
+<!ELEMENT quantity         (#PCDATA)>
+<!ATTLIST quantity unit (Piece|Case|Kilogram) #REQUIRED>
+<!ELEMENT price            (#PCDATA)>
+    ]> 
+<customers>
+	<customer NUMBER="C09288">
+	    <name type="individual">
+		<lastname prefix="Mr.">Tyrebiter</lastname>
+		<firstname>George</firstname>
+		<middle_initial>L</middle_initial>
+	    </name>
+	    <address>
+		<street>123 Oak Street</street>
+		<apartment>Suite 16</apartment>
+		<city>Madison</city>
+		<state>WI</state>
+		<zip>43704</zip>
+		<country>United States</country>
+	    </address>
+	    <created_date>
+		<month>4</month>
+    	        <day>15</day>
+                <year>1988</year>
+            </created_date>
+	    <purchase_date>
+		<month>8</month>
+    	        <day>19</day>
+                <year>2009</year>
+            </purchase_date>
+	    <payment_date>
+		<month>9</month>
+    	        <day>18</day>
+                <year>2009</year>
+            </payment_date>
+	    <current_balance>123.45</current_balance>
+	    <order customer_number="C09288">
+		<order_number>12345</order_number>
+		<order_date>
+		    <month>4</month>
+		    <day>15</day>
+		    <year>2009</year>
+		</order_date>
+		<item>
+                    <item_number>928333</item_number>
+                    <quantity unit="Case">12</quantity>
+                    <price>16.28</price>
+		</item>
+		<item>
+		    <item_number>893757</item_number>
+                    <quantity unit="Piece">144</quantity>
+                    <price>23.45</price>
+		</item>
+		<item>
+                    <item_number>28830</item_number>
+                    <quantity unit="Kilogram">20</quantity>
+                    <price>20.45</price>
+		</item>
+		</order>
+	    <order customer_number="C09288">
+		<order_number>0023132</order_number>
+		<order_date>
+		    <month>6</month>
+		    <day>23</day>
+		    <year>2009</year>
+		</order_date>
+		<item>
+                    <item_number>19228</item_number>
+                    <quantity unit="Piece">200</quantity>
+                    <price>12.00</price>
+                </item>
+                <item>
+                    <item_number>418277</item_number>
+                    <quantity unit="Kilogram">400</quantity>
+                    <price>9.50</price>
+                </item>
+	    </order>
+	</customer>
+	<customer NUMBER="C09289">
+	    <name type="individual">
+		<lastname prefix="Ms.">Brown</lastname>
+		<firstname>Sally</firstname>
+		<middle_initial>S</middle_initial>
+	    </name>
+	    <address>
+		<street>123 Elm Street</street>
+		<apartment>Apt. 1</apartment>
+		<city>Madison</city>
+		<state>WI</state>
+		<zip>43704</zip>
+		<country>United States</country>
+	    </address>
+	    <created_date>
+		<month>11</month>
+    	        <day>4</day>
+                <year>1995</year>
+            </created_date>
+	    <purchase_date>
+		<month>8</month>
+    	        <day>19</day>
+                <year>2009</year>
+            </purchase_date>
+	    <payment_date>
+		<month>9</month>
+    	        <day>18</day>
+                <year>2009</year>
+            </payment_date>
+	    <current_balance>9,876.54</current_balance>
+	    <order customer_number="C09289">
+		<order_number>0012346</order_number>
+		<order_date>
+		    <month>4</month>
+		    <day>15</day>
+		    <year>2009</year>
+		</order_date>
+		<item>
+                    <item_number>928333</item_number>
+                    <quantity unit="Case">12</quantity>
+                    <price>16.28</price>
+		</item>
+		<item>
+		    <item_number>893757</item_number>
+                    <quantity unit="Piece">144</quantity>
+                    <price>34.43</price>
+		</item>
+		<item>
+                    <item_number>948830</item_number>
+                    <quantity unit="Kilogram">200</quantity>
+                    <price>20.45</price>
+		</item>
+		</order>
+	    <order customer_number="C09289">
+		<order_number>0045677</order_number>
+		<order_date>
+		    <month>6</month>
+		    <day>23</day>
+		    <year>2009</year>
+		</order_date>
+		<item>
+                    <item_number>19228</item_number>
+                    <quantity unit="Piece">200</quantity>
+                    <price>12.00</price>
+                </item>
+                <item>
+                    <item_number>718277</item_number>
+                    <quantity unit="Kilogram">400</quantity>
+                    <price>9.50</price>
+                </item>
+	    </order>
+	</customer>
+	<customer NUMBER="C09290">
+	    <name type="individual">
+		<lastname prefix="Mr.">Porter</lastname>
+    	        <firstname>Harry</firstname>
+                <middle_initial>W</middle_initial>
+            </name>
+            <address>
+                <street>7722 First Street</street>
+                <apartment></apartment>
+                <city>Madison</city>
+                <state>WI</state>
+                <zip>43704</zip>
+                <country>United States</country>
+            </address>
+	    <created_date>
+		<month>6</month>
+    	        <day>7</day>
+                <year>1999</year>
+            </created_date>
+	    <purchase_date>
+		<month>1</month>
+    	        <day>5</day>
+                <year>2009</year>
+            </purchase_date>
+	    <payment_date>
+		<month>3</month>
+    	        <day>7</day>
+                <year>2009</year>
+            </payment_date>
+            <current_balance>1,234.56</current_balance>
+	    <order customer_number="C09290">
+		<order_number>12347</order_number>
+		<order_date>
+		    <month>4</month>
+		    <day>15</day>
+		    <year>2009</year>
+		</order_date>
+		<item>
+                    <item_number>1333</item_number>
+                    <quantity unit="Case">12</quantity>
+                    <price>16.28</price>
+		</item>
+		<item>
+		    <item_number>893757</item_number>
+                    <quantity unit="Piece">144</quantity>
+                    <price>12.34</price>
+		</item>
+		<item>
+                    <item_number>948830</item_number>
+                    <quantity unit="Kilogram">27</quantity>
+                    <price>20.45</price>
+		</item>
+		</order>
+	    <order customer_number="C09290">
+		<order_number>352</order_number>
+		<order_date>
+		    <month>6</month>
+		    <day>23</day>
+		    <year>2009</year>
+		</order_date>
+		<item>
+                    <item_number>219</item_number>
+                    <quantity unit="Piece">200</quantity>
+                    <price>12.00</price>
+                </item>
+                <item>
+                    <item_number>18277</item_number>
+                    <quantity unit="Kilogram">400</quantity>
+                    <price>9.50</price>
+                </item>
+	    </order>
+	</customer>
+	<customer NUMBER="C09291">
+	    <name type="individual">
+		<lastname prefix="Ms.">Abe</lastname>
+		<firstname>Miaka</firstname>
+		<middle_initial></middle_initial>
+	    </name>
+	    <address>
+		<street>1396 Gohan Avenue</street>
+		<apartment>Apt. 21</apartment>
+		<city>Niigata</city>
+		<state>Niigata</state>
+		<zip>0298483</zip>
+		<country>Japan</country>
+	    </address>
+	    <created_date>
+		<month>3</month>
+    	        <day>09</day>
+                <year>2002</year>
+            </created_date>
+	    <purchase_date>
+		<month>7</month>
+    	        <day>23</day>
+                <year>2009</year>
+            </purchase_date>
+	    <payment_date>
+		<month>07</month>
+    	        <day>24</day>
+                <year>2010</year>
+            </payment_date>
+	    <current_balance>246.00</current_balance>
+	    <order customer_number="C09291">
+		<order_number>0012348</order_number>
+		<order_date>
+		    <month>4</month>
+		    <day>15</day>
+		    <year>2009</year>
+		</order_date>
+		<item>
+                    <item_number>333</item_number>
+                    <quantity unit="Case">12</quantity>
+                    <price>16.28</price>
+		</item>
+		<item>
+		    <item_number>893757</item_number>
+                    <quantity unit="Piece">144</quantity>
+                    <price>100</price>
+		</item>
+		<item>
+                    <item_number>948830</item_number>
+                    <quantity unit="Kilogram">1000</quantity>
+                    <price>20.45</price>
+		</item>
+		</order>
+	    <order customer_number="C09291">
+		<order_number>0043107</order_number>
+		<order_date>
+		    <month>06</month>
+		    <day>23</day>
+		    <year>2009</year>
+		</order_date>
+		<item>
+                    <item_number>919228</item_number>
+                    <quantity unit="Piece">200</quantity>
+                    <price>12.00</price>
+                </item>
+                <item>
+                    <item_number>18277</item_number>
+                    <quantity unit="Kilogram">400</quantity>
+                    <price>9.50</price>
+                </item>
+	    </order>
+	</customer>
+</customers>

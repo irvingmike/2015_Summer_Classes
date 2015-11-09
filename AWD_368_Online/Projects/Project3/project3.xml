@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!--
+  Name: Aaron Anderson
+  Assignment: Lab Project 3.1 (Based on Project 2.1)
+  Date: 08/6/2015
+-->
+
+<!DOCTYPE exchanges [
+
+	<!ELEMENT exchanges (exchange+)>
+
+	<!ELEMENT exchange (name, address, telephone, emailAddress, applicationDate, availableDate, birthCountry, dateOfBirth?, age?, gender, schoolName, schoolAddress, yearInSchool?, motherName?, fatherName?, emergencyTelephone, feePaid, essay, spokenLanguages, countryChoices)>
+	<!ATTLIST exchange id ID #REQUIRED
+	                   exchangeType (S|T) #REQUIRED>
+
+	<!ELEMENT name (lastName, firstName, middleInitial?)>
+	<!ELEMENT address (street, apartment?, city, (state|province), (zipCode|postalCode), country)>
+	<!ELEMENT telephone (#PCDATA)>
+	<!ELEMENT emailAddress (#PCDATA)>
+	<!ELEMENT applicationDate (month, day, year)>
+	<!ELEMENT availableDate (month, day, year)>
+	<!ELEMENT birthCountry (#PCDATA)>
+	<!ELEMENT dateOfBirth (month, day, year)>
+	<!ELEMENT age (#PCDATA)>
+	<!ELEMENT gender (#PCDATA)>
+	<!ELEMENT schoolName (#PCDATA)>
+	<!ELEMENT schoolAddress (street, apartment?, city, (state|province), (zipCode|postalCode), country)>
+	<!ELEMENT yearInSchool (#PCDATA)>
+	<!ELEMENT motherName (lastName, firstName, middleInitial?)>
+	<!ELEMENT fatherName (lastName, firstName, middleInitial?)>
+	<!ELEMENT emergencyTelephone (#PCDATA)>
+	<!ELEMENT feePaid (#PCDATA)>
+	<!ATTLIST feePaid currency CDATA #REQUIRED>
+	<!ELEMENT essay (#PCDATA)>
+	<!ELEMENT spokenLanguages (language, language+)>
+	<!ELEMENT countryChoices (countryChoice, countryChoice, countryChoice, countryChoice, countryChoice)>
+
+	<!ELEMENT lastName (#PCDATA)>
+	<!ELEMENT firstName (#PCDATA)>
+	<!ELEMENT middleInitial (#PCDATA)>
+
+	<!ELEMENT street (#PCDATA)>
+	<!ELEMENT apartment (#PCDATA)>
+	<!ELEMENT city (#PCDATA)>
+	<!ELEMENT state (#PCDATA)>
+	<!ELEMENT province (#PCDATA)>
+	<!ELEMENT zipCode (#PCDATA)>
+	<!ELEMENT postalCode (#PCDATA)>
+	<!ELEMENT country (#PCDATA)>
+
+	<!ELEMENT month (#PCDATA)>
+	<!ELEMENT day (#PCDATA)>
+	<!ELEMENT year (#PCDATA)>
+
+	<!ELEMENT language (#PCDATA)>
+	<!ATTLIST language fluency (1|2|3|4) #REQUIRED>
+
+	<!ELEMENT countryChoice (#PCDATA)>
+	<!ATTLIST countryChoice rank (1|2|3|4|5) #REQUIRED>
+
+	<!-- Languages Spoken -->
+	<!ENTITY eng "English">
+	<!ENTITY fre "French">
+	<!ENTITY ger "German">
+	<!ENTITY grk "Greek">
+	<!ENTITY jap "Japanese">
+	<!ENTITY spa "Spanish" >
+
+	<!-- Countries -->
+	<!ENTITY br "Brazil">
+	<!ENTITY ca "Canada">
+	<!ENTITY eg "Egypt">
+	<!ENTITY en "England">
+	<!ENTITY fi "Finland">
+	<!ENTITY fr "France">
+	<!ENTITY de "Germany">
+	<!ENTITY it "Italy" >
+	<!ENTITY jp "Japan" >
+	<!ENTITY mx "Mexico">
+	<!ENTITY no "Norway">
+	<!ENTITY us "United States">
+
+]>
+
+<exchanges>
+
+	<exchange id="I00001" exchangeType="S">
+		<name>
+			<lastName>Anderson</lastName>
+			<firstName>Aaron</firstName>
+			<middleInitial>R</middleInitial>
+		</name>
+		<address>
+			<street>1701 Wright Street</street>
+			<apartment></apartment>
+			<city>Madison</city>
+			<state>WI</state>
+			<zipCode>53704</zipCode>
+			<country>&us;</country>
+		</address>
+		<telephone>(608) 555-1234</telephone>
+		<emailAddress>studentemail@madisoncollege.edu</emailAddress>
+		<applicationDate>
+			<month>3</month>
+			<day>23</day>
+			<year>2015</year>
+		</applicationDate>
+		<availableDate>
+			<month>3</month>
+			<day>25</day>
+			<year>2015</year>
+		</availableDate>
+		<birthCountry>&us;</birthCountry>
+		<dateOfBirth>
+			<month>1</month>
+			<day>22</day>
+			<year>1997</year>
+		</dateOfBirth>
+		<age>18</age>
+		<gender>male</gender>
+		<schoolName>Madison Area High School</schoolName>
+		<schoolAddress>
+			<street>123 School Street</street>
+			<city>Madison</city>
+			<state>WI</state>
+			<zipCode>53717</zipCode>
+			<country>USA</country>
+		</schoolAddress>
+		<yearInSchool>Senior</yearInSchool>
+		<motherName>
+			<lastName>StudentParent</lastName>
+			<firstName>Mom</firstName>
+			<middleInitial>H</middleInitial>
+		</motherName>
+		<fatherName>
+			<lastName>StudentParent</lastName>
+			<firstName>Dad</firstName>
+			<middleInitial>K</middleInitial>
+		</fatherName>
+		<emergencyTelephone>(608) 123-4567</emergencyTelephone>
+		<feePaid currency="USD">500.00</feePaid>
+		<essay>
+			<![CDATA[
+			Sample of exchange essay for me to apply.  Why do I want to go?
+			]]>
+		</essay>
+		<spokenLanguages>
+			<language fluency="3">&ger;</language>
+			<language fluency="3">&eng;</language>
+			<language fluency="1">&spa;</language>
+		</spokenLanguages>
+		<countryChoices>
+			<countryChoice rank="1">&de;</countryChoice>
+			<countryChoice rank="3">&br;</countryChoice>
+			<countryChoice rank="5">&mx;</countryChoice>
+			<countryChoice rank="2">&fr;</countryChoice>
+			<countryChoice rank="4">&en;</countryChoice>
+		</countryChoices>
+	</exchange>
+
+	<exchange id="I00002" exchangeType="S">
+		<name>
+			<lastName>Smith-William</lastName>
+			<firstName>Julian</firstName>
+			<middleInitial>J</middleInitial>
+		</name>
+		<address>
+			<street>123 Some Street</street>
+			<apartment></apartment>
+			<city>Portland</city>
+			<state>OR</state>
+			<zipCode>12345</zipCode>
+			<country>&us;</country>
+		</address>
+		<telephone>(123) 123-4567</telephone>
+		<emailAddress>smith-william@madisoncollege.edu</emailAddress>
+		<applicationDate>
+			<month>1</month>
+			<day>14</day>
+			<year>2015</year>
+		</applicationDate>
+		<availableDate>
+			<month>2</month>
+			<day>13</day>
+			<year>2015</year>
+		</availableDate>
+		<birthCountry>&us;</birthCountry>
+		<dateOfBirth>
+			<month>4</month>
+			<day>5</day>
+			<year>1998</year>
+		</dateOfBirth>
+		<age>16</age>
+		<gender>male</gender>
+		<schoolName>Westview High School</schoolName>
+		<schoolAddress>
+			<street>44566 Westview Road</street>
+			<city>Portland</city>
+			<state>Oregon</state>
+			<zipCode>12345</zipCode>
+			<country>&us;</country>
+		</schoolAddress>
+		<yearInSchool>Junior</yearInSchool>
+		<motherName>
+			<lastName>Smith</lastName>
+			<firstName>Peggy</firstName>
+			<middleInitial>H</middleInitial>
+		</motherName>
+		<fatherName>
+			<lastName>Williams</lastName>
+			<firstName>Ralph</firstName>
+			<middleInitial>Y</middleInitial>
+		</fatherName>
+		<emergencyTelephone>(608) 555-4456</emergencyTelephone>
+		<feePaid currency="USD">50.00</feePaid>
+		<essay>
+			<![CDATA[I have worked all my life and would like to travel. In order for me to be considered to be a foreign exchange student, I would need a scholarship.]]>
+		</essay>
+		<spokenLanguages>
+			<language fluency="2">&grk;</language>
+			<language fluency="4">&eng;</language>
+		</spokenLanguages>
+		<countryChoices>
+			<countryChoice rank="2">&fi;</countryChoice>
+			<countryChoice rank="5">&no;</countryChoice>
+			<countryChoice rank="1">&br;</countryChoice>
+			<countryChoice rank="3">&jp;</countryChoice>
+			<countryChoice rank="4">&eg;</countryChoice>
+		</countryChoices>
+	</exchange>
+
+	<exchange id="I00003" exchangeType="S">
+		<name>
+			<lastName>Morimoto</lastName>
+			<firstName>Vivian</firstName>
+			<middleInitial></middleInitial>
+		</name>
+		<address>
+			<street>112 Japan Street</street>
+			<city>Bunkyo-ku</city>
+			<province>Tokyo</province>
+			<postalCode>100-6805</postalCode>
+			<country>&br;</country>
+		</address>
+		<telephone>(111) 222-3333</telephone>
+		<emailAddress>vmorimoto@madisoncollege.edu</emailAddress>
+		<applicationDate>
+			<month>1</month>
+			<day>6</day>
+			<year>2015</year>
+		</applicationDate>
+		<availableDate>
+			<month>2</month>
+			<day>13</day>
+			<year>2015</year>
+		</availableDate>
+		<birthCountry>&br;</birthCountry>
+		<dateOfBirth>
+			<month>9</month>
+			<day>3</day>
+			<year>1997</year>
+		</dateOfBirth>
+		<age>17</age>
+		<gender>female</gender>
+		<schoolName>Tokyo's Finest High School</schoolName>
+		<schoolAddress>
+			<street>1223 High School Street</street>
+			<city>Bunkyo-ku</city>
+			<province>Tokyo</province>
+			<postalCode>100-6805</postalCode>
+			<country>&br;</country>
+		</schoolAddress>
+		<yearInSchool>Junior</yearInSchool>
+		<motherName>
+			<lastName>Morimoto</lastName>
+			<firstName>Tina</firstName>
+			<middleInitial>K</middleInitial>
+		</motherName>
+		<fatherName>
+			<lastName>Morimoto</lastName>
+			<firstName>Katsumoto</firstName>
+			<middleInitial>Q</middleInitial>
+		</fatherName>
+		<emergencyTelephone>(608) 555-2222</emergencyTelephone>
+		<feePaid currency="JPY">1000.00</feePaid>
+		<essay>
+			<![CDATA[This would be a great opportunity for me to get out and see the world. I truly enjoy living in Japan, but I would also love to travel around the world and this opportunity would give me a chance to do so.  France would be a dream trip, but going to the United States would also be quite wonderful.  Those are my top two choices, but in the end--any opportunity to go to any country would be an absolute thrill!!]]>
+		</essay>
+		<spokenLanguages>
+			<language fluency="3">&eng;</language>
+			<language fluency="4">&jap;</language>
+			<language fluency="2">&fre;</language>
+		</spokenLanguages>
+		<countryChoices>
+			<countryChoice rank="2">&us;</countryChoice>
+			<countryChoice rank="4">&de;</countryChoice>
+			<countryChoice rank="3">&ca;</countryChoice>
+			<countryChoice rank="5">&it;</countryChoice>
+			<countryChoice rank="1">&fr;</countryChoice>
+		</countryChoices>
+	</exchange>
+
+	<exchange id="I000004" exchangeType="T">
+		<name>
+			<lastName>Walden</lastName>
+			<firstName>Mary-Jo</firstName>
+			<middleInitial>U</middleInitial>
+		</name>
+		<address>
+			<street>333 North Shore Blvd</street>
+			<apartment>310</apartment>
+			<city>Miami</city>
+			<state>FL</state>
+			<zipCode>32408</zipCode>
+			<country>&us;</country>
+		</address>
+		<telephone>(555) 222-4456</telephone>
+		<emailAddress>teacher@madisoncollege.edu</emailAddress>
+		<applicationDate>
+			<month>5</month>
+			<day>22</day>
+			<year>2014</year>
+		</applicationDate>
+		<availableDate>
+			<month>6</month>
+			<day>1</day>
+			<year>2015</year>
+		</availableDate>
+		<birthCountry>&ca;</birthCountry>
+		<gender>female</gender>
+		<schoolName>Simple High School</schoolName>
+		<schoolAddress>
+			<street>1223 Some Nice Street</street>
+			<city>Miami</city>
+			<state>FL</state>
+			<zipCode>32417</zipCode>
+			<country>&us;</country>
+		</schoolAddress>
+		<emergencyTelephone>(333) 435-3423</emergencyTelephone>
+		<feePaid currency="USD">200.00</feePaid>
+		<essay>
+			<![CDATA[I am coming to bring my knowledge and experience to others, but more so to learn from others and become a better person.]]>
+		</essay>
+		<spokenLanguages>
+			<language fluency="2">&ger;</language>
+			<language fluency="4">&eng;</language>
+			<language fluency="3">&jap;</language>
+		</spokenLanguages>
+		<countryChoices>
+			<countryChoice rank="4">&de;</countryChoice>
+			<countryChoice rank="1">&jp;</countryChoice>
+			<countryChoice rank="3">&br;</countryChoice>
+			<countryChoice rank="5">&de;</countryChoice>
+			<countryChoice rank="2">&fr;</countryChoice>
+		</countryChoices>
+	</exchange>
+</exchanges>

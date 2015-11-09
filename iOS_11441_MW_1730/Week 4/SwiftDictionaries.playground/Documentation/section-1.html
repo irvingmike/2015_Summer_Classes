@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>What's a Dictionary? What comes to your mind?</p>
+
+<p>This?</p>
+
+<p><img class="img-border" src="images/dictionary01.png" alt="" width="300" /></p>
+
+<p>And when you open a dictionary you might see something like this.</p>
+
+<p><img class="imgwb" src="images/dictionary02.png" alt="" width="600" /></p>
+
+<p>You can think of a dictionary entry like this.</p>
+
+<p><img class="img-border" src="images/dictionary03.png" alt="" width="600" /></p>
+
+<p>We usually think of a dictionary definition like this.</p>
+
+<p><img class="img-border" src="images/dictionary04.png" alt="" width="600" /></p>
+
+<p>It could also be this.</p>
+
+<p><img class="img-border" src="images/dictionary05.png" alt="" width="446" /></p>
+
+<p>In programming terms the first one has this:</p>
+
+<p><strong>Key:</strong> A string value of &quot;Car&quot;</p>
+
+<p><strong>Definition:</strong> A string value of &quot;a road vehicle...&quot;</p>
+
+<p>The second entry is like this:</p>
+
+<p><strong>Key:</strong> A string value of &quot;Car&quot;</p>
+
+<p><strong>Definition:</strong> An image.</p>
+
+<h3 id="adictionaryinswift">A Dictionary in Swift</h3>
+
+<p>In programming, a dictionary is this same concept brought into code. Imagine a class where you could enter a word and it would return the definition. A <strong>Swift Dictionary</strong> does that and more. </p>
+
+<p>Here's how we would define a Swift dictionary that would hold a dictionary of words.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="nl">wordDictionary</span><span class="p">:</span> <span class="n">Dictionary</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p><img class="img-border" src="images/dictionary06.png" alt="" width="700" /></p>
+
+<p>We can also also use this shortcut.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="nl">wordDictionary</span><span class="p">:</span> <span class="p">[</span><span class="nl">String</span> <span class="p">:</span> <span class="n">String</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="terms">Terms</h4>
+
+<p>Notice that we use these terms.</p>
+
+<ul>
+<li><strong>Key</strong> – This is the general concept of the word we use to lookup the definition in a paper dictionary.</li>
+<li><strong>Value</strong> – This is a general term for what we get when we use a key to lookup something. It could be text, or images, or sounds, or instances of classes, or even other collections like an array.</li>
+</ul>
+
+<h3 id="dictionaryexample">Dictionary Example</h3>
+
+<p>Let's make a dictionary of words and definitions as an example.</p>
+
+<p><strong>1.</strong> Declare the dictionary variable.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="nl">wordDictionary</span><span class="p">:</span> <span class="n">Dictionary</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p><strong>2.</strong> Create the instance of the dictionary itself. The <code>[:]</code> symbol is like the <code>[]</code> symbol for creating an array. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">wordDictionary</span> <span class="o">=</span> <span class="p">[</span><span class="o">:</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<p><strong>3.</strong> Add some dictionary entries. Here's the syntax for one entry.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">wordDictionary</span><span class="p">[</span><span class="s">&quot;car&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Here's the little dictionary with several entries in a code block.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h3 id="loopingthrougharrays">Looping Through Arrays</h3>
+
+<p>You should already know some about arrays and looping so let's combine them. Looping through an array can be very simple. Here's the basic form. I've included the array of names we used before.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span> <span class="s">&quot;Dakota&quot;</span><span class="p">,</span> <span class="s">&quot;Joe&quot;</span><span class="p">,</span> <span class="s">&quot;Ellen&quot;</span><span class="p">,</span> <span class="s">&quot;Josie&quot;</span><span class="p">,</span> <span class="s">&quot;Tim&quot;</span><span class="p">,</span> <span class="s">&quot;Gene&quot;</span><span class="p">,</span> <span class="s">&quot;Phil&quot;</span><span class="p">,</span> <span class="s">&quot;Suzie&quot;</span><span class="p">,</span> <span class="s">&quot;Bill&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="k">in</span> <span class="n">names</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Hello, \(name)&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p><img class="img-border" src="images/looping03.png" alt="" width="600" /></p>
+
+<p>How does it work?</p>
+
+<p><img class="img-border" src="images/looping04.png" alt="" width="600" /></p>
+
+<p>It loops the right number of times automatically! With each loop the next element is placed into the constant <code>name</code>. You can make that constant any name you'd like that makes sense.</p>
+
+<p>Why is <code>name</code> a constant? Shouldn't it be a <code>var</code>? Good question! Swift uses a constant by default and sets the next element into it at the top of each loop. It's a constant because we can't change its value inside the loop. </p>
+
+<h4 id="tryit">Try it!</h4>
+
+<p>Enter the array and loop for names into this code block.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h3 id="switchstatement">Switch Statement</h3>
+
+<p>Swift also gives us a variation on the <code>switch</code> statement.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">switch</span> <span class="o">&lt;</span><span class="n">some</span> <span class="n">value</span> <span class="n">to</span> <span class="n">consider</span><span class="o">&gt;</span> <span class="p">{</span>
+<span class="k">case</span> <span class="o">&lt;</span><span class="n">value</span> <span class="mi">1</span><span class="o">&gt;:</span>
+    <span class="o">&lt;</span><span class="n">respond</span> <span class="n">to</span> <span class="n">value</span> <span class="mi">1</span><span class="o">&gt;</span>
+<span class="k">case</span> <span class="o">&lt;</span><span class="n">value</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">value</span> <span class="mi">3</span><span class="o">&gt;:</span>
+    <span class="o">&lt;</span><span class="n">respond</span> <span class="n">to</span> <span class="n">value</span> <span class="mi">2</span> <span class="n">or</span> <span class="mi">3</span><span class="o">&gt;</span>
+<span class="k">default</span><span class="o">:</span>
+    <span class="o">&lt;</span><span class="n">otherwise</span><span class="p">,</span> <span class="k">do</span> <span class="n">something</span> <span class="k">else</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>They work like this.</p>
+
+<p><img class="imgwb" src="images/conditionals02.png" alt="" width="500" /></p>
+
+<p>Here's a simple example.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="k">switch</span> <span class="n">number</span> <span class="p">{</span>
+<span class="k">case</span> <span class="mi">10</span><span class="o">:</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;It is 10!&quot;</span><span class="p">)</span>
+<span class="k">default</span><span class="o">:</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;It is not 10.&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

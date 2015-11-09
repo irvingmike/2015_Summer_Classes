@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Output:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre>I&#39;m the simple function!
+I&#39;m the simple function!
+</pre></div>
+</td></tr></table>
+
+<p>That works! What is going on? </p>
+
+<p>It's simple, functions in Swift are first class data, they're just like any data. We can assign them to variables, use them in parameters, add them to collections, and most everything else we do with variables.</p>
+
+<p>And they have a type.</p>
+
+<hr />
+
+<h4 id="functiontypes">Function Types</h4>
+
+<p>Do you remember how to see the type of a <code>var</code> in Xcode or in a playground? We <strong>Option-click</strong> on it. Try that with the <code>willThisWork</code> variable. You should see this.</p>
+
+<p><img class="imgwb" src="images/morefuncs01.png" alt="" width="600" /></p>
+
+<p>The type is <span style="font-size:1.5em;font-weight:bold;"><code>() -&gt; ()</code></span></p>
+
+<hr />
+
+<h4 id="parametersandreturntype">Parameters and Return Type</h4>
+
+<p><img  src="images/morefuncs02.png" alt="" width="700" /></p>
+
+<hr />
+
+<h3 id="parameters">Parameters</h3>
+
+<p>Let's make another function with some parameters.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="nf">addThese</span><span class="p">(</span><span class="nl">first</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="nl">second</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;\(first) plus \(second) is \(first + second)&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

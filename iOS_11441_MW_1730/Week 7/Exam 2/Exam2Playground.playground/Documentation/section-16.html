@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h3 id="examprojects">Exam Projects</h3>
+
+<p>There are 2 projects in this part of the exam. To get the full number of points your app must work correctly. However, partial credit will be given generously. Do as much as you can on every part of the projects. If you get stuck, move on and get more points in another part of the project. You can still do very well on this part of the exam even if your apps don’t run. You are trying to communicate to your instructor that you understand the concepts the projects cover. Also note that just because your apps run correctly doesn’t mean you automatically get all the points. Full credit requires <strong>running correctly</strong>, having <strong>good code</strong>, as well as having <strong>sound architecture and design</strong>.</p>
+
+<p>You do not need to print any project files or show them them to me. When you are done with the exam you need to compress the project directories into a .zip files and email them to me. Read the instructions at the top of the exam for more details.</p>
+
+<hr />
+
+<h3 id="project112.5points">Project 1 (12.5 points)</h3>
+
+<p>Create a new <strong>Command Line Tool</strong> in Xcode named <strong>Exam2Project1</strong>.</p>
+
+<p>Write the tool as follows.</p>
+
+<p><strong>1.</strong> Use the <strong>Callbacks</strong> lab and the <strong>Time Display</strong> project as your guides.</p>
+
+<p><strong>2.</strong> Write an app that outputs a <strong>random number</strong> between 1 and 1000 and the <strong>average</strong> of all the generated numbers to the console every second.</p>
+
+<p><strong>3.</strong> Here's how to get a random number between 1 and 1000</p>
+
+<pre><code>Int(arc4random_uniform(1000 + 1))
+</code></pre>
+
+<p><strong>4.</strong> You won't need to create an array to hold all the numbers. The average is calculated like this:</p>
+
+<pre><code>average == total accumulated value of the numbers / count of the numbers
+</code></pre>
+
+<p><strong>5.</strong> This means you should have a variable for: the current random number, the total of all the numbers added together, the total number of random numbers that have been output, and the average.</p>
+
+<p><strong>6.</strong> You will do all this in a new Class. Just like in <strong>Callbacks</strong>, one function will be called by an <strong>NSTimer</strong> and will have to have this on the line above the function.</p>
+
+<pre><code>@objc
+</code></pre>
+
+<p>This function will:</p>
+
+<ol>
+<li>Get a new <strong>random number</strong>.</li>
+<li>Add the value to the <strong>total value</strong> property.</li>
+<li>Increment the <strong>counter</strong>.</li>
+<li>Calculate the <strong>average</strong>.</li>
+<li>Display the output to the console by calling <code>print(self)</code>.</li>
+</ol>
+
+<p><strong>7.</strong> The class should conform to the <strong>CustomStringConvertible</strong> protocol. (That new protocol has replaced <strong>Printable</strong>.) The <strong>description</strong> property will return a string like this:</p>
+
+<pre><code>random number: 716, average: 577.4
+</code></pre>
+
+<p><strong>8.</strong> In the <strong>main.swift</strong> file you should:</p>
+
+<ol>
+<li>Create an <strong>instance</strong> of the above class.</li>
+<li>Create an <strong>NSTimer</strong> that runs every second and uses the instance of the class.</li>
+<li>Starts a <strong>Run Loop</strong>.</li>
+</ol>
+
+<p><strong>9.</strong> Sample output after letting the app run for a while.</p>
+
+<pre><code>random number: 3, average: 604.5
+random number: 738, average: 613.4
+random number: 137, average: 583.625
+random number: 743, average: 593.0
+random number: 688, average: 598.277777777778
+random number: 63, average: 570.105263157895
+random number: 716, average: 577.4
+random number: 728, average: 584.571428571429
+random number: 735, average: 591.409090909091
+random number: 570, average: 590.478260869565
+</code></pre>
+
+<hr />
+
+<h3 id="project212.5points">Project 2 (12.5 points)</h3>
+
+<p>Create a new empty project. Name it <strong>Exam2Project2</strong></p>
+
+<p>Write an iOS app that looks like this.</p>
+
+<p><img class="imgwb" src="images/exam2_03.png" alt="" width="200" /></p>
+
+<hr />
+
+<p>The app's table view will display 1000 random number between 1 and 10,000. You can use this code to generate the random numbers.</p>
+
+<pre><code>Int(arc4random_uniform(10000 + 1))
+</code></pre>
+
+<h4 id="notes:">Notes:</h4>
+
+<ul>
+<li><p>You will not need to store the numbers. You can generate them on the fly when you configure the cell. </p></li>
+<li><p>Each row of the table view number display the row number starting at 1, a colon, a space, and then the random number.</p>
+
+<pre><code>1: 6034
+&lt;row number&gt;: &lt;randon number&gt;
+</code></pre></li>
+<li><p>The title of the table view should be <strong>Random Numbers</strong>.</p></li>
+</ul>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

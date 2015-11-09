@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<p>The return type for <code>length</code> is <code>Int</code>, also a swift type.</p>
+
+<hr />
+
+<h4 id="callinganobjective-cfunction">Calling an Objective-C Function</h4>
+
+<p>The <code>count()</code> function above is part of Swift and is written in Swift. </p>
+
+<p>Next, we'll call a function that is written in Objective-C.</p>
+
+<p>This function will break up a string around the spaces. Here's how we would call the function in <strong>Objective-C</strong>.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="bp">NSArray</span> <span class="o">*</span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">sample</span> <span class="nl">componentsSeparatedByString</span><span class="p">:</span> <span class="s">@&quot; &quot;</span><span class="p">];</span>
+</pre></div>
+</td></tr></table>
+
+<p>That may look a little strange to a new programmer who hasn't encountered it before. Swift can call this same function using the syntax we've been learning.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">words</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="n">componentsSeparatedByString</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>That's looks more familiar. Let's try the Swift version. (Objective-C doesn't work in playgrounds.)</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

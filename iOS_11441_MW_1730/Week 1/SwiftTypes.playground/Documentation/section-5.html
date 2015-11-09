@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>The error is pretty clear.</p>
+
+<blockquote>
+<p><code>Playground execution failed: &lt;EXPR&gt;:37:17: error: cannot invoke '+' with an argument list of type '(Int, Double)'</code></p>
+</blockquote>
+
+<p>The <span style="font-size:1.5em;"><strong><code>+</code></strong></span> can't even be used with number types that aren't the same. So, how do we do the math? We have to convert. </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">integerNumber</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">let</span> <span class="n">floatingNumber</span> <span class="o">=</span> <span class="mf">12.99</span>
+<span class="k">let</span> <span class="n">sum</span> <span class="o">=</span> <span class="kt">Double</span><span class="p">(</span><span class="n">integerNumber</span><span class="p">)</span> <span class="o">+</span> <span class="n">floatingNumber</span>
+</pre></div>
+</td></tr></table>
+
+<p>We can convert from any number type to others in the same manner. </p>
+
+<p>What do you think will happen with these conversions?</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">pie</span> <span class="o">=</span> <span class="mf">3.141592653589793238462643383279502884197169399375105820974944592307816406286</span>
+
+<span class="n">println</span><span class="p">(</span><span class="n">pie</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="kt">Float</span><span class="p">(</span><span class="n">pie</span><span class="p">))</span>
+<span class="n">println</span><span class="p">(</span><span class="kt">Int</span><span class="p">(</span><span class="n">pie</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now try it!</p>
+
+<hr />
+
+<h4 id="lab5">Lab 5</h4>
+
+<p>Enter the above. (It's OK to copy/paste the value for pie.)</p>    </section>
+  </div>
+</body>
+</html>

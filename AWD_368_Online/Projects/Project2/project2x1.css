@@ -1,0 +1,65 @@
+/*
+    Name: Aaron Anderson
+    Assignment:  Project 2.1
+    Date: 07/01/2015
+ */
+
+body  {
+    font-family: Arial, sans-serif;
+
+    display: block;
+    display: block;
+
+    color: blue;
+}
+
+h1  {
+    font-size: 1.5em;
+}
+
+table  {
+    padding: 0;
+
+    border-collapse: collapse;
+
+    border: 1px solid #000000;
+}
+
+tr  {
+    margin: 0;
+    padding: 0;
+}
+
+tr.header  {
+    color: #FFFF00;
+    background-color: #000000;
+}
+
+tr.subhead  {
+    color: #FFFF00;
+    background-color: #000080;
+}
+
+td  {
+    width: 20em;
+    margin: 0;
+    padding: .25em;
+
+    border: 0;
+}
+
+td.addressCaption  {
+    background-color: #ADD8E6;
+}
+
+td.boldText  {
+    font-weight: 600;
+}
+
+.italics  {
+    font-style: italic;
+}
+
+.navyText  {
+    color: #000080;
+}

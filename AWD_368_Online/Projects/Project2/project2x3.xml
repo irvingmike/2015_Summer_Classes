@@ -1,0 +1,288 @@
+<?xml version='1.0' standalone='no' ?>
+
+<!--
+  Name: Aaron Anderson
+  Assignment: Lab Project 2.3 (Based on Project 2.2)
+  Date: 07/15/2015
+  File References: project2x3.xsl
+-->
+
+<?xml-stylesheet type="text/xsl" href="project2x3.xsl" ?>
+
+<exchanges>
+
+  <exchange classification="S" exchangeID="E00001">
+    <name>
+      <nameLast>Anderson</nameLast>
+      <nameFirst>Aaron</nameFirst>
+      <nameMiddleInitial>R</nameMiddleInitial>
+    </name>
+    <addressHome>
+      <addressStreet>318 North Owen Drive</addressStreet>
+      <addressApartment></addressApartment>
+      <addressCity>Madison</addressCity>
+      <addressState>WI</addressState>
+      <addressZip>53705</addressZip>
+      <addressCountry>United States</addressCountry>
+    </addressHome>
+    <telephone>(608) 345-3491</telephone>
+    <email>aranderson3@madisoncollege.edu</email>
+    <applicationDate>
+      <applicationDateMonth>02</applicationDateMonth>
+      <applicationDateDay>29</applicationDateDay>
+      <applicationDateYear>12</applicationDateYear>
+    </applicationDate>
+    <availableDate>
+      <availableDateMonth>08</availableDateMonth>
+      <availableDateDay>26</availableDateDay>
+      <availableDateYear>12</availableDateYear>
+    </availableDate>
+    <birthCountry>United States</birthCountry>
+    <dateOfBirth>
+      <birthDateMonth>11</birthDateMonth>
+      <birthDateDay>26</birthDateDay>
+      <birthDateYear>1972</birthDateYear>
+    </dateOfBirth>
+    <age>42</age>
+    <gender>Male</gender>
+    <schoolName>Madison College</schoolName>
+    <schoolAddress>
+      <addressStreetSchool>1701 Wright St.</addressStreetSchool>
+      <addressApartmentSchool></addressApartmentSchool>
+      <addressCitySchool>Madison</addressCitySchool>
+      <addressStateSchool>WI</addressStateSchool>
+      <addressZipSchool>53704</addressZipSchool>
+      <addressCountrySchool>United States</addressCountrySchool>
+    </schoolAddress>
+    <yearInSchool>freshman</yearInSchool>
+    <motherName>
+      <nameLastMother>DeMuess</nameLastMother>
+      <nameFirstMother>Jennifer</nameFirstMother>
+      <nameMiddleInitialMother>L</nameMiddleInitialMother>
+    </motherName>
+    <fatherName>
+      <nameLastFather>Anderson</nameLastFather>
+      <nameFirstFather>Bradley</nameFirstFather>
+      <nameMiddleInitialFather>E</nameMiddleInitialFather>
+    </fatherName>
+    <emergencyTelephone>(800) 867-5309</emergencyTelephone>
+    <feePaid currency="USD">895</feePaid>
+    <essay>
+      <![CDATA[Foreign Exchange One of the greatest experiences that a college student can have is that of studying abroad. It is one of the most enlightening experiences one can ever become involved in. It is a wonderful way to learn about another culture.]]>
+    </essay>
+    <languageSpoken fluency="3">English</languageSpoken>
+    <languageSpoken fluency="1">Spanish</languageSpoken>
+    <countryChoice preference="5">United States</countryChoice>
+    <countryChoice preference="2">Brazil</countryChoice>
+    <countryChoice preference="4">Mexico</countryChoice>
+    <countryChoice preference="3">Canada</countryChoice>
+    <countryChoice preference="1">Denmark</countryChoice>
+  </exchange>
+
+  <exchange classification="S" exchangeID="E00002">
+    <name>
+      <nameLast>Weizorack-Gryzbowski</nameLast>
+      <nameFirst>Tracy</nameFirst>
+      <nameMiddleInitial>F</nameMiddleInitial>
+    </name>
+    <addressHome>
+      <addressStreet>789 Park Place</addressStreet>
+      <addressApartment>314</addressApartment>
+      <addressCity>Waunakee</addressCity>
+      <addressState>Wi</addressState>
+      <addressZip>53597</addressZip>
+      <addressCountry>United States</addressCountry>
+    </addressHome>
+    <telephone>(608) 849-5977</telephone>
+    <email>agentStarling@fbi.gov</email>
+    <applicationDate>
+      <applicationDateMonth>12</applicationDateMonth>
+      <applicationDateDay>03</applicationDateDay>
+      <applicationDateYear>14</applicationDateYear>
+    </applicationDate>
+    <availableDate>
+      <availableDateMonth>09</availableDateMonth>
+      <availableDateDay>05</availableDateDay>
+      <availableDateYear>15</availableDateYear>
+    </availableDate>
+    <birthCountry>United States</birthCountry>
+    <dateOfBirth>
+      <birthDateMonth>04</birthDateMonth>
+      <birthDateDay>26</birthDateDay>
+      <birthDateYear>1978</birthDateYear>
+    </dateOfBirth>
+    <age>39</age>
+    <gender>female</gender>
+    <schoolName>University of Wisconsin - Platteville</schoolName>
+    <schoolAddress>
+      <addressStreetSchool>1 University Plaza</addressStreetSchool>
+      <addressApartmentSchool></addressApartmentSchool>
+      <addressCitySchool>Platteville</addressCitySchool>
+      <addressStateSchool>WI</addressStateSchool>
+      <addressZipSchool>53818</addressZipSchool>
+      <addressCountrySchool>United States</addressCountrySchool>
+    </schoolAddress>
+    <yearInSchool>Junior</yearInSchool>
+    <motherName>
+      <nameLastMother>Brown</nameLastMother>
+      <nameFirstMother>Tisha</nameFirstMother>
+      <nameMiddleInitialMother>D</nameMiddleInitialMother>
+    </motherName>
+    <fatherName>
+      <nameLastFather>Staples</nameLastFather>
+      <nameFirstFather>Kurtis</nameFirstFather>
+      <nameMiddleInitialFather>S</nameMiddleInitialFather>
+    </fatherName>
+    <emergencyTelephone>(312) 421-6700</emergencyTelephone>
+    <feePaid currency="UAH">18804</feePaid>
+    <essay>
+      <![CDATA[They experience the first culture shock when arriving in the host country and the second one when arriving back to their home countries. These shocks make youngsters more sociable, confident, adaptive, independent, flexible and definitely more tolerant.]]>
+    </essay>
+    <languageSpoken fluency="4">English</languageSpoken>
+    <languageSpoken fluency="3">Irish</languageSpoken>
+    <languageSpoken fluency="1">Japanese</languageSpoken>
+    <countryChoice preference="1">United States</countryChoice>
+    <countryChoice preference="3">Japan</countryChoice>
+    <countryChoice preference="4">Ireland</countryChoice>
+    <countryChoice preference="2">Nicaragua</countryChoice>
+    <countryChoice preference="5">Germany</countryChoice>
+  </exchange>
+
+  <exchange classification="S" exchangeID="E00003">
+    <name>
+      <nameLast>Carter</nameLast>
+      <nameFirst>Fred</nameFirst>
+      <nameMiddleInitial>Allan</nameMiddleInitial>
+    </name>
+    <addressHome>
+      <addressStreet>1233 Main Street</addressStreet>
+      <addressApartment></addressApartment>
+      <addressCity>Lake Mills</addressCity>
+      <addressState>WI</addressState>
+      <addressZip>53551</addressZip>
+      <addressCountry>United States</addressCountry>
+    </addressHome>
+    <telephone>(920) 648-8448</telephone>
+    <email>iLiveBacon@gmail.com</email>
+    <applicationDate>
+      <applicationDateMonth>06</applicationDateMonth>
+      <applicationDateDay>19</applicationDateDay>
+      <applicationDateYear>13</applicationDateYear>
+    </applicationDate>
+    <availableDate>
+      <availableDateMonth>01</availableDateMonth>
+      <availableDateDay>01</availableDateDay>
+      <availableDateYear>14</availableDateYear>
+    </availableDate>
+    <birthCountry>United States</birthCountry>
+    <dateOfBirth>
+      <birthDateMonth>07</birthDateMonth>
+      <birthDateDay>07</birthDateDay>
+      <birthDateYear>1973</birthDateYear>
+    </dateOfBirth>
+    <age>41</age>
+    <gender>male</gender>
+    <schoolName>Miskatonic University</schoolName>
+    <schoolAddress>
+      <addressStreetSchool>4 Thaumaturgy Lane</addressStreetSchool>
+      <addressApartmentSchool></addressApartmentSchool>
+      <addressCitySchool>Arkham</addressCitySchool>
+      <addressStateSchool>Massachusetts</addressStateSchool>
+      <addressZipSchool>01914</addressZipSchool>
+      <addressCountrySchool>United States</addressCountrySchool>
+    </schoolAddress>
+    <yearInSchool>Senior</yearInSchool>
+    <motherName>
+      <nameLastMother>Hopper</nameLastMother>
+      <nameFirstMother>Grace</nameFirstMother>
+      <nameMiddleInitialMother></nameMiddleInitialMother>
+    </motherName>
+    <fatherName>
+      <nameLastFather>Scheef</nameLastFather>
+      <nameFirstFather>Mark</nameFirstFather>
+      <nameMiddleInitialFather>A</nameMiddleInitialFather>
+    </fatherName>
+    <emergencyTelephone>(636) 555-3226</emergencyTelephone>
+    <feePaid currency="KPW">805493</feePaid>
+    <essay>
+      <![CDATA[My dream to go to America began about four years ago. My parents knew that they could never afford a year abroad, so I tried to work, and save the money, but it was impossible. I tried scholarships, but it did not work out.]]>
+    </essay>
+    <languageSpoken fluency="3">English</languageSpoken>
+    <languageSpoken fluency="4">French</languageSpoken>
+    <countryChoice preference="4">United States</countryChoice>
+    <countryChoice preference="2">Brazil</countryChoice>
+    <countryChoice preference="5">France</countryChoice>
+    <countryChoice preference="3">Portugul</countryChoice>
+    <countryChoice preference="1">North Korea</countryChoice>
+  </exchange>
+
+  <exchange classification="T" exchangeID="E00004">
+    <name>
+      <nameLast>Tomasik</nameLast>
+      <nameFirst>Maria</nameFirst>
+      <nameMiddleInitial></nameMiddleInitial>
+    </name>
+    <addressHome>
+      <addressStreet>221 Baker St.</addressStreet>
+      <addressApartment>B</addressApartment>
+      <addressCity>London</addressCity>
+      <addressState></addressState>
+      <addressZip>NW1 6XE</addressZip>
+      <addressCountry>England</addressCountry>
+    </addressHome>
+    <telephone>(207) 224-3688</telephone>
+    <email>prettyInPink@lakemills.k12.wi.us</email>
+    <applicationDate>
+      <applicationDateMonth>08</applicationDateMonth>
+      <applicationDateDay>30</applicationDateDay>
+      <applicationDateYear>13</applicationDateYear>
+    </applicationDate>
+    <availableDate>
+      <availableDateMonth>08</availableDateMonth>
+      <availableDateDay>01</availableDateDay>
+      <availableDateYear>14</availableDateYear>
+    </availableDate>
+    <birthCountry>Denmark</birthCountry>
+    <dateOfBirth>
+      <birthDateMonth></birthDateMonth>
+      <birthDateDay></birthDateDay>
+      <birthDateYear></birthDateYear>
+    </dateOfBirth>
+    <age></age>
+    <gender>female</gender>
+    <schoolName>Lake Mills Public High School</schoolName>
+    <schoolAddress>
+      <addressStreetSchool>615 Catlin Dr</addressStreetSchool>
+      <addressApartmentSchool></addressApartmentSchool>
+      <addressCitySchool>Lake Mills High School</addressCitySchool>
+      <addressStateSchool>WI</addressStateSchool>
+      <addressZipSchool>53551</addressZipSchool>
+      <addressCountrySchool>United States</addressCountrySchool>
+    </schoolAddress>
+    <yearInSchool></yearInSchool>
+    <motherName>
+      <nameFirstMother></nameFirstMother>
+      <nameLastMother></nameLastMother>
+      <nameMiddleInitialMother></nameMiddleInitialMother>
+    </motherName>
+    <fatherName>
+      <nameFirstFather></nameFirstFather>
+      <nameLastFather></nameLastFather>
+      <nameMiddleInitialFather></nameMiddleInitialFather>
+    </fatherName>
+    <emergencyTelephone>(914) 555-2368</emergencyTelephone>
+    <feePaid currency="EUR">806</feePaid>
+    <essay>
+      <![CDATA[I am so truly thankful for this experience; it has changed me forever. Appreciate life, embrace what you have, and accept that this is your life, and you are the one to change it. Being an exchange student, and living in a different country for a while has opened my eyes.]]>
+    </essay>
+    <languageSpoken fluency="3">English</languageSpoken>
+    <languageSpoken fluency="2">Japanese</languageSpoken>
+    <languageSpoken fluency="4">Akkala Sami</languageSpoken>
+    <countryChoice preference="1">Russia</countryChoice>
+    <countryChoice preference="5">United States</countryChoice>
+    <countryChoice preference="4">Guam</countryChoice>
+    <countryChoice preference="3">Vatican</countryChoice>
+    <countryChoice preference="2">Liechtenstein</countryChoice>
+  </exchange>
+
+</exchanges>

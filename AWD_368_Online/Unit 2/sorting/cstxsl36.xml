@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cust36.xsl" ?>
+<customers>
+<customer>                                             
+     <number>06327</number>
+     <name>American Industries</name>
+     <address>
+          <street>1023 Fence Lane </street>
+          <city> Numis</city>
+          <state>NE</state>
+          <zip>68763</zip>
+     </address>
+     <telephone>2063514999 </telephone>
+     <lastPurchaseDate>1/1/2003</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>09288</number>
+     <name>Great Bear Co.</name>
+     <address>
+          <street>Pier 36 </street>
+          <city>Seattle</city>
+          <state>WA</state>
+          <zip>98152</zip>
+     </address>
+     <telephone>2063514999 </telephone>
+     <lastPurchaseDate>10/1/1996</lastPurchaseDate>
+     <balance>946.35</balance>
+</customer>
+<customer>
+     <number>10243</number>
+     <name>Nesbitt Mfg.</name>
+     <address>
+          <street>2730 Belmount Drive</street>
+          <city>New Haven</city>
+          <state>CT</state>
+          <zip>06516</zip>
+     </address>
+     <telephone>0000000000</telephone>
+     <lastPurchaseDate>9/18/2003 </lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>12345</number>
+     <name>Irish Imports</name>
+     <address>
+          <street>14 East 80th </street>
+          <city>New York</city>
+          <state>NY</state>
+          <zip>10092</zip>
+     </address>
+     <telephone>2123349487 </telephone>
+     <lastPurchaseDate>9/25/2003</lastPurchaseDate>
+     <balance>3935.25</balance>
+</customer>
+<customer>
+     <number>14672</number>
+     <name>ITC Shipping</name>
+     <address>
+          <street>1560 Marks Ave.</street>
+          <city>Bakersfield</city>
+          <state>CA</state>
+          <zip>93306</zip>
+     </address>
+     <telephone>8052638060 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>2270.25</balance>
+</customer>
+<customer>
+     <number>15008</number>
+     <name>Zuni Cooperative</name>
+     <address>
+          <street>237 Sunrise Ave.</street>
+          <city>Flagstaff</city>
+          <state>AZ</state>
+          <zip>86001</zip>
+     </address>
+     <telephone>6024971887 </telephone>
+     <lastPurchaseDate>9/23/2003</lastPurchaseDate>
+     <balance>485.41</balance>
+</customer>
+<customer>
+     <number>16403</number>
+     <name>Max Electronics</name>
+     <address>
+          <street>9 Fruit St.</street>
+          <city>Palo Alto</city>
+          <state>CA</state>
+          <zip>94306</zip>
+     </address>
+     <telephone>4154581364 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>1546.15</balance>
+</customer>
+<customer>
+     <number>18325</number>
+     <name>West Company</name>
+     <address>
+          <street>8677 Cotton Canyon </street>
+          <city>Provo</city>
+          <state>UT</state>
+          <zip>84118</zip>
+     </address>
+     <telephone>8018232287 </telephone>
+     <lastPurchaseDate>9/24/2003</lastPurchaseDate>
+     <balance>67.80</balance>
+</customer>
+<customer>
+     <number>19542</number>
+     <name>Mom's Pie Co.</name>
+     <address>
+          <street>56 Cayton Rd.</street>
+          <city>Florence</city>
+          <state>NY</state>
+          <zip>41042</zip>
+     </address>
+     <telephone>0000000000</telephone>
+     <lastPurchaseDate>11/04/2003</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>19592</number>
+     <name>Wooster Feed Co.</name>
+     <address>
+          <street>7 American Ave.</street>
+          <city>Clovis</city>
+          <state>CA</state>
+          <zip>93612</zip>
+     </address>
+     <telephone>0000000000</telephone>
+     <lastPurchaseDate>10/2/1998</lastPurchaseDate>
+     <balance>871.79</balance>
+</customer>
+<customer>
+     <number>19631</number>
+     <name>Sara's Loft</name>
+     <address>
+          <street>1403 Skyline Dr.</street>
+          <city>Oakland</city>
+          <state>CA</state>
+          <zip>94611</zip>
+     </address>
+     <telephone>4158326211</telephone>
+     <lastPurchaseDate>10/2/1998</lastPurchaseDate>
+     <balance>1177.05</balance>
+</customer>
+<customer>
+     <number>19712</number>
+     <name>Keystone Construction</name>
+     <address>
+          <street>43 Mirabel Ave.</street>
+          <city>San Francisco</city>
+          <state>CA</state>
+          <zip>94142</zip>
+     </address>
+     <telephone>4153361114 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>301.70</balance>
+</customer>
+<customer>
+     <number>19844</number>
+     <name>Omni Guard</name>
+     <address>
+          <street>99 Hellgate Way</street>
+          <city>Chicago</city>
+          <state>IL</state>
+          <zip>60642</zip>
+     </address>
+     <telephone>3122389963 </telephone>
+     <lastPurchaseDate>9/24/1998</lastPurchaseDate>
+     <balance>232.99</balance>
+</customer>
+<customer>
+     <number>22128</number>
+     <name>Pacific Books</name>
+     <address>
+          <street>2850 Kesey Way</street>
+          <city>Coos Bay</city>
+          <state>OR</state>
+          <zip>97420</zip>
+     </address>
+     <telephone>5037359051 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>243.55</balance>
+</customer>
+<customer>
+     <number>24724</number>
+     <name>Zugg &amp; Co.</name>
+     <address>
+          <street>1326 Van Ness </street>
+          <city>Iowa City</city>
+          <state>IA</state>
+          <zip>52240</zip>
+     </address>
+     <telephone>3199643029 </telephone>
+     <lastPurchaseDate>9/24/2003</lastPurchaseDate>
+     <balance>501.00</balance>
+</customer>
+<customer>
+     <number>25259</number>
+     <name>Moon Travel Agency</name>
+     <address>
+          <street>2941 Linden Ave.</street>
+          <city>Berkeley</city>
+          <state>CA</state>
+          <zip>94704</zip>
+     </address>
+     <telephone>4156840975 </telephone>
+     <lastPurchaseDate>10/2/2003</lastPurchaseDate>
+     <balance>762.20</balance>
+</customer>
+<customer>
+     <number>26301</number>
+     <name>B.A. Krebs Co.</name>
+     <address>
+          <street>17643 Colfax </street>
+          <city>Denver</city>
+          <state>CO</state>
+          <zip>80228</zip>
+     </address>
+     <telephone>3037816113 </telephone>
+     <lastPurchaseDate>9/24/1998</lastPurchaseDate>
+     <balance>42.15</balance>
+</customer>
+<customer>
+     <number>27251</number>
+     <name>Traders, Inc.</name>
+     <address>
+          <street>207 Aspen Lane </street>
+          <city>Taos</city>
+          <state>NM</state>
+          <zip>87571</zip>
+     </address>
+     <telephone>5053386864 </telephone>
+     <lastPurchaseDate>9/23/2003</lastPurchaseDate>
+     <balance>666.66</balance>
+</customer>
+<customer>
+     <number>28177</number>
+     <name>Fresno Fruit Co.</name>
+     <address>
+          <street>2432 Railroad Ave.</street>
+          <city>Fresno</city>
+          <state>CA</state>
+          <zip>93721</zip>
+     </address>
+     <telephone>2094234001</telephone>
+     <lastPurchaseDate>10/2/1997</lastPurchaseDate>
+     <balance>1783.17</balance>
+</customer>
+<customer>
+     <number>29718</number>
+     <name>Auroral Lighting</name>
+     <address>
+          <street>1939 Schlitz Way</street>
+          <city>Milwaukee</city>
+          <state>WI</state>
+          <zip>53233</zip>
+     </address>
+     <telephone>4149626872</telephone>
+     <lastPurchaseDate>9/25/1998</lastPurchaseDate>
+     <balance>1417.41</balance>
+</customer>
+<customer>
+     <number>30309</number>
+     <name>Driftwood Art</name>
+     <address>
+          <street>6 Beach St.</street>
+          <city>Carmel</city>
+          <state>CA</state>
+          <zip>93921</zip>
+     </address>
+     <telephone>0000000000</telephone>
+     <lastPurchaseDate>4/15/2003</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>31143</number>
+     <name>Funston Clay</name>
+     <address>
+          <street>4342 Thompson Ave.</street>
+          <city>Whitefish</city>
+          <state>MT</state>
+          <zip>59938</zip>
+     </address>
+     <telephone>4062754344</telephone>
+     <lastPurchaseDate>6/23/2003</lastPurchaseDate>
+     <balance>1360.43</balance>
+</customer>
+<customer>
+     <number>31151</number>
+     <name>Cassady and Cody</name>
+     <address>
+          <street>8776 Snow Valley Rd.</street>
+          <city>Whitefish</city>
+          <state>MT</state>
+          <zip>59937</zip>
+     </address>
+     <telephone>4062751234</telephone>
+     <lastPurchaseDate>10/22/2003</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>32808</number>
+     <name>Aztec Gifts</name>
+     <address>
+          <street>1000 42nd Ave.</street>
+          <city>Dallas</city>
+          <state>TX</state>
+          <zip>75218</zip>
+     </address>
+     <telephone>0000000000</telephone>
+     <lastPurchaseDate>4/15/2002</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>34479</number>
+     <name>Foundations, Inc.</name>
+     <address>
+          <street>1622 West 22nd</street>
+          <city>Minneapolis</city>
+          <state>MN</state>
+          <zip>55436</zip>
+     </address>
+     <telephone>0000000000</telephone>
+     <lastPurchaseDate>6/23/2003</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>36838</number>
+     <name>Mountain, Inc.</name>
+     <address>
+          <street>9640 Berthoud Rd.</street>
+          <city>Sterling</city>
+          <state>CO</state>
+          <zip>80751</zip>
+     </address>
+     <telephone>3037230981</telephone>
+     <lastPurchaseDate>12/22/2003</lastPurchaseDate>
+     <balance>774.30</balance>
+</customer>
+<customer>
+     <number>37362</number>
+     <name>Newsome Service Co.</name>
+     <address>
+          <street>84 Frances Way</street>
+          <city>Kingston</city>
+          <state>NY</state>
+          <zip>12401</zip>
+     </address>
+     <telephone> 0000000000</telephone>
+     <lastPurchaseDate>1/1/1980</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>39152</number>
+     <name>Stone, Kemp &amp; Co.</name>
+     <address>
+          <street>867 Mellon St.</street>
+          <city>Pittsburgh</city>
+          <state>PA</state>
+          <zip>45289</zip>
+     </address>
+     <telephone>4125834912</telephone>
+     <lastPurchaseDate>6/23/2003</lastPurchaseDate>
+     <balance>3264.34</balance>
+</customer>
+<customer>
+     <number>40908</number>
+     <name>Michaels Bros.</name>
+     <address>
+          <street> 38 Lakeview Drive</street>
+          <city>Allentown</city>
+          <state>NJ</state>
+          <zip>85012</zip>
+     </address>
+     <telephone> 0000000000</telephone>
+     <lastPurchaseDate>8/19/2003</lastPurchaseDate>
+     <balance>0.00</balance>
+</customer>
+<customer>
+     <number>43109</number>
+     <name>MMA, Inc.</name>
+     <address>
+          <street>1067 West Morris </street>
+          <city>Fresno</city>
+          <state>CA</state>
+          <zip>93721</zip>
+     </address>
+     <telephone>2099622271</telephone>
+     <lastPurchaseDate>11/4/2003</lastPurchaseDate>
+     <balance>778.11</balance>
+</customer>
+<customer>
+     <number>45152</number>
+     <name>Pere &amp; Sons</name>
+     <address>
+          <street>36 Ballard Ave.</street>
+          <city>Seattle</city>
+          <state>WA</state>
+          <zip>98166</zip>
+     </address>
+     <telephone>2062227413</telephone>
+     <lastPurchaseDate>9/18/2003</lastPurchaseDate>
+     <balance>2397.57</balance>
+</customer>
+<customer>
+     <number>48127</number>
+     <name>Jim Bern and Co.</name>
+     <address>
+          <street>768 River Run</street>
+          <city>Telluride</city>
+          <state>CO</state>
+          <zip>81438</zip>
+     </address>
+     <telephone>3032570495</telephone>
+     <lastPurchaseDate>8/19/2003</lastPurchaseDate>
+     <balance>292.32</balance>
+</customer>
+<customer>
+     <number>53287</number>
+     <name>A-1 Supply</name>
+     <address>
+          <street>1177 Vine St.</street>
+          <city>Madison</city>
+          <state>WI</state>
+          <zip>53716</zip>
+     </address>
+     <telephone>6087237666</telephone>
+     <lastPurchaseDate>4/15/2003</lastPurchaseDate>
+     <balance>6645.68</balance>
+</customer>
+<customer>
+     <number>55557</number>
+     <name>Gulick and Ryan</name>
+     <address>
+          <street>1601 Cole St.</street>
+          <city>Cleveland</city>
+          <state>OH</state>
+          <zip>44128</zip>
+     </address>
+     <telephone>2167356253</telephone>
+     <lastPurchaseDate>4/15/1997</lastPurchaseDate>
+     <balance>1476.43</balance>
+</customer>
+<customer>
+     <number>57339</number>
+     <name>Rogonding and Company</name>
+     <address>
+          <street>535 Ramona </street>
+          <city>Palo Alto</city>
+          <state>CA</state>
+          <zip>94306</zip>
+     </address>
+     <telephone>4157810550</telephone>
+     <lastPurchaseDate>10/1/1998</lastPurchaseDate>
+     <balance>110.50</balance>
+</customer>
+</customers>

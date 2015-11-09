@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>We should get the expected output.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">Howdy</span><span class="p">,</span> <span class="n">Fred</span><span class="o">!</span>
+</pre></div>
+</td></tr></table>
+
+<p>That doesn't seem super clear. We can read the beginning of the function as, &quot;Say greeting to person Fred.&quot; That's good, but what is &quot;Howdy&quot;? Let make it clear with a new concept, External Parameter Names.</p>
+
+<h3 id="externalparameternames">External Parameter Names</h3>
+
+<p>Here's a normal parameter with one name.</p>
+
+<ul>
+<li><code>firstName: String</code></li>
+</ul>
+
+<p><code>firstName</code> is actually its <strong>internal name</strong>. We can also add an <strong>external name</strong>. Just add another name before the internal name.</p>
+
+<ul>
+<li><code>aFirstName firstName: String</code></li>
+</ul>
+
+<p>The <strong>external name</strong> is what is used when we call the function. The <strong>internal name</strong> is used inside the function. There's another effect. Let's add an external name to the <code>sayGreetingToPerson()</code> function like this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="nf">sayGreetingToPerson</span><span class="p">(</span><span class="nl">person</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">withGreeting</span> <span class="nl">greeting</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;\(greeting), \(person)!&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>When we try to call it with this code it fails to compile.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">sayGreetingToPerson</span><span class="p">(</span><span class="s">&quot;Fred&quot;</span><span class="p">,</span> <span class="s">&quot;Howdy&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="cm">/*</span>
+<span class="cm">Playground execution failed: &lt;EXPR&gt;:56:20: error: missing argument label &#39;withGreeting:&#39; in call</span>
+<span class="cm">sayGreetingToPerson(&quot;Fred&quot;, &quot;Howdy&quot;)</span>
+<span class="cm">                   ^</span>
+<span class="cm">                            withGreeting: </span>
+<span class="cm">*/</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+
+<p>When we add an external name to a parameter it becomes <strong>required</strong> when we call it. We can fix the above code with this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">sayGreetingToPerson</span><span class="p">(</span><span class="s">&quot;Fred&quot;</span><span class="p">,</span> <span class="nl">withGreeting</span><span class="p">:</span> <span class="s">&quot;Howdy&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>    </section>
+  </div>
+</body>
+</html>

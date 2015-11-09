@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="books">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="book" type="bookType" minOccurs="3" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="bookType">
+        <xsd:choice>
+            <xsd:sequence>
+                <xsd:element name="isbn" type="isbnType" />
+                <xsd:element name="title" type="titleType" />
+                <xsd:element name="edition" type="editionType" />
+                <xsd:element name="author" type="nameType"  minOccurs="1" maxOccurs="unbounded" />
+                <xsd:element name="publishedDate" type="dateType" />
+                <xsd:element name="type" type="classificationType" />
+                <xsd:element name="price" type="xsd:double" />
+            </xsd:sequence>
+        </xsd:choice>
+    </xsd:complexType>
+
+    <xsd:complexType name="titleType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="type" use="required">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="[H|P]" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:simpleType name="editionType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="([\d]{0,2})?" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="isbnType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[\-\d]{10,20}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="nameType">
+        <xsd:sequence>
+            <xsd:element name="first" type="alphaType" />
+            <xsd:element name="middle" type="alphaOptionalType" />
+            <xsd:element name="last" type="alphaType" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="alphaType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[\-'A-Za-z]{1,}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="alphaOptionalType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z]?" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="dateType">
+        <xsd:sequence>
+            <xsd:element name="month">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:unsignedByte">
+                        <xsd:minInclusive value="1"/>
+                        <xsd:maxInclusive value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="day">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:unsignedByte">
+                        <xsd:minInclusive value="1"/>
+                        <xsd:maxInclusive value="31"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="year" type="xsd:gYear" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="classificationType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="nonfiction"/>
+            <xsd:enumeration value="fiction"/>
+            <xsd:enumeration value="historical"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

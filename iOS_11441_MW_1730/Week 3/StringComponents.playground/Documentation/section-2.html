@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Sometimes that works well, but notice the words that end with a period? We can also use this function.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">componentsSeparatedByCharactersInSet</span><span class="p">(</span><span class="n">_</span> <span class="nl">separator</span><span class="p">:</span> <span class="bp">NSCharacterSet</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">AnyObject</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<p>The key is to find the right character set. And you can also make your own set. Let's make our own.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">mySet</span> <span class="o">=</span> <span class="bp">NSCharacterSet</span><span class="p">(</span><span class="nl">charactersInString</span><span class="p">:</span> <span class="s">&quot;. &quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now use that to make a better array.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

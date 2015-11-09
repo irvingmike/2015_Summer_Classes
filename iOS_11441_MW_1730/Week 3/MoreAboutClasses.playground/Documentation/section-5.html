@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h4 id="designatedandconvenienceinitializers">Designated and Convenience Initializers</h4>
+
+<p>Every class should have one initializer that sets all the values to some good default value. This one initializer is call the <strong>Designated Initializer</strong>. Once you have one of those you can do this with the variables.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">species</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">weight</span><span class="p">:</span> <span class="n">Double</span>
+    <span class="k">var</span> <span class="nl">height</span><span class="p">:</span> <span class="n">Double</span>
+</pre></div>
+</td></tr></table>
+
+<p>Does that seem strange? Doesn't Swift not allow variables to be made like this? </p>
+
+<p>If you initialize a variable in an <code>init</code> method then you don't have to initialize them when you declare them. This even works with constants. <strong>Sweet!</strong> </p>
+
+<p>These initializers are quite handy.</p>
+
+<p>Here's the full class at this point.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="n">Pet</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">species</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">weight</span><span class="p">:</span> <span class="n">Double</span>
+    <span class="k">var</span> <span class="nl">height</span><span class="p">:</span> <span class="n">Double</span>
+
+    <span class="k">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&quot;In the init() method!&quot;</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;&lt;name&gt;&quot;</span>
+        <span class="n">species</span> <span class="o">=</span> <span class="s">&quot;&lt;unknown&gt;&quot;</span>
+        <span class="n">weight</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="p">}</span>
+
+    <span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="n">Double</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="n">Double</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Hmm, do you notice that both of the initializers set all the variables? Is that necessary? No, so lets fix it. </p>
+
+<p>Let's make the one with the parameters the true designated initializer and the other one a <strong>convenience initializer</strong>. </p>
+
+<p>Change the first initializer to this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="n">convenience</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">self</span><span class="p">.</span><span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;&lt;name&gt;&quot;</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="s">&quot;&lt;unknown&gt;&quot;</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Whoa! Did they really make the word <strong>convenience</strong> a keyword in Swift? Yes, they did. Here's the full class now.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="n">Pet</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nl">name</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">species</span><span class="p">:</span> <span class="n">String</span>
+    <span class="k">var</span> <span class="nl">weight</span><span class="p">:</span> <span class="n">Double</span>
+    <span class="k">var</span> <span class="nl">height</span><span class="p">:</span> <span class="n">Double</span>
+
+    <span class="n">convenience</span> <span class="k">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">self</span><span class="p">.</span><span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;&lt;name&gt;&quot;</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="s">&quot;&lt;unknown&gt;&quot;</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="n">Double</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="n">Double</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>    </section>
+  </div>
+</body>
+</html>

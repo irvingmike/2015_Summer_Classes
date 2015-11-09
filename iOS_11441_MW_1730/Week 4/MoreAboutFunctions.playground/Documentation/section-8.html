@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p><strong>Option-click</strong> on the variable and we can see the type.</p>
+
+<p><img class="imgwb" src="images/morefuncs03.png" alt="" width="600" /></p>
+
+<p>The type is <span style="font-size:1.5em;font-weight:bold;"><code>(Int, Int) -&gt; ()</code></span></p>
+
+<p><img src="images/morefuncs04.png" alt="" width="900" /></p>
+
+<hr />
+
+<h3 id="declaringfunctiontypes">Declaring Function Types</h3>
+
+<p>Does this mean we can declare variables and constants to have a type that's a function? </p>
+
+<p>Yup.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="nl">add2</span><span class="p">:</span> <span class="p">(</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span>
+
+<span class="n">add2</span> <span class="o">=</span> <span class="n">addThese</span>
+
+<span class="n">add2</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!ELEMENT items (item+)>
+
+<!ELEMENT item (description, country, sellingPrice, cost, quantityOnHand, backorderedAmount, dateLastReceived, quantitySoldYearToDate, warehouseSection, warehouseShelve, remarks, supplier+)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT sellingPrice (#PCDATA)>
+<!ELEMENT cost (#PCDATA)>
+<!ELEMENT quantityOnHand (#PCDATA)>
+<!ELEMENT backorderedAmount (#PCDATA)>
+
+<!ELEMENT dateLastReceived (month, day, year)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+
+<!ELEMENT quantitySoldYearToDate (#PCDATA)>
+<!ELEMENT warehouseSection (#PCDATA)>
+<!ELEMENT warehouseShelve (#PCDATA)>
+<!ELEMENT remarks (#PCDATA)>
+
+<!ELEMENT supplier (number, shipmentLeadTime, cost)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT shipmentLeadTime (#PCDATA)>
+
+<!ATTLIST item itemNumber ID #REQUIRED>
+<!ATTLIST sellingPrice saleItem (Y|N) #REQUIRED>
+<!ATTLIST backorderedAmount dateOrdered CDATA #IMPLIED>
+<!ATTLIST shipmentLeadTime unit (weeks|days) #REQUIRED>

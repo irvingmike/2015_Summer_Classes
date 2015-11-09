@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h3 id="whatisjson">What is JSON?</h3>
+
+<p>JSON is a data transfer format that uses JavaScript to describe objects. It is used heavily by iOS applications that communicate with backend websites.</p>
+
+<p>Here’s a simple example that holds the data for one Contact object.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;lastName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Black&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;email&quot;</span> <span class="o">:</span> <span class="s2">&quot;jblack@maily.com&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;cell&quot;</span> <span class="o">:</span> <span class="s2">&quot;608-555-5656&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The curly braces, <strong><code>{}</code></strong>, indicate that the data is a dictionary.</p>
+
+<p>Each line is a <strong>key/value</strong> pair with the key first.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+ <span class="o">^^^^^^^^^</span>     <span class="o">^^^^</span>
+ <span class="nx">key</span>           <span class="nx">value</span>
+</pre></div>
+</td></tr></table>
+
+<p>A set of square brackets <strong><code>[]</code></strong> indicates an array. Here's an array of strings.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="p">[</span>
+    <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;two&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;three&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;four&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;five&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<p>And here's an array of numbers. Notice that no quotes are used for numbers.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="p">[</span>
+    <span class="mi">10</span><span class="p">,</span>
+    <span class="mi">12</span><span class="p">,</span>
+    <span class="mi">43</span><span class="p">,</span>
+    <span class="mi">100</span>
+<span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<p>Here's an example that is an array of dictionaries. Each element in the array is separated by a comma.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Fred&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;lastName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Sanders&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span> <span class="o">:</span> <span class="s2">&quot;fred@sanders.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cell&quot;</span> <span class="o">:</span> <span class="s2">&quot;608-555-1234&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;firstName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Joe&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;lastName&quot;</span> <span class="o">:</span> <span class="s2">&quot;Brown&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span> <span class="o">:</span> <span class="s2">&quot;joe@email.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cell&quot;</span> <span class="o">:</span> <span class="s2">&quot;608-555-9999&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="usingjsoninswift">Using JSON in Swift</h3>
+
+<p>Well, actually, we have to use some Objective-C classes to use JSON in Swift. That's not a problem, we've been doing that all semester.</p>
+
+<h4 id="nsjsonserialization">NSJSONSerialization</h4>
+
+<p>There’s a class that is part of the Foundation class that come with Xcode named <strong>NSJSONSerialization</strong>. This class can convert the above <strong>JSON</strong> data into Objective-C and <strong>NSDictionary</strong> objects, <strong>NSArray</strong> objects, <strong>NSString</strong> objects, and <strong>NSNumber</strong> objects and back. It’s pretty cool.</p>
+
+<h3 id="loadingjsondata">Loading JSON Data</h3>
+
+<p>Download this file and put it in your <code>/Users/&lt;user&gt;/Documents/Shared Playground Data/</code> folder. <strong>Right-click</strong> and <strong>Save Linked File As...</strong> to download.</p>
+
+<ul>
+<li><a href="http://teachersdoor.com/summer15/Resources/json-contacts.txt">json-contacts.txt</a></li>
+</ul>
+
+<hr />
+
+<p>This line of code will load the <strong>json-contacts.txt</strong> file into an app as a instance of the <strong>NSData</strong> class. This is required by the next step of converting the JSON to Swift types.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">jsonData</span> <span class="o">=</span> <span class="bp">NSData</span><span class="p">(</span><span class="nl">contentsOfFile</span><span class="p">:</span> <span class="s">&quot;/Users/&lt;user&gt;/Documents/Shared Playground Data/json-contacts.txt&quot;</span><span class="p">)</span><span class="o">!</span>
+</pre></div>
+</td></tr></table>
+
+<p>Let's see that in action. (Don't forget to change <code>&lt;user&gt;</code> to your account.)</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

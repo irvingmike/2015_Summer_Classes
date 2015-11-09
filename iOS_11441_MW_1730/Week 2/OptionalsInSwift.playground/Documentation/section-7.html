@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Whoops! We get an error.</p>
+
+<pre><code>Playground execution failed: &lt;EXPR&gt;:47:31: error: value of optional type 'Int?' not unwrapped; did you mean to use '!' or '?'?
+println(&quot;Item total: \(Double(itemCount) * price)&quot;)
+                              ^
+                                       !
+</code></pre>
+
+<p>And it's a bad error. It would crash our app. We need to not do this. We can only use the unwrap operator, <span style="font-size:1.5em;"><strong><code>!</code></strong></span>, if we are sure the variable inside the Optional is not <code>nil</code>. </p>
+
+<h4 id="optionalbinding">Optional Binding</h4>
+
+<p>The next way to unwrap an Optional is to use optional binding. You will hear most people refer to this as the <strong><code>if let</code></strong> method. What if we have no way of knowing if there is data in an Optional? We need to test the Optional to see what's inside. How do we <strong>shake the box</strong>? We use <code>if let</code>.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="nl">itemCount</span><span class="p">:</span> <span class="n">Int</span><span class="o">?</span>
+<span class="k">var</span> <span class="n">price</span> <span class="o">=</span> <span class="mf">1.99</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="n">itemCountCheck</span> <span class="o">=</span> <span class="n">itemCount</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Item total: \(Double(itemCountCheck) * price)&quot;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Whoops! Something is nil.&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Try it!</p>    </section>
+  </div>
+</body>
+</html>

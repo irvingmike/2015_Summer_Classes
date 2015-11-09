@@ -1,0 +1,16 @@
+/*
+   New Perspectives on XML
+   Tutorial 1
+   Case Problem 4
+   Filename: delton.css
+
+   This file contains styles used in the accounts.xml file.
+
+*/
+
+body {font-family:Arial, Helvetica, sans-serif}
+Client {display:block; margin-bottom:20px}
+Name, Address, Street, Phone, E-mail, Account_Total {display:block}
+Address, Phone, E-mail, Account_Total {text-indent:1em}
+Name {font-family:Arial, Helvetica, sans-serif; font-weight:bold}
+First, Last {display:inline; margin-right:0.5em}

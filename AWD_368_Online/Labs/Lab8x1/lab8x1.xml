@@ -1,0 +1,131 @@
+<?xml version="1.0" standalone="no"?>
+
+<!--
+  Student Name: Aaron Anderson
+  LAB 8.1
+  Date: 07/12/2015
+  File Dependencies: lab8x1.xsl
+-->
+
+<?xml-stylesheet type="text/xsl" href="lab8x1.xsl" ?>
+
+<!--
+   type attribute
+   H - Hardbound
+   P - Paperback
+-->
+
+<books>
+   <book>
+      <isbn>978-1-4188-6064-6</isbn>
+      <title type="P">XML Comprehensive</title>
+      <edition>2</edition>
+      <author>
+         <first>Patrick</first>
+         <middle></middle>
+         <last>Carey</last>
+      </author>
+      <publishedDate>
+         <month>7</month>
+         <day>9</day>
+         <year>2007</year>
+      </publishedDate>
+      <type>nonfiction</type>
+      <price>70</price>
+   </book>
+
+   <book>
+      <isbn>978-0-1322-4085-7</isbn>
+      <title type="H">Systems Analysis and Design</title>
+      <edition>7</edition>
+      <author>
+         <first>Kenneth</first>
+         <middle>E</middle>
+         <last>Kendall</last>
+      </author>
+      <author>
+         <first>Julie</first>
+         <middle>E</middle>
+         <last>Kendall</last>
+      </author>
+      <publishedDate>
+         <month>3</month>
+         <day>27</day>
+         <year>2007</year>
+      </publishedDate>
+      <type>nonfiction</type>
+      <price>166.67</price>
+   </book>
+
+   <book>
+      <isbn>978-0-6700-3337-9</isbn>
+      <title type="H">Collapse: How Societies Choose to Fail or Succeed</title>
+      <edition>1</edition>
+      <author>
+         <first>Jared</first>
+         <middle>M</middle>
+         <last>Diamond</last>
+      </author>
+      <publishedDate>
+         <month>12</month>
+         <day>29</day>
+         <year>2004</year>
+      </publishedDate>
+      <type>nonfiction</type>
+      <price>29.95</price>
+   </book>
+
+   <book>
+      <isbn>978-0-8050-0111-2</isbn>
+      <title type="P">The Grasshopper Trap</title>
+      <edition></edition>
+      <author>
+         <first>Patrick</first>
+         <middle>F</middle>
+         <last>McManus</last>
+      </author>
+      <publishedDate>
+         <month>9</month>
+         <day>15</day>
+         <year>1986</year>
+      </publishedDate>
+      <type>fiction</type>
+      <price>14</price>
+   </book>
+
+   <book>
+      <isbn>978-0-0305-9172-3</isbn>
+      <title type="P">A Fine and Pleasant Misery</title>
+      <edition></edition>
+      <author>
+         <first>Patrick</first>
+         <middle>F</middle>
+         <last>McManus</last>
+      </author>
+      <publishedDate>
+         <month>4</month>
+         <day>15</day>
+         <year>1981</year>
+      </publishedDate>
+      <type>fiction</type>
+      <price>11.20</price>
+   </book>
+
+   <book>
+      <isbn>978-0-3930-6131-4</isbn>
+      <title type="H">Guns, Germs, and Steel: The Fates of Human Societies</title>
+      <edition>1</edition>
+      <author>
+         <first>Jared</first>
+         <middle>M</middle>
+         <last>Diamond</last>
+      </author>
+      <publishedDate>
+         <month>7</month>
+         <day>11</day>
+         <year>2005</year>
+      </publishedDate>
+      <type>nonfiction</type>
+      <price>16.47</price>
+   </book>
+</books>

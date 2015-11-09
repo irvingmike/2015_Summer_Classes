@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<h3 id="whatsthebigdeal">What's the big deal?</h3>
+
+<p>There are a few major differences between a <strong>Class</strong> and a <strong>Structure</strong>.</p>
+
+<ul>
+<li>Class are always passed by <strong>reference</strong> while Structures are always passed by <strong>value</strong>.
+
+<ul>
+<li>Classes are called <strong>reference types</strong> and Structures are called <strong>value types</strong>.</li>
+<li>The compiler can do some nice optimizations on <code>struct</code>s that it can't do with classes. Structures are fast.</li>
+</ul></li>
+<li>You can't use <strong>Inheritance</strong> with Structures.</li>
+<li>You don't always have to make <strong>initializers</strong>. Try this, comment out both of the initializers for the <code>struct</code>. What happens? Then comment out the code for <code>rectangle1</code> and <code>rectangle3</code>. Look at that, <code>rectangle2</code> still works. The compiler makes the full initializer for you. That's pretty cool. If that's all you need then don't bother making your own.</li>
+</ul>
+
+<h3 id="whatarestructuresfor">What are Structures for?</h3>
+
+<p>We want to use Structures when the data we need to hold is smaller and doesn't change much. The overall performance gains with <code>struct</code>s comes when we don't have a huge amount of data in them. They will copied every time we pass them to anything else.</p>    </section>
+  </div>
+</body>
+</html>

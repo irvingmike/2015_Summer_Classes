@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>Have you ever found yourself wanting to return more than one thing from a function?</p>
+
+<p>How is this done in most languages? </p>
+
+<ul>
+<li>An array</li>
+<li>An object</li>
+</ul>
+
+<p>Both of those options are fairly heavy when we just want to return a few things, like a couple of numbers.</p>
+
+<p>How would we even write a function that returns more than one thing? What would go after the return arrow for type? What would we actually return?</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">twoNumbers</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="o">????</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="c1">????</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+
+<h4 id="entertuples.">Enter Tuples.</h4>
+
+<p>They are a lightweight way to pass multiple things around. Here's an example.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">87</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+
+<p><img class="imgwb" src="images/tuples01.png" alt="" width="600" /></p>
+
+<hr />
+
+<p><strong>Tuples</strong> look a little like arrays. They have much lower overhead. We can use them whenever we want to pass around pieces without needing a class or array. </p>
+
+<p>Our mystery function can now be updated like this.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="n">twoNumbers</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="o">????</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">87</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+
+<h4 id="tupletypes">Tuple Types</h4>
+
+<p>OK, how about the return type for that function? Here's that constant with explicit types.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">let</span> <span class="nl">myTuple</span><span class="p">:</span> <span class="p">(</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">87</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+
+<p><img class="imgwb" src="images/tuples02.png" alt="" width="600" /></p>
+
+<hr />
+
+<p>Now we can fill in the rest of the function.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">func</span> <span class="nf">twoNumbers</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">87</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Let's put that into this code block.</p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>

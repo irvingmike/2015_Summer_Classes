@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html style="font-size: 80.0%;">
+<head>
+  <meta charset="utf-8">
+  <title>iOS Development</title>
+  <meta id="xcode-display" name="xcode-display" content="render">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="pygments.css">
+</head>
+<body class="jazz">
+  <div class="content-wrapper">
+    <section class="section">
+<hr />
+
+<p>You should now be seeing this output.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre>In the init() method!
+In the init() method!
+Pet: name=&lt;name&gt;, species=&lt;unknown&gt;, w/h=0.0/0.0
+Pet: name=&lt;name&gt;, species=&lt;unknown&gt;, w/h=0.0/0.0
+</pre></div>
+</td></tr></table>
+
+<p>Sweet! But, what about those other two pets? </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">var</span> <span class="n">petThree</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Ralph&quot;</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="s">&quot;Dog&quot;</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="mf">30.0</span><span class="p">)</span>
+<span class="k">var</span> <span class="n">petFour</span> <span class="o">=</span> <span class="n">Pet</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Panda&quot;</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="s">&quot;Rabbit&quot;</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="mf">6.0</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="initializerswithparameters">Initializers With Parameters</h4>
+
+<p>We can have more than one initializer. Each one has to have a different set of parameters. Here's the initializer we want.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="n">Double</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="n">Double</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+    <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>What's with the <code>self.</code>?</p>
+
+<h4 id="propertiesvs.localvariables">Properties vs. Local Variables</h4>
+
+<p>Notice that the <code>init()</code> function has a parameter named <code>name</code>? The class also has a property named <code>name</code>. Is that a problem? It can be. If we just did this it would be a problem:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// Wrong! Don&#39;t do this.</span>
+<span class="k">init</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">species</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="nl">weight</span><span class="p">:</span> <span class="n">Double</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="n">Double</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>When we have <code>name = name</code> the compiler can't tell which one you mean. So it just uses the one that's closest, which means they both refer to the parameter. </p>
+
+<p>The word <code>self</code> refers to the class itself. When you add <code>self.</code> before a property name it means to use the property at the top of the class, not the local parameter. You could have the property names be different than the parameters names, too.</p>
+
+<hr />
+
+<p>Go back up and add the right version of the <code>init()</code> function to the class. Then come back here and try it out. Add some <code>println()</code> statements to see their values. </p>
+
+<hr />    </section>
+  </div>
+</body>
+</html>
